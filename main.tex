@@ -1,0 +1,398 @@
+\documentclass[12p]{article}
+
+\usepackage{geometry} % Required to change the page size to A4
+\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+\usepackage[nopar]{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{fancyhdr}
+\usepackage[parfill]{parskip} % Makes sure to put line breaks in between paragraphs and have no indentation
+\usepackage{dirtytalk} % Used for quotations (\say{quote})
+\usepackage[toc,page]{appendix}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[
+    style=numeric,
+    sorting=none
+    ]{biblatex}
+\addbibresource{references.bib}
+
+\linespread{1.2} % Line spacing
+\setlength\parindent{0pt} % Globally suppress indentation
+ 
+\graphicspath{{pics/}} % Specifies the directory where pictures are stored
+
+\pagestyle{fancy} % Use this, if a header on each page with the section title and page number is wanted
+\fancyhf{} % Removes all headers and footers, comment this to show page number at the bottom of each page again
+\fancyhead[L]{\rightmark} % Sets the section title on the left side of the header
+\fancyhead[R]{\thepage} % Sets the page number on the right side of the header
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines
+\newcommand{\SlimHRule}{\rule{\linewidth}{0.25mm}} % Defines a new command for horizontal lines
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+    
+    \center
+    
+    %------------------------------------------------
+	%	Logo
+	%------------------------------------------------
+	
+	\includegraphics[width=0.2\textwidth]{pics/AAU_Logo.png}\\[1cm]
+    
+    %------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+	
+	\textsc{\LARGE Aalborg University Copenhagen}\\[1.5cm]
+	
+	\textsc{\Large P1 Project}\\[0.5cm]
+	
+	\textsc{\large Group 007}\\[0.5cm]
+	
+	\textsc{\large IT, Communication and New Media}\\[0.5cm]
+	
+	
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+	
+	\HRule\\[0.4cm]
+	
+	{\huge\bfseries Gangster Squirrel}\\[0.4cm]
+	
+	\HRule\\[1.5cm]
+	
+	%------------------------------------------------
+	%	Author(s) and Supervisor(s)
+	%------------------------------------------------
+	
+	\begin{minipage}{0.4\textwidth}
+    \begin{flushleft} \large
+    \emph{Authors}\\
+        Ludvig Alexander \textsc{Brüchmann} \\
+        Muheb \textsc{Khan} \\
+    	Rehan \textsc{Mir} \\
+    	Johannes \textsc{Mols} \\
+    	Martin \textsc{Sander} \\
+    	Agata \textsc{Surmacz} \\
+    	Boris \textsc{Yordanov} \\
+    \end{flushleft}
+    \end{minipage}
+    ~
+    \begin{minipage}{0.4\textwidth}
+    \begin{flushright} \large
+    \emph{Study Numbers} \\
+        - \\
+        - \\
+        - \\
+        20174921 \\
+        - \\
+        - \\
+        - \\
+    \end{flushright}
+    \end{minipage}\\[0.5cm]
+    
+    %------------------------------------------------
+    
+    \begin{minipage}{0.4\textwidth}
+    \begin{flushleft} \large
+    \emph{Supervisor}\\
+        Morten \textsc{Falch} \\
+        Lene Tolstrup \textsc{Sørensen} \\
+    \end{flushleft}
+    \end{minipage}
+    ~
+    \begin{minipage}{0.4\textwidth}
+    \begin{flushright} \large
+    \end{flushright}
+    \end{minipage}\\[0.5cm]
+
+	%------------------------------------------------
+	%	Date
+	%------------------------------------------------
+	
+	\vfill\vfill\vfill % Position the date 3/4 down the remaining page
+	
+	{\large\today} % Date, change the \today to a set date if you want to be precise
+	
+    
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	SYNOPSIS / ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+\thispagestyle{plain} %Sets the page style for this specific page to plain, to remove the header and show the page number at the bottom
+    This is our Abstract, my dudes.
+    
+    % TEST IMAGE
+    % Adjust width and therefore height by setting the width to a value between 0-1, in which 1 is the full page with
+    % The label is for internal referencing and you can name it whatever you want (e.g. you can later reference this somewhere and it will print out the figure number of the graphic
+    % The caption is to set a subtext to the image, remove if unwanted
+    
+    \begin{figure}[h]
+        \center
+        \includegraphics[width=0.3\textwidth]{AAU_Logo}
+        \label{Test}
+        \caption{Test}
+    \end{figure}
+    
+    And this is how you can integrate images. \medskip
+    
+    And this is how to cite \cite{howtowriteagoodresearchpaper} something \cite{Google}.
+
+\end{abstract}
+
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Include a table of contents
+\thispagestyle{plain} %Sets the page style for this specific page to plain, to remove the header and show the page number at the bottom
+
+\newpage % Begins the essay on a new page instead of on the same page as the table of contents 
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+Text
+
+\begin{center}
+    \vspace{1em}
+    \SlimHRule\\[0.1cm]
+    \Large{Our problem formulation}
+    \SlimHRule\\[0.1cm]
+    \vspace{1em}
+\end{center}
+
+Text \medskip
+
+Text
+
+%----------------------------------------------------------------------------------------
+%	METHODOLOGY
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Methodology} \label{Methodology}
+
+\textbf{Introduction}
+
+Text. \medskip
+
+\textbf{Planning}
+
+Text. \medskip
+
+\textbf{PEST analysis (Section \ref{PEST})}
+
+Text. \medskip
+
+\textbf{Stakeholder analysis (Section \ref{Stakeholder_Analysis})}
+
+Text. \medskip
+
+\textbf{Market Segmentation (Section \ref{MarketSegmentation})}
+
+Text. \medskip
+
+\textbf{Blue Ocean - Red Ocean (Section \ref{BlueOceanRedOcean})}
+
+Text. \medskip
+
+\textbf{SWOT analysis (Section \ref{SWOT})}
+
+Text. \medskip
+
+\textbf{The four P's (Section \ref{TheFourPs})}
+
+Text.  \medskip
+
+\textbf{Marketing strategy (Section \ref{MarketingStrategy})}
+
+Text.
+
+%----------------------------------------------------------------------------------------
+%	STATE OF THE ART
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{State of the art}
+
+Introduction on state of the art and how we searched and found our competitors.
+
+\subsection{Game 1}
+
+Text.
+
+\subsection{Game 2}
+
+Text.
+
+\subsection{Game 3}
+
+Text.
+
+%------------------------------------------------
+
+\subsection{Conclusion}
+Conclusion.
+
+%----------------------------------------------------------------------------------------
+%	MARKET ANALYSIS
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Market analysis} \label{MarketAnalysis}
+
+%------------------------------------------------
+
+\subsection{Analysis of external factors (PEST)} \label{PEST}
+
+\textbf{Political factors}
+
+Text. \medskip
+
+\textbf{Economic factors}
+
+Text. \medskip
+
+\textbf{Socio-Cultural factors}
+
+Text. \medskip
+
+\textbf{Technological factors}
+
+Text. \medskip
+
+\textbf{Conclusion}
+
+Conclusion.
+
+\newpage
+
+%------------------------------------------------
+
+\subsection{Stakeholder analysis} \label{Stakeholder_Analysis}
+
+Text.
+
+\newpage
+
+%------------------------------------------------
+
+\subsection{Market segmentation} \label{MarketSegmentation}
+
+Text.
+
+\newpage
+
+%------------------------------------------------
+
+\subsection{Blue ocean - Red ocean} \label{BlueOceanRedOcean}
+
+Text.
+
+\newpage
+
+%------------------------------------------------
+
+\subsection{SWOT analysis} \label{SWOT}
+
+I left this in as a template for this kind of table, it took me a lot of time to figure that one out.
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{|p{0.5\textwidth}|p{0.5\textwidth}|}
+    \hline
+    \multicolumn{1}{|c|}{\textbf{Strengths}} & \multicolumn{1}{c|}{\textbf{Weaknesses}} \\
+    \hline
+    {• We can respond very quickly to our customers in Copenhagen and it's areas when they order on our platform\newline{}• Our prices are low and competitive compared to the market\newline{}• We know what our target customer is looking for if he chooses us, and therefore we can answer his needs very rapidly\newline{}• Our products are of certified good quality} & • Our company has little market presence or reputation\newline{}• We have a small staff, with limited skill base in many areas\newline{}• Higher price point compared to supermarkets since the service is included\newline{}• Delivery fees are higher by night time \\
+    \hline
+    \end{tabular}
+  \label{tab:swot_one}
+\end{table}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{|p{0.5\textwidth}|p{0.5\textwidth}|}
+    \hline
+    \multicolumn{1}{|c|}{\textbf{Opportunities}} & \multicolumn{1}{c|}{\textbf{Threats}} \\
+    \hline
+    {• Our competitors offer is very limited, so we can expand more over time\newline{}• The sector of alcohol is always growing, which leaves a gap in the market\newline{}• No real competitors in Denmark} & • Selling alcohol license may be hard to obtain\newline{}• Emergence of future competitors\newline{}• Customer choosing other options such as DøgnNetto, or Bilka \\
+    \hline
+    \end{tabular}
+  \label{tab:swot_two}
+\end{table}
+
+\newpage
+
+%------------------------------------------------
+
+\subsection{The four P's} \label{TheFourPs}
+
+Text.
+
+\newpage
+
+%------------------------------------------------
+
+\subsection{Marketing strategy} \label{MarketingStrategy}
+
+Text.
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENTATION
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Documentation}
+
+Text.
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Conclusion}
+
+Project Conclusion.
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\newpage
+\printbibliography[heading=bibintoc,title={References}]
+
+%----------------------------------------------------------------------------------------
+%	APPENDIX
+%----------------------------------------------------------------------------------------
+
+\newpage
+\appendix
+\section{Appendix}
+
+%------------------------------------------------
+
+\end{document}
