@@ -15,6 +15,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{url}
+\usepackage{minted} % Used for including code with syntax highlighting: https://www.sharelatex.com/learn/Code_Highlighting_with_minted
 
 \usepackage[
     style=numeric,
@@ -164,7 +165,7 @@ Text
 \begin{center}
     \vspace{1em}
     \SlimHRule\\[0.1cm]
-    \Large{Our problem formulation}
+    \Large{Problem formulation}
     \SlimHRule\\[0.1cm]
     \vspace{1em}
 \end{center}
@@ -223,13 +224,14 @@ Text.
 \newpage
 \section{State of the art}
 
-Introduction on state of the art and how we searched and found our competitors.
+In this section we have been looking for inspirations for our project. We have identified many of other games that are congruous to what we wanted to do.
+We were looking for our competitiors via Google and also we knew a few of them from our own experiences. We have found plenty examples in the Internet and we chose the ones that are, in our opinion, the most similar and related to our game idea. Through this research we wanted to get an overview of general features that this type of games have. Then we will discuss which of them are the most relevant and decide which we would like to implement. This section also helped us to understand the market that we are working in and find out which Ocean Strategy we should use.
 
 %------------------------------------------------
 
 \subsection{Tallowmere} \label{StateOfTheArt_Tallowmere}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \center
     \includegraphics[width=1\textwidth]{StateOfTheArtScreenshots/tallowmere}
     \label{StateOfTheArt_Screenshots_Tallowmere}
@@ -258,7 +260,7 @@ Features:
 
 \subsection{Cave Story Plus}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \center
     \includegraphics[width=1\textwidth]{StateOfTheArtScreenshots/cave_story_plus}
     \label{StateOfTheArt_Screenshots_CaveStoryPlus}
@@ -267,7 +269,7 @@ Features:
 
 Cave Story+ is a Cave Story remake for PC, Mac and Nintendo Switch developed by Nicalis. It was released on Steam on November 22, 2011. The game features remastered graphics and music as well as several new game modes, of which one is only made exclusively to the Nintendo Switch version \cite{CaveStoryPlusWiki}.
 
-This game offers a unique storyline based on Mysterious themes and it takes you to an amazing world of Mimiga, the land of the Free Running Rabbits named as Mimigas \cite{CaveStoryPlusMoreGamesLike}.
+Cave story+ has a selection of three difficulty levels; easy, standard and hard. Easy mode halves the HP of enemies and halves the damage they do to Quote (the main protagonist of Cave Story). The standard difficulty, is identical to the original game, in which Quote takes 100\% damage, and enemies have 100\% HP. Hard mode doubles the HP of enemies and removes all Life Capsules but one from the game, leaving the player with a maximum of 8 HP. Moreover, the Missile Launcher isn't available in the Hard mode.
 
 Features:
 
@@ -286,7 +288,7 @@ Features:
 
 \subsection{Stardew Valley}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \center
     \includegraphics[width=1\textwidth]{StateOfTheArtScreenshots/stardew_valley}
     \label{StateOfTheArt_Screenshots_StardewValley}
@@ -312,7 +314,7 @@ Features:
 
 \subsection{Rogue Legacy}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \center
     \includegraphics[width=1\textwidth]{StateOfTheArtScreenshots/rogue_legacy}
     \label{StateOfTheArt_Screenshots_RogueLegacy}
@@ -339,7 +341,7 @@ Features: \cite{RogueLegacySteam}
 
 \subsection{Mega Miner}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \center
     \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/mega_miner}
     \label{StateOfTheArt_Screenshots_MegaMiner}
@@ -363,7 +365,7 @@ Features:
 
 \subsection{Spelunky}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \center
     \includegraphics[width=1\textwidth]{StateOfTheArtScreenshots/spelunky}
     \label{StateOfTheArt_Screenshots_Spelunky}
@@ -515,6 +517,65 @@ Text.
 
 \subsection{Choosing the game engine}
 
+\subsection{libGDX Setup}
+
+To setup the libGDX in IntelliJ, these factors are required as a minimum: 
+
+Java Development Kit 7+ (Must be JDK)
+IntelliJ IDEA 2016+, (community edition is sufficient) 
+Android Studio, 2.2+ 
+
+To create a project in libGDX, libGDX provides a simple wizard tool (gdx-setup.jar) allowing you to easily get started. This will create a gradle ready project, which can then be imported into the IDE (Android Studio, Eclipse..) \cite{LibGDXSetup}.
+
+\subsection{Using key bindings for player input}
+
+Key bindings in games are used to give the players the possibility to individually adjust their setup as they like. Players might want to change the assigned keys for certain actions in the game, if they have unusual keyboard layouts, use other types of input devices like gamepads, or simply like to change a certain key. This gives more flexibility since hard-coded keys can cause frustration and cause an unfavourable opinion about the game.
+
+LibGDX has two different kinds of input processing, the first one being the \texttt{Input} class included in the framework, which uses polling to get key presses. The second method is using an \texttt{InputProcessor}, also included in the framework, which uses events to control input. The key difference between those is, that one can check if a specific key is being pressed at the time of checking with the polling method. An input processor, however, triggers events when certain input events happen, like pressing down a key and then delivering the key code of the pressed key. This allows the input management to be more "clean" and efficient since one can't easily check if one of many flexible keys is being pressed without an input processor.
+
+In order to change and save key bindings, there needs to be a data structure. This is represented in the \texttt{KeyBindingObject} class (see \ref{KeyBindingObject.java}). One object each represents a single action in the game, represented by a String, and an array of integers, which represent the codes of the keys that are assigned to this action. Therefore, multiple keys can be assigned to one action.
+
+Furthermore, the game has to save this information in a file to make it persistent, or the information will be lost once the application is closed. Therefore, the game will save and load the key bindings into a JSON (JavaScript Object Notation) file, which is a standard data interchange format. Handling this operation is done by the \texttt{KeyBindings} class (see \ref{KeyBindings.java}) class. 
+
+This class has public lists of the type Integer, which store the key codes for each individual action. These lists are read by the game to process input. In the constructor of the class, the program searches for the JSON file and if it exists, it reads it with the help of \texttt{GSON} \cite{GSON}, an open-source library by Google to convert Java Objects into JSON strings and back. If the file doesn't exist or is empty, a new one will be created and the default keys will be assigned to each action by writing them to the new file and then read them again. Those default keys are hardcoded in the constructor as a \texttt{KeyBindingObject} array.
+
+However, if the file does exist, the JSON string is read from it and converted to an array of \texttt{KeyBindingObject}'s. Each key object will then be assigned to the proper list, that was mentioned earlier. This is done by looping through each object and adding it to the lists by comparing the String attribute, described as \texttt{}{action}. This procedure is called deserialization and can be seen in \ref{KeyBindings.java} in the \texttt{deserializeKeyBindings()} method.
+
+An exemplary key bindings JSON key binding file looks like this:
+\inputminted[linenos,breaklines]{json}{code/json/keybindings.json}
+
+An array in JSON starts with a \texttt{[}, hence the bracket at the start and end. The \texttt{KeyBindingObject}'s in between are items of that array. Each item has a String identifier and another array for the corresponding key codes. JSON separates key and value with a \texttt{:} symbol.
+
+As described earlier, the game uses a \texttt{InputProcessor} to handle gameplay relevant input. Since the game has to recognize when a key is pressed, and not just fire an event once a key is pressed down once, it uses public booleans to toggle between an action being active or not. Otherwise, the player would get a move impulse, for example, only once instead of for the duration of the key press. This logic is located in the \texttt{GameplayInputProcessor} class (see \ref{GameplayInputProcessor.java}). When a key is being pressed down or being released, it checks, if the key code of the pressed key is in one of the lists. If that is the case, the \texttt{boolean} is toggled. This \texttt{boolean} is a member of the \texttt{PlayScreen} class and is \texttt{public static} to be available in this class, and is being imported in a static context, hence the missing class reference in the Input Processor class.
+
+Finally, all of this is then used in the \texttt{update} loop of the \texttt{PlayScreen}, which is executed each frame. This is an example of the movement in the right direction:
+
+\begin{minted}[linenos,breaklines]{java}
+if (isPressingMoveRight &&
+    player.body.getLinearVelocity().x <= player.getMaxWalkVelocity()) 
+{
+    player.body.applyLinearImpulse(new Vector2(player.getWalkImpulseVelocity(), 0), player.body.getWorldCenter(), true);
+}
+\end{minted}
+
+Here, it is simply being checked, if the user presses a key that is associated with the action of moving in the right direction, by evaluating \texttt{isPressingMoveRight}.
+
+\subsection{Visual Documentation}
+
+\subsection{Tech Documentation}
+
+\subsection{Animations}
+
+\subsection{Collision detection}
+
+\subsection{Item collecting}
+
+\subsection{Player and enemy health management}
+
+\subsection{Sprites}
+
+\subsection{Maps}
+
 %----------------------------------------------------------------------------------------
 %	DISCUSSION
 %----------------------------------------------------------------------------------------
@@ -546,8 +607,38 @@ Project Conclusion.
 
 \newpage
 \appendix
-\section{Appendix}
+\section{Source Code Appendix}
+
+\subsection{MainGameClass} \label{MainGameClass.java}
+\inputminted[linenos,breaklines]{java}{code/MainGameClass.java}
+
+\subsection{GameProgress}
+
+\subsection{Input}
+\subsubsection{GameplayInputProcessor} \label{GameplayInputProcessor.java}
+\inputminted[linenos,breaklines]{java}{code/Input/GameplayInputProcessor.java}
+
+\subsection{Items}
+
+\subsection{KeyBindings}
+\subsubsection{KeyBindingObject} \label{KeyBindingObject.java}
+\inputminted[linenos,breaklines]{java}{code/KeyBindings/KeyBindingObject.java}
+\subsubsection{KeyBindings} \label{KeyBindings.java}
+\inputminted[linenos,breaklines]{java}{code/KeyBindings/KeyBindings.java}
+
+\subsection{Scenes}
+
+\subsection{Screens}
+\subsubsection{PlayScreen} \label{PlayScreen.java}
+\inputminted[linenos,breaklines]{java}{code/Screens/PlayScreen.java}
+
+\subsection{Sprites}
+
+\subsection{Statistics}
+
+\subsection{Tools}
+
+\subsection{Widgets}
 
 %------------------------------------------------
-
 \end{document}
