@@ -181,42 +181,6 @@ Text
 \newpage
 \section{Methodology} \label{Methodology}
 
-\textbf{Introduction}
-
-Text. \medskip
-
-\textbf{Planning}
-
-Text. \medskip
-
-\textbf{PEST analysis (Section \ref{PEST})}
-
-Text. \medskip
-
-\textbf{Stakeholder analysis (Section \ref{Stakeholder_Analysis})}
-
-Text. \medskip
-
-\textbf{Market Segmentation (Section \ref{MarketSegmentation})}
-
-Text. \medskip
-
-\textbf{Blue Ocean - Red Ocean (Section \ref{BlueOceanRedOcean})}
-
-Text. \medskip
-
-\textbf{SWOT analysis (Section \ref{SWOT})}
-
-Text. \medskip
-
-\textbf{The four P's (Section \ref{TheFourPs})}
-
-Text.  \medskip
-
-\textbf{Marketing strategy (Section \ref{MarketingStrategy})}
-
-Text.
-
 %----------------------------------------------------------------------------------------
 %	STATE OF THE ART
 %----------------------------------------------------------------------------------------
@@ -412,102 +376,6 @@ Conclusion.
 \newpage
 \section{Market analysis} \label{MarketAnalysis}
 
-%------------------------------------------------
-
-\subsection{Analysis of external factors (PEST)} \label{PEST}
-
-\textbf{Political factors}
-
-Text. \medskip
-
-\textbf{Economic factors}
-
-Text. \medskip
-
-\textbf{Socio-Cultural factors}
-
-Text. \medskip
-
-\textbf{Technological factors}
-
-Text. \medskip
-
-\textbf{Conclusion}
-
-Conclusion.
-
-\newpage
-
-%------------------------------------------------
-
-\subsection{Stakeholder analysis} \label{Stakeholder_Analysis}
-
-Text.
-
-\newpage
-
-%------------------------------------------------
-
-\subsection{Market segmentation} \label{MarketSegmentation}
-
-Text.
-
-\newpage
-
-%------------------------------------------------
-
-\subsection{Blue ocean - Red ocean} \label{BlueOceanRedOcean}
-
-Text.
-
-\newpage
-
-%------------------------------------------------
-
-\subsection{SWOT analysis} \label{SWOT}
-
-I left this in as a template for this kind of table, it took me a lot of time to figure that one out.
-
-\begin{table}[H]
-  \centering
-    \begin{tabular}{|p{0.5\textwidth}|p{0.5\textwidth}|}
-    \hline
-    \multicolumn{1}{|c|}{\textbf{Strengths}} & \multicolumn{1}{c|}{\textbf{Weaknesses}} \\
-    \hline
-    {• We can respond very quickly to our customers in Copenhagen and it's areas when they order on our platform\newline{}• Our prices are low and competitive compared to the market\newline{}• We know what our target customer is looking for if he chooses us, and therefore we can answer his needs very rapidly\newline{}• Our products are of certified good quality} & • Our company has little market presence or reputation\newline{}• We have a small staff, with limited skill base in many areas\newline{}• Higher price point compared to supermarkets since the service is included\newline{}• Delivery fees are higher by night time \\
-    \hline
-    \end{tabular}
-  \label{tab:swot_one}
-\end{table}
-
-\begin{table}[H]
-  \centering
-    \begin{tabular}{|p{0.5\textwidth}|p{0.5\textwidth}|}
-    \hline
-    \multicolumn{1}{|c|}{\textbf{Opportunities}} & \multicolumn{1}{c|}{\textbf{Threats}} \\
-    \hline
-    {• Our competitors offer is very limited, so we can expand more over time\newline{}• The sector of alcohol is always growing, which leaves a gap in the market\newline{}• No real competitors in Denmark} & • Selling alcohol license may be hard to obtain\newline{}• Emergence of future competitors\newline{}• Customer choosing other options such as DøgnNetto, or Bilka \\
-    \hline
-    \end{tabular}
-  \label{tab:swot_two}
-\end{table}
-
-\newpage
-
-%------------------------------------------------
-
-\subsection{The four P's} \label{TheFourPs}
-
-Text.
-
-\newpage
-
-%------------------------------------------------
-
-\subsection{Marketing strategy} \label{MarketingStrategy}
-
-Text.
-
 %----------------------------------------------------------------------------------------
 %	DOCUMENTATION
 %----------------------------------------------------------------------------------------
@@ -517,15 +385,26 @@ Text.
 
 \subsection{Choosing the game engine}
 
+Deciding on a game engine is not an easy task, especially for Java. In the group, we split up the research of individual game engines, so that we can gather information about as many as possible before deciding on one. The procedure of finding relevant frameworks and game engines was fairly easy, by searching on a list of game engines on Wikipedia \cite{ListOfGameEngines}, using Google search and reading through forums to determine the public opinion on this topic. It quickly became apparent, that the market is rather thin when it comes to Java-based game engines, the big players like Unity and Unreal Engine rely on \texttt{C} variations.
+
+We researched the option of using a native Java library like \texttt{JavaFX}, and therefore having to write a lot of basic code ourselves. The group decided against this option by a majority vote. Not having to deal with a lot of very basic problems and therefore being able to develop the game farther and with more features, was more appealing to the majority of the group members.
+
+Moving on, the group settled on a couple of game engines or frameworks to research: \texttt{libGDX, LWJGL, jMonkeyEngine, mini2Dx} and \texttt{Slick2D}. This selection is mostly by scavenging forum posts and the first page of Google for the search of "Java Game Engines". One particular Reddit post \cite{RedditJavaGameEngines} named all of them.
+
+Since \texttt{libGDX} is based on \texttt{LWJGL}, it is easy to compare them. \texttt{LWJGL} is very low-level and doesn't provide many features, compared to \texttt{libGDX}. It is also harder to start off with as a beginner in programming \cite{StackExchangeLibGDXLWJGL}, which is why we went with \texttt{libGDX}. Furthermore, the \texttt{jMonkeyEngine} is mainly developed for 3D applications, which rules it out for our project. \texttt{Mini2Dx} and \texttt{Slick2D} are both based on \texttt{LWJGL} too, but we already decided in favour of \texttt{libGDX}, since we had a working demo running and an overall good feeling with it. It is also important to note, that both of those have a smaller community and therefore documentation, which is also a reason, why the group decided to stick with the "big guy". 
+
 \subsection{libGDX Setup}
 
-To setup the libGDX in IntelliJ, these factors are required as a minimum: 
+To setup a libGDX project in IntelliJ IDEA, the official setup tool (see Figure \ref{fig:LibGDXSetupScreenshot}) needs to be used. This creates a Gradle project with all necessary files, adds optional extensions by default and defines the deployment platforms (Desktop, Android, iOS and HTML). By clicking on \emph{Advanced} and selecting IntelliJ IDEA or a different IDE, this tool also creates the project files for the specific IDE.
 
-Java Development Kit 7+ (Must be JDK)
-IntelliJ IDEA 2016+, (community edition is sufficient) 
-Android Studio, 2.2+ 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{libGDX_setup.png}
+    \caption{libGDX Setup Tool}
+    \label{fig:LibGDXSetupScreenshot}
+\end{figure}
 
-To create a project in libGDX, libGDX provides a simple wizard tool (gdx-setup.jar) allowing you to easily get started. This will create a gradle ready project, which can then be imported into the IDE (Android Studio, Eclipse..) \cite{LibGDXSetup}.
+The import into IntelliJ is easy, just open the project and an import pop-up appears. By simply clicking \texttt{Ok}, everything will be imported and set up and the project is ready. To run the application in an desktop environment, the build configuration needs to be updated first, by setting the working directory to the \texttt{assets} folder of the project. With this being done, the set-up is complete.
 
 \subsection{Using key bindings for player input}
 
