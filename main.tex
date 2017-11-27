@@ -98,7 +98,7 @@
     \begin{flushright} \large
     \emph{Study Numbers} \\
         20174692 \\
-        - \\
+        20173803 \\
         20174693 \\
         20174921 \\
         - \\
@@ -160,7 +160,7 @@
 
 \section{Introduction}
 
-Text
+Hi how are you
 
 \begin{center}
     \vspace{1em}
@@ -189,7 +189,7 @@ Text
 \section{State of the art}
 
 In this section we have been looking for inspirations for our project. We have identified many of other games that are congruous to what we wanted to do.
-We were looking for our competitiors via Google and also we knew a few of them from our own experiences. We have found plenty examples in the Internet and we chose the ones that are, in our opinion, the most similar and related to our game idea. Through this research we wanted to get an overview of general features that this type of games have. Then we will discuss which of them are the most relevant and decide which we would like to implement. This section also helped us to understand the market that we are working in and find out which Ocean Strategy we should use.
+We were looking for our competitors via Google and we also knew a few of them beforehand. We have found plenty of examples on the Internet and we chose the ones that are, in our opinion, the most similar and related to our game idea. Through this research we wanted to get an overview of general features that this type of games have. Then we decided to discuss which of them were the most relevant and which we would like to implement. This section also helped us to understand the market that we are working in and helpted us to find out which Ocean Strategy we should use.
 
 %------------------------------------------------
 
@@ -197,9 +197,9 @@ We were looking for our competitiors via Google and also we knew a few of them f
 
 \begin{figure}[ht]
     \center
-    \includegraphics[width=1\textwidth]{StateOfTheArtScreenshots/tallowmere}
+    \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/mega_miner}
     \label{StateOfTheArt_Screenshots_Tallowmere}
-    \caption{Screenshot of the game Tallowmere \cite{TallowmereScreenshot}}
+    \caption{Screenshot of the game Mega Miner \cite{MegaMinerScreenshot}}
 \end{figure}
 
 A 2D action platformer with an emphasis on executing your hero's jumping, shield-blocking, and weapon-attacking at the right moments as you move through a procedurally-generated dungeon. The game is available for:
@@ -374,14 +374,39 @@ Conclusion.
 %----------------------------------------------------------------------------------------
 
 \newpage
-\section{Market analysis} \label{MarketAnalysis}
+\section{Business Strategy} \label{MarketAnalysis}
 
 %----------------------------------------------------------------------------------------
+\subsection{Business Model} 
+Ever since the release of Pong in the U.S. and the beginning of the first generation of video game consoles in 1972 the gaming industry has been growing steadily and sees no end it sight. It has spread throughout the globe and game development companies have become international organisations. The only part of the globe where games are not popular is South America.\cite{GamesMarketRevenue} In the past few years the mobile gaming segment has overtaken all others in revenue and is expected to increase its lead over the coming years.
+
+\begin{figure}[ht]
+    \center
+    \includegraphics[width=1\textwidth]{BusinessStrategy/Newzoo_2017_Global_Games_Market_Per_Segment_April_2017}
+    \label{Newzoo_2017_Global_Games_Market_Per_Segment_April_2017}
+    \caption{Newzoo 2017 Global Games Market Per Segment \cite{NezooScreenshot}}
+\end{figure}
+
+One of the reasons for this growth is the inclusion of new players - mostly females and elders, has induced the popularity of casual games in social networks and mobile apps. Another is the constant development of the different business models used by game developers. The most successful in recent years has been the free-to-model.\cite{BusinessModelsAndStrategy}
+
+So how to combine these strengths into a model that will help us establish our project in this competitive market?
+
+We plan to use the trends in gaming to our advantage - PC games are still popular, but players expect an impressive gaming experience in return for their money. Mobile games are growing in popularity and lots of people are happy to pay for a simple entertaining experience.
+
+Therefore we plan to release Gangster Squirrel for free for Desktop devices as an effort to boost interest. Mobile versions would be available as well for 1.99\$.
+
+A subscription-based model, though other games have had great success with it, doesn’t make sense in our case, because our game is very short. We plan to build a strong brand with successful sequels of the game, which will help with establishing ourselves in the market.
+
+\subsection{Marketing Strategy}
+Lorem impsum
+
 %	DOCUMENTATION
 %----------------------------------------------------------------------------------------
 
 \newpage
 \section{Documentation}
+
+%------------------------------------------------
 
 \subsection{Choosing the game engine}
 
@@ -395,9 +420,9 @@ Since \texttt{libGDX} is based on \texttt{LWJGL}, it is easy to compare them. \t
 
 \subsection{libGDX Setup}
 
-To setup a libGDX project in IntelliJ IDEA, the official setup tool (see Figure \ref{fig:LibGDXSetupScreenshot}) needs to be used. This creates a Gradle project with all necessary files, adds optional extensions by default and defines the deployment platforms (Desktop, Android, iOS and HTML). By clicking on \emph{Advanced} and selecting IntelliJ IDEA or a different IDE, this tool also creates the project files for the specific IDE.
+To setup a libGDX project in IntelliJ IDEA, the official setup tool (see Figure \ref{fig:LibGDXSetupScreenshot}) needs to be used. This creates a Gradle project with all necessary files, adds optional extensions by default and defines the deployment platforms (Windows, macOS, Linux, Android, iOS, Blackberry and HTML5). By clicking on \emph{Advanced} and selecting IntelliJ IDEA or a different IDE, this tool also creates the project files for the specific IDE.
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=0.6\textwidth]{libGDX_setup.png}
     \caption{libGDX Setup Tool}
@@ -405,6 +430,73 @@ To setup a libGDX project in IntelliJ IDEA, the official setup tool (see Figure 
 \end{figure}
 
 The import into IntelliJ is easy, just open the project and an import pop-up appears. By simply clicking \texttt{Ok}, everything will be imported and set up and the project is ready. To run the application in an desktop environment, the build configuration needs to be updated first, by setting the working directory to the \texttt{assets} folder of the project. With this being done, the set-up is complete.
+
+%------------------------------------------------
+
+\subsection{The application structure}
+
+Since libGDX applications can run on multiple platforms (Windows, macOS, Linux, Android, iOS, Blackberry and HTML5), the structure isn't as straight forward as a usual Java application. This project is supposed to only run on the desktop platforms though, which is why the focus is there.
+
+Depending on the selected deployment platforms, the project will contain different kinds of \texttt{Launchers}, which handle the execution of the game. All desktop environments run on the same launcher, since Java is cross-platform itself. The following code is all it takes to set it up, including setting certain configuration values, which are defined in the main class of the game.
+
+\begin{minted}[linenos,breaklines]{java}
+public class DesktopLauncher {
+	public static void main (String[] arg) {
+		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
+
+		config.title = MainGameClass.NAME;
+		config.foregroundFPS = MainGameClass.FPS;
+		config.width = MainGameClass.WIDTH;
+		config.height = MainGameClass.HEIGHT;
+		config.fullscreen = MainGameClass.FULLSCREEN;
+		config.resizable = MainGameClass.RESIZABLE;
+
+		new LwjglApplication(new MainGameClass(), config);
+	}
+}
+\end{minted}
+
+Going further, the actual code is located in the \texttt{core} directory of the project. Beside that, the generated \texttt{bytecode}, the \texttt{build gradle} file and the \texttt{assets} folder are located here. The assets folder contains all external files, like graphics, fonts and text files, which are used by the game.
+
+The game starts off in the \texttt{MainGameClass} (see \ref{MainGameClass.java}), which runs the very basic foundation of the game, by setting up important public static parameters like screen size, camera settings, gravity, and more. The main class extends libGDX's \emph{abstract} \texttt{Game} class, which itself implements the \texttt{ApplicationListener} \emph{interface}. LibGDX mostly works in an event driven fashion, which is why there is no game loop \cite{libGDXLifeCycle}. The \texttt{render} method however, can be considered as such, as it runs every every frame. The flowchart in figure \ref{fig:LibGDXLifeCycle} explains the life cycle of a libGDX application quite well.
+
+\begin{figure}[ht]
+    \center
+    \includegraphics[width=1\textwidth]{Documentation/lifeCycle}
+    \caption{LibGDX Life Cycle \cite{libGDXLifeCycle}}
+    \label{fig:LibGDXLifeCycle}
+\end{figure}
+
+The main class has several purposes. It runs the main game cycle, sets up necessary parameters and has them publicly available to all classes, but also contains some important methods, like resetting certain values in the save files (player lifes, current time) and also methods to exit the application. The following code shows the two overloaded exit methods. The difference is simply, that one of them prints out a message before exiting, while the other does not.
+
+\begin{minted}[linenos,breaklines]{java}
+public void exitApplication() {
+	resetTimer();
+	resetPlayerLifes();
+	Gdx.app.exit();
+	System.exit(0);
+}
+
+public void exitApplication(String errorMessage) {
+	if (errorMessage != null && !errorMessage.isEmpty()) {
+		System.err.println(errorMessage);
+	}
+
+	exitApplication();
+}
+\end{minted}
+
+The methods \texttt{resetTimer()} and \texttt{resetPlayerLifes()} reset the values for the current game time and the current lifes of the player in the JSON save files, because they are being used by the game and need to be temporary, or the lifes or the time will not start from the default value, when starting the game the next time. These values need to be stored in a file, because the entire play screen class is being reloaded, when the player respawns, and therefore resetting all run time variables.
+
+The game is then being closed by calling the libGDX method \texttt{Gdx.app.exit()}, which disposes of all disposable resources in the application, and close the game. This works just fine, but usually prints out a bunch of irrelevant errors, which can be more or less supressed by calling the native Java method \texttt{System.exit()}. The error code \texttt{0} means the execution went just fine with no errors.
+
+When the main class is done setting things up, including the creation of a new Thread for a connectivity with Twitch (see documentation at \ref{Twitch}), the game switches the \texttt{Screen} to the \texttt{SplashScreen} class, which simply displays a splash screen and then switches to the \texttt{PlayScreen} class \ref{PlayScreen.java}, which is the main screen of the game, containing the actual gameplay and manages, how it all comes together. It implements libGDX's \texttt{Screen} class and follows a similar life cycle as described for the main game class.
+
+ %------------------------------------------------
+ 
+ \subsection{The Play Screen}
+ 
+ %------------------------------------------------
 
 \subsection{Using key bindings for player input}
 
@@ -425,7 +517,7 @@ An exemplary key bindings JSON key binding file looks like this:
 
 An array in JSON starts with a \texttt{[}, hence the bracket at the start and end. The \texttt{KeyBindingObject}'s in between are items of that array. Each item has a String identifier and another array for the corresponding key codes. JSON separates key and value with a \texttt{:} symbol.
 
-As described earlier, the game uses a \texttt{InputProcessor} to handle gameplay relevant input. Since the game has to recognize when a key is pressed, and not just fire an event once a key is pressed down once, it uses public booleans to toggle between an action being active or not. Otherwise, the player would get a move impulse, for example, only once instead of for the duration of the key press. This logic is located in the \texttt{GameplayInputProcessor} class (see \ref{GameplayInputProcessor.java}). When a key is being pressed down or being released, it checks, if the key code of the pressed key is in one of the lists. If that is the case, the \texttt{boolean} is toggled. This \texttt{boolean} is a member of the \texttt{PlayScreen} class and is \texttt{public static} to be available in this class, and is being imported in a static context, hence the missing class reference in the Input Processor class.
+As described earlier, the game uses an \texttt{InputProcessor} to handle gameplay relevant input. Since the game has to recognize when a key is pressed, and not just fire an event once a key is pressed down once, it uses public booleans to toggle between an action being active or not. Otherwise, the player would get a move impulse, for example, only once instead of for the duration of the key press. This logic is located in the \texttt{GameplayInputProcessor} class (see \ref{GameplayInputProcessor.java}). When a key is being pressed down or being released, it checks, if the key code of the pressed key is in one of the lists. If that is the case, the \texttt{boolean} is toggled. This \texttt{boolean} is a member of the \texttt{PlayScreen} class and is \texttt{public static} to be available in this class, and is being imported in a static context, hence the missing class reference in the Input Processor class.
 
 Finally, all of this is then used in the \texttt{update} loop of the \texttt{PlayScreen}, which is executed each frame. This is an example of the movement in the right direction:
 
@@ -437,23 +529,130 @@ if (isPressingMoveRight &&
 }
 \end{minted}
 
-Here, it is simply being checked, if the user presses a key that is associated with the action of moving in the right direction, by evaluating \texttt{isPressingMoveRight}.
+Here, it is simply being checked, if the user presses a key that is associated with the action of moving in the right direction, by evaluating \texttt{isPressingMoveRight}. If this is the case, a linear impulse in the right direction is being applied to the player.
+
+ %------------------------------------------------
 
 \subsection{Visual Documentation}
 
+ %------------------------------------------------
+
 \subsection{Tech Documentation}
+
+ %------------------------------------------------
 
 \subsection{Animations}
 
+An animation can be described as the illusion of movement caused by rapidly switching between different static images. We animated our characters by using libGdx's Animation Class \cite{libGdxAnimClass}. An animation consists of multiple frames which are shown in a sequence at set intervals.  The Animation Class stores a list of objects representing the sequence. Each object in the Animation is called a key frame, and multiple key frames make up the animation.
+
+A typical 2D animation consists of a number of TextureRegions and would be specified as:
+
+\mint{java}{Animation<TextureRegion> myAnimation = new Animation<TextureRegion>(...);}
+
+Every animation needs a sprite sheet - that's an image consisting of all the frames for the animation.
+
+\begin{figure}[ht]
+    \center
+    \includegraphics[width=1\textwidth]{Documentation/frog.jpg}
+    \caption{Sprite Sheet Example}
+    \label{SpriteSheetExample}
+\end{figure}
+
+The sprite sheet contains two different animations - the first 4 frames from left to right are used to animated movement. The last 4 are used for the attack animation. To help select the correct parts of the spritesheet while animating, a TextureAtlas is generated. Among other information about the sheet, it contains the start position of the two types of animation (lines 6 and 13). Here is an example:
+\begin{minted}[linenos,breaklines]{text}
+frog.png
+size: 256, 32
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+frog_jump
+  rotate: false
+  xy: 0, 0
+  size: 128, 32
+  orig: 128, 32
+  offset: 0, 0
+  index: -1
+frog_attack
+  rotate: false
+  xy: 128, 0
+  size: 128, 32
+  orig: 128, 32
+  offset: 0, 0
+  index: -1
+\end{minted}
+
+All the texture atlases are defined in the game's \texttt{PlayScreen} class, using the following syntax:
+\begin{minted}[linenos,breaklines]{java}
+//Define frog atlas
+enemyFrogTextureAtlas = new TextureAtlas("sprites/enemies/frog/frog.atlas");
+
+//Frog atlas getter
+public TextureAtlas getEnemyFrogTextureAtlas() {
+    return enemyFrogTextureAtlas;
+}
+\end{minted}
+
+The defined atlases can be reached from other classes via a getter.
+
+We created the actual animations in the class for each specific character. 
+
+The first step is to add all the frames we'll need into an array, by selecting the start of the animation from the texture atlas and iterating until we have collected all the frames (in this case the frames are 4).
+The second step is to pass the the speed of animation to the Animation Class along with the animation frames.
+
+\begin{minted}[linenos,breaklines]{java}
+//Define attack animation
+attackFrames = new Array<>();
+for(int i = 0; i < 4; i++) {
+    attackFrames.add(new TextureRegion(
+        screen.getEnemyFrogTextureAtlas().findRegion("frog_attack"), i * ENEMY_PIXEL_WIDTH, 0, ENEMY_PIXEL_WIDTH, ENEMY_PIXEL_HEIGHT)
+    );
+}
+attackAnimation = new Animation<>(0.4f, attackFrames);
+
+//Define move animation
+jumpFrames = new Array<>();
+for(int i = 0; i < 4; i++) {
+    jumpFrames.add(new TextureRegion(
+        screen.getEnemyFrogTextureAtlas().findRegion("frog_jump"), i * ENEMY_PIXEL_WIDTH, 0, ENEMY_PIXEL_WIDTH, ENEMY_PIXEL_HEIGHT)
+    );
+}
+jumpAnimation = new Animation<>(0.4f, jumpFrames);
+\end{minted}
+
+It's up to the developer though to specify when and for how long the animation is run. In our case we jump animation is on a continuous loop, and the attack is used only when the enemy and player are in contact.
+
+\begin{minted}[linenos,breaklines]{java}
+public void update(float deltaTime) {
+    setRegion(jumpAnimation.getKeyFrame(stateTime, true));
+}
+\end{minted}
+
+
+ %------------------------------------------------
+
 \subsection{Collision detection}
+
+ %------------------------------------------------
 
 \subsection{Item collecting}
 
+ %------------------------------------------------
+
 \subsection{Player and enemy health management}
+
+ %------------------------------------------------
 
 \subsection{Sprites}
 
+ %------------------------------------------------
+
 \subsection{Maps}
+
+Document maps \textbf{hi}
+
+ %------------------------------------------------
+
+\subsection{Twitch} \label{Twitch}
 
 %----------------------------------------------------------------------------------------
 %	DISCUSSION
