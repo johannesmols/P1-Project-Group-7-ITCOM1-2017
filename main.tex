@@ -103,7 +103,7 @@
         20174921 \\
         - \\
         20173800 \\
-        - \\
+        20174447 \\
     \end{flushright}
     \end{minipage}\\[0.5cm]
     
@@ -189,7 +189,7 @@ Text
 \section{State of the art}
 
 In this section we have been looking for inspirations for our project. We have identified many of other games that are congruous to what we wanted to do.
-We were looking for our competitors via Google and we also knew a few of them beforehand. We have found plenty of examples on the Internet and we chose the ones that are, in our opinion, the most similar and related to our game idea. Through this research we wanted to get an overview of general features that this type of games have. Then we decided to discuss which of them were the most relevant and which we would like to implement. This section also helped us to understand the market that we are working in and helpted us to find out which Ocean Strategy we should use.
+We were looking for our competitors via Google and we also knew a few of them beforehand. We have found plenty of examples on the Internet and we chose the ones that are, in our opinion, the most similar and related to our game idea. Through this research we wanted to get an overview of general features that this type of games have. Then we decided to discuss which of them were the most relevant and which we would like to implement. This section also helped us to understand the market that we are working in and helped us to find out which Ocean Strategy we should use.
 
 %------------------------------------------------
 
@@ -259,7 +259,7 @@ Features:
     \caption{Screenshot of the game Stardew Valley \cite{StardewValleyScreenshot}}
 \end{figure}
 
-Stardew Valley is a 2D top-down indie farming simulation, which features an endless mine, where the player can fight, gather resources for the character and his farm and explore the different levels. The mines consist of an endless amount of procedurally generated levels, with checkpoints after every five levels. These checkpoints can be reached by an elevator on the first level in the mines. Each level consists of several elements, which are mainly gatherable stones and enemies, and also enemies. Furthermore, some levels have special elements, which are quicksand, minecarts, chests, and more. To reach the next level, the player has to find a ladder down, which can be found under a random stone or ore. They can either be destroyed by a pickaxe or bomb. This mine system is only a small part of the overall game but offers a fun and highly replayable experience due to the infinite amounts of levels.
+Stardew Valley is a 2D top-down indie farming simulation, which features an endless mine, where the player can fight, gather resources for the character and his farm and explore the different levels. The mines consist of an endless amount of procedurally generated levels, with checkpoints after every five levels. These checkpoints can be reached by an elevator on the first level in the mines. Each level consists of several elements, which are mainly gatherable stones and enemies. Furthermore, some levels have special elements, which are quicksand, minecarts, chests, and more. To reach the next level, the player has to find a ladder down, which can be found under a random stone or ore. They can either be destroyed by a pickaxe or bomb. This mine system is only a small part of the overall game but offers a fun and highly replayable experience due to the infinite amounts of levels.
 
 Features:
 
@@ -398,7 +398,8 @@ Therefore we plan to release Gangster Squirrel for free for Desktop devices as a
 A subscription-based model, though other games have had great success with it, doesn’t make sense in our case, because our game is very short. We plan to build a strong brand with successful sequels of the game, which will help with establishing ourselves in the market.
 
 \subsection{Marketing Strategy}
-Lorem impsum
+Through the long history of game development, the marketing utilised by game producers has been quite varied \cite{MarketingStrategyExamples}. Users have been bombarded with promotional videos, print ads, billboards, newsletters and much more. Some companies have benefited from their marketing materials going viral.
+Our game will not be distributed on physical media, due to the added cost, it will available solely online. Therefore to aid with the advertisement our marketing will also be online, due to it's high return of investment, analytic capabilities and ease of use.
 
 %	DOCUMENTATION
 %----------------------------------------------------------------------------------------
@@ -408,19 +409,27 @@ Lorem impsum
 
 %------------------------------------------------
 
-\subsection{Choosing the game engine}
+\subsection{Choosing the game engine} \label{DocGameEngine}
 
-Deciding on a game engine is not an easy task, especially for Java. In the group, we split up the research of individual game engines, so that we can gather information about as many as possible before deciding on one. The procedure of finding relevant frameworks and game engines was fairly easy, by searching on a list of game engines on Wikipedia \cite{ListOfGameEngines}, using Google search and reading through forums to determine the public opinion on this topic. It quickly became apparent, that the market is rather thin when it comes to Java-based game engines, the big players like Unity and Unreal Engine rely on \texttt{C} variations.
+Deciding on a game engine is not an easy task, especially for Java. In the group, we split up the research of individual game engines, so that we can gather information about as many as possible before deciding on one. The procedure of finding relevant frameworks and game engines was fairly easy, by searching on a list of game engines on Wikipedia \cite{ListOfGameEngines}, using Google search and reading through forums to determine the public opinion on this topic. It quickly became apparent, that the market is rather thin when it comes to Java-based game engines, the big players like Unity \cite{UnityGameEngine} and Unreal Engine \cite{UnrealEngine} rely on \texttt{C} variations.
 
-We researched the option of using a native Java library like \texttt{JavaFX}, and therefore having to write a lot of basic code ourselves. The group decided against this option by a majority vote. Not having to deal with a lot of very basic problems and therefore being able to develop the game farther and with more features, was more appealing to the majority of the group members.
+We researched the option of using a native Java library like \texttt{JavaFX}, which would imply a lot of work on creating a core foundation for a game since it's not specifically made for this purpose. Most modern game engines come with certain standards, including an already existing application structure (with a game loop, scene management, events, and more). Popular engines usually also include their own or community made tools like map editors, asset managers, user interface composer, physics simulation, and so much more.
 
-Moving on, the group settled on a couple of game engines or frameworks to research: \texttt{libGDX, LWJGL, jMonkeyEngine, mini2Dx} and \texttt{Slick2D}. This selection is mostly by scavenging forum posts and the first page of Google for the search of "Java Game Engines". One particular Reddit post \cite{RedditJavaGameEngines} named all of them.
+All of this would have the consequence of us having to code everything ourselves, limiting the outcome of the project due to the limited time. The group decided against this option by a majority vote. Not having to deal with a lot of very basic problems and therefore being able to develop the game farther and with more features, was more appealing to the majority of the group members.
 
-Since \texttt{libGDX} is based on \texttt{LWJGL}, it is easy to compare them. \texttt{LWJGL} is very low-level and doesn't provide many features, compared to \texttt{libGDX}. It is also harder to start off with as a beginner in programming \cite{StackExchangeLibGDXLWJGL}, which is why we went with \texttt{libGDX}. Furthermore, the \texttt{jMonkeyEngine} is mainly developed for 3D applications, which rules it out for our project. \texttt{Mini2Dx} and \texttt{Slick2D} are both based on \texttt{LWJGL} too, but we already decided in favour of \texttt{libGDX}, since we had a working demo running and an overall good feeling with it. It is also important to note, that both of those have a smaller community and therefore documentation, which is also a reason, why the group decided to stick with the "big guy". 
+Moving on, the group settled on a couple of game engines or frameworks to research: \texttt{libGDX} \cite{LibGDX}, \texttt{LWJGL} \cite{LWJGL}, \texttt{jMonkeyEngine} \cite{jMonkeyEngine}, \texttt{mini2Dx} \cite{mini2Dx} and \texttt{Slick2D} \cite{Slick2D}. This selection is mostly by scavenging forum posts and the first page of Google for the search of "Java Game Engines". One particular \emph{Reddit} post \cite{RedditJavaGameEngines} named all of them.
 
-\subsection{libGDX Setup}
+Since \texttt{libGDX} is based on \texttt{LWJGL}, it is easy to compare them. \texttt{LWJGL} is very low-level and doesn't provide many features, compared to \texttt{libGDX}. It is also harder to start off with as a beginner in programming \cite{StackExchangeLibGDXLWJGL}, which is why we went with \texttt{libGDX}. Furthermore, the \texttt{jMonkeyEngine} is mainly developed for 3D applications, which rules it out for our project. 
 
-To setup a libGDX project in IntelliJ IDEA, the official setup tool (see Figure \ref{fig:LibGDXSetupScreenshot}) needs to be used. This creates a Gradle project with all necessary files, adds optional extensions by default and defines the deployment platforms (Windows, macOS, Linux, Android, iOS, Blackberry and HTML5). By clicking on \emph{Advanced} and selecting IntelliJ IDEA or a different IDE, this tool also creates the project files for the specific IDE.
+\texttt{Mini2Dx} and \texttt{Slick2D} are both based on \texttt{LWJGL} too, but considerably smaller than \texttt{libGDX}. Comparing the GitHub pages of libGDX \cite{libgDXGitHub} and mini2Dx \cite{mini2DxGitHub}, this is quickly apparent. \texttt{LibGDX} has more than 400 contributors to the repository, while \texttt{mini2Dx} is only created and maintained by one person when looking at the contributors page. Meanwhile, \texttt{Slick2D} is hosted on BitBucket \cite{Slick2DBitBucket}, and hasn't even created a \emph{Read me} file. Judging from the documentation of the different game engines (can be found on the respective GitHub pages and for \texttt{Slick2D} on their own Wiki page \cite{Slick2DWiki}), it becomes even clearer, which engine is popular and which are not. \texttt{LibGDX} has a very extensive documentation with plenty of examples and in-depth explanations. \texttt{Mini2Dx} has a much smaller documentation, where most topics simply consist of a lot of pasted code without proper explanation. Meanwhile, \texttt{Slick2D}'s wiki page looks almost like an empty wiki template, because there is basically no documentation whatsoever.
+
+This analysis is quite a clear statement, which choice would be the best and most painless way to go, so we decided to go with \texttt{libGDX}.
+
+%------------------------------------------------
+
+\subsection{libGDX Setup} \label{DocSetup}
+
+To set up a libGDX project in IntelliJ IDEA, the official setup tool (see Figure \ref{fig:LibGDXSetupScreenshot}) needs to be used. This creates a Gradle project with all necessary files, adds optional extensions by default and defines the deployment platforms (Windows, macOS, Linux, Android, iOS, Blackberry, and HTML5). By clicking on \emph{Advanced} and selecting IntelliJ IDEA or a different IDE, this tool also creates the project files for the specific IDE.
 
 \begin{figure}[ht]
     \centering
@@ -429,15 +438,15 @@ To setup a libGDX project in IntelliJ IDEA, the official setup tool (see Figure 
     \label{fig:LibGDXSetupScreenshot}
 \end{figure}
 
-The import into IntelliJ is easy, just open the project and an import pop-up appears. By simply clicking \texttt{Ok}, everything will be imported and set up and the project is ready. To run the application in an desktop environment, the build configuration needs to be updated first, by setting the working directory to the \texttt{assets} folder of the project. With this being done, the set-up is complete.
+The import into IntelliJ is easy, just open the project and an import pop-up appears. By simply clicking \texttt{Ok}, everything will be imported and set up and the project is ready. To run the application in a desktop environment, the build configuration needs to be updated first, by setting the working directory to the \texttt{assets} folder of the project. With this being done, the set-up is complete.
 
 %------------------------------------------------
 
-\subsection{The application structure}
+\subsection{The main class} \label{DocMainClass}
 
-Since libGDX applications can run on multiple platforms (Windows, macOS, Linux, Android, iOS, Blackberry and HTML5), the structure isn't as straight forward as a usual Java application. This project is supposed to only run on the desktop platforms though, which is why the focus is there.
+Since libGDX applications can run on multiple platforms (Windows, macOS, Linux, Android, iOS, Blackberry, and HTML5), the structure isn't as straightforward as a usual Java application. This project is supposed to only run on the desktop platforms though, which is why the focus is there.
 
-Depending on the selected deployment platforms, the project will contain different kinds of \texttt{Launchers}, which handle the execution of the game. All desktop environments run on the same launcher, since Java is cross-platform itself. The following code is all it takes to set it up, including setting certain configuration values, which are defined in the main class of the game.
+Depending on the selected deployment platforms, the project will contain different kinds of \texttt{Launchers}, which handle the execution of the game. All desktop environments run on the same launcher since Java is cross-platform itself. The following code is all it takes to set it up, including setting certain configuration values, which are defined in the main class of the game.
 
 \begin{minted}[linenos,breaklines]{java}
 public class DesktopLauncher {
@@ -458,7 +467,7 @@ public class DesktopLauncher {
 
 Going further, the actual code is located in the \texttt{core} directory of the project. Beside that, the generated \texttt{bytecode}, the \texttt{build gradle} file and the \texttt{assets} folder are located here. The assets folder contains all external files, like graphics, fonts and text files, which are used by the game.
 
-The game starts off in the \texttt{MainGameClass} (see \ref{MainGameClass.java}), which runs the very basic foundation of the game, by setting up important public static parameters like screen size, camera settings, gravity, and more. The main class extends libGDX's \emph{abstract} \texttt{Game} class, which itself implements the \texttt{ApplicationListener} \emph{interface}. LibGDX mostly works in an event driven fashion, which is why there is no game loop \cite{libGDXLifeCycle}. The \texttt{render} method however, can be considered as such, as it runs every every frame. The flowchart in figure \ref{fig:LibGDXLifeCycle} explains the life cycle of a libGDX application quite well.
+The game starts off in the \texttt{MainGameClass} (see \ref{MainGameClass.java}), which runs the very basic foundation of the game, by setting up important public static parameters like screen size, camera settings, gravity, and more. The main class extends libGDX's \emph{abstract} \texttt{Game} class, which itself implements the \texttt{ApplicationListener} \emph{interface}. LibGDX mostly works in an event-driven fashion, which is why there is no game loop \cite{libGDXLifeCycle}. The \texttt{render} method, however, can be considered as such, as it runs every frame. The flowchart in figure \ref{fig:LibGDXLifeCycle} explains the life cycle of a libGDX application quite well.
 
 \begin{figure}[ht]
     \center
@@ -467,7 +476,7 @@ The game starts off in the \texttt{MainGameClass} (see \ref{MainGameClass.java})
     \label{fig:LibGDXLifeCycle}
 \end{figure}
 
-The main class has several purposes. It runs the main game cycle, sets up necessary parameters and has them publicly available to all classes, but also contains some important methods, like resetting certain values in the save files (player lifes, current time) and also methods to exit the application. The following code shows the two overloaded exit methods. The difference is simply, that one of them prints out a message before exiting, while the other does not.
+The main class has several purposes. It runs the main game cycle, sets up necessary parameters and has them publicly available to all classes, but also contains some important methods, like resetting certain values in the save files (player lives, current time) and also methods to exit the application. The following code shows the two overloaded exit methods. The difference is simply, that one of them prints out a message before exiting, while the other does not.
 
 \begin{minted}[linenos,breaklines]{java}
 public void exitApplication() {
@@ -486,19 +495,80 @@ public void exitApplication(String errorMessage) {
 }
 \end{minted}
 
-The methods \texttt{resetTimer()} and \texttt{resetPlayerLifes()} reset the values for the current game time and the current lifes of the player in the JSON save files, because they are being used by the game and need to be temporary, or the lifes or the time will not start from the default value, when starting the game the next time. These values need to be stored in a file, because the entire play screen class is being reloaded, when the player respawns, and therefore resetting all run time variables.
+The methods \texttt{resetTimer()} and \texttt{resetPlayerLifes()} reset the values for the current game time and the current lives of the player in the JSON save files, because they are being used by the game and need to be temporary, or the lives or the time will not start from the default value, when starting the game the next time. These values need to be stored in a file, because the entire play screen class is being reloaded, when the player respawns, and therefore resetting all run time variables.
 
-The game is then being closed by calling the libGDX method \texttt{Gdx.app.exit()}, which disposes of all disposable resources in the application, and close the game. This works just fine, but usually prints out a bunch of irrelevant errors, which can be more or less supressed by calling the native Java method \texttt{System.exit()}. The error code \texttt{0} means the execution went just fine with no errors.
+The game is then being closed by calling the libGDX method \texttt{Gdx.app.exit()}, which disposes of all disposable resources in the application and close the game. This works just fine, but usually prints out a bunch of irrelevant errors, which can be more or less suppressed by calling the native Java method \texttt{System.exit()}. The error code \texttt{0} means the execution went just fine with no errors.
 
 When the main class is done setting things up, including the creation of a new Thread for a connectivity with Twitch (see documentation at \ref{Twitch}), the game switches the \texttt{Screen} to the \texttt{SplashScreen} class, which simply displays a splash screen and then switches to the \texttt{PlayScreen} class \ref{PlayScreen.java}, which is the main screen of the game, containing the actual gameplay and manages, how it all comes together. It implements libGDX's \texttt{Screen} class and follows a similar life cycle as described for the main game class.
 
- %------------------------------------------------
+%------------------------------------------------
+
+\subsection{The application structure} \label{DocApplicationStructure}
+
+As described in the previous section, the \texttt{MainGameClass} is the entry point of the application, followed by the most important class of the game, the \texttt{PlayScreen}. This does not nearly describe the structure of the entire project though since there are dozens of classes in the project.
+
+The following figure \ref{fig:minClassDiagram} is a minimised version of the class diagram of the project, which is supposed to show the relation between classes and the overall structure.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Documentation/class_diagram_minimized.png}
+    \caption{Minimised class diagram}
+    \label{fig:minClassDiagram}
+\end{figure}
+
+The application starts with the \texttt{DesktopLauncher}. Other platforms have different launchers, but this project is only available on desktop platforms and is, therefore, the only launcher. The full diagram also shows a \texttt{HtmlLauncher} for running it in a web browser, which is not used, nor supported in our case.
+
+The first actual class of the game is the \texttt{MainGameClass}, which was already explained in the previous section. From there, a separate thread for the Twitch integration is created (see section \ref{Twitch}). The reason, why so many dotted arrows point back to the main class, is because of all the public parameters that are stored here and needed by many classes.
+
+Following that, the main game class creates the \texttt{SplashScreen}, which just shows an image for a few seconds and then switches to the \texttt{PlayScreen}. In here, everything gameplay relevant is being created and handled (see section \ref{DocPlayScreen}). 
+
+The following list briefly describes each class that can be seen in the minimised class diagram, except the ones already described. Many of these classes have subclasses or associated classes, which are not relevant for the structure but can be seen in the full diagram (see section \ref{AppendixClassDiagramFull}).
+
+\begin{itemize}
+    \item \textbf{Box2DWorldCreator}: responsible for creating the physics environment of the map (see section \ref{DocPhysicsAndBodySetup} and \ref{DocMaps})
+    \item \textbf{WorldContactListener}: detects and handles all collision between physics objects (see section \ref{DocCollisionDetection})
+    \item \textbf{InteractiveMapTileObject}: an abstract class for static map objects, includes physical body set up and collision handling (see section \ref{DocPhysicsAndBodySetup})
+    \item \textbf{Enemy}: an abstract class for different enemy objects, includes physical body set up, collision handling and enemy movement \textbf{ADD REFERENCE TO SECTION}
+    \item \textbf{Player}: the definition of the player as physical entity and as texture. Everything from player animations, moving, attacking and switching weapons is done here \textbf{ADD REFERENCE TO SECTION}
+    \item \textbf{PlayScreenHud}: sets up and manages the "Heads Up Display", containing items like the health bar and the timer \textbf{ADD REFERENCE TO SECTION}
+    \item \textbf{GameplayInputProcessor}: registers key press events and handles them appropriately (see section \ref{DocKeyBindings})
+    \item \textbf{KeyBindings}: reads and writes associated keys with certain actions to a file (see section \ref{DocKeyBindings})
+    \item \textbf{GameProgress}: reads and writes the user's progress in the game to a file \textbf{ADD REFERENCE TO SECTION}
+    \item \textbf{Statistics}: reads and writes the user's statistics to a file \textbf{ADD REFERENCE TO SECTION}
+    \item \textbf{WeaponList}: reads and writes all available weapons in the game to a file \textbf{ADD REFERENCE TO SECTION}
+\end{itemize}
+
+%------------------------------------------------
  
- \subsection{The Play Screen}
+\subsection{The Play Screen} \label{DocPlayScreen}
+ 
+%------------------------------------------------
+
+\subsection{Physics and collision detection} \label{DocCollisions}
+
+One of the most important aspects of a game is certainly the collision detection and handling between objects. Without it, it would not be possible to even make the player walk on a flat surface.
+
+LibGDX utilizes \texttt{Box2D}, a famous physics engine for rigid body simulations, originally written in \texttt{C++} and since ported into many other languages. It was used in several well known games like \emph{Angry Birds}, \emph{Tiny Wings}, \emph{Limbo}, and \emph{Happy Wheels} \cite{box2DGithub}\cite{box2DWikipedia}.
+
+\subsubsection{Physics and body set up} \label{DocPhysicsAndBodySetup}
+
+As described in the map documentation (see section \ref{DocMaps}), the maps that are created in the \texttt{Tiled} map editor, can contain so called object layers, which contain information about shapes, that will be used as collision shapes in the game. For example, when creating a simple two dimensional map in a map editor, you obviously add graphics. The game can't know, what the world actually looks like just by the textures though. It needs solid information on what to treat as walkable ground, what enemies are, where a finish line might be, and so on. This is where the object layers come into play.
+
+Before we can go on to detecting collisions and handling them, we obviously first need to create a world and all it's bodies, in order to play with them. The first step towards this is done in the \texttt{PlayScreen} class (see \ref{PlayScreen.java}) within the constructor. Here, a \texttt{World} object is created, which contains all bodies and controls the entire physics simulation. The following line of code initialises the world, with the parameter of the gravity, which is roughly $9.81m/s^2$ in the negative direction of the Y axis. This value is a final floating point value, defined in the main game class amongst the other constant values. The second parameter, \texttt{doSleep}, improves the performance of the simulation, if set to \texttt{true}, by not simulating inactive bodies, which means bodies that do not move or interact in any other way with the world, at the specific time.
+
+\mint{java}{world = new World(new Vector2(0, - MainGameClass.GRAVITY), true);}
+
+Furthermore, a \texttt{Box2DWorldCreator} and \texttt{WorldContactListener} class are initialised in the same constructor. Both of them are custom written classes, the first one being responsible for reading the shapes from the map file and translating them into actual bodies in the world. This is partially described in the maps documentation in section \ref{DocMaps}. The second class implements libGDX's \texttt{ContactListener} class and constantly listens for collisions between objects and calls the required methods. This is documented in the next section (\ref{DocCollisionDetection}).
+
+All static objects in the map are child objects of the abstract \texttt{InteractiveMapTileObject} class (see \ref{InteractiveMapTileObject.java}).
+
+\textbf{To be continued...}
+
+\subsubsection{Collision detection} \label{DocCollisionDetection}
  
  %------------------------------------------------
 
-\subsection{Using key bindings for player input}
+\subsection{Using key bindings for player input} \label{DocKeyBindings}
 
 Key bindings in games are used to give the players the possibility to individually adjust their setup as they like. Players might want to change the assigned keys for certain actions in the game, if they have unusual keyboard layouts, use other types of input devices like gamepads, or simply like to change a certain key. This gives more flexibility since hard-coded keys can cause frustration and cause an unfavourable opinion about the game.
 
@@ -533,17 +603,17 @@ Here, it is simply being checked, if the user presses a key that is associated w
 
  %------------------------------------------------
 
-\subsection{Visual Documentation}
+\subsection{Visual Documentation} \label{DocVisual}
 
  %------------------------------------------------
 
-\subsection{Tech Documentation}
+\subsection{Tech Documentation} \label{DocTech}
 
  %------------------------------------------------
 
-\subsection{Animations}
+\subsection{Animations} \label{DocAnimations}
 
-An animation can be described as the illusion of movement caused by rapidly switching between different static images. We animated our characters by using libGdx's Animation Class \cite{libGdxAnimClass}. An animation consists of multiple frames which are shown in a sequence at set intervals.  The Animation Class stores a list of objects representing the sequence. Each object in the Animation is called a key frame, and multiple key frames make up the animation.
+An animation can be described as the illusion of movement caused by rapidly switching between different static images. We animated our characters by using libGdx's Animation Class \cite{libGdxAnimClass}. An animation consists of multiple frames which are shown in a sequence at set intervals.  The Animation Class stores a list of objects representing the sequence. Each object in the Animation is called a keyframe, and multiple keyframes make up the animation.
 
 A typical 2D animation consists of a number of TextureRegions and would be specified as:
 
@@ -558,7 +628,8 @@ Every animation needs a sprite sheet - that's an image consisting of all the fra
     \label{SpriteSheetExample}
 \end{figure}
 
-The sprite sheet contains two different animations - the first 4 frames from left to right are used to animated movement. The last 4 are used for the attack animation. To help select the correct parts of the spritesheet while animating, a TextureAtlas is generated. Among other information about the sheet, it contains the start position of the two types of animation (lines 6 and 13). Here is an example:
+The sprite sheet contains two different animations - the first 4 frames from left to right are used to animate movement. The last 4 are used for the attack animation. To help select the correct parts of the sprite sheet while animating, a TextureAtlas is generated. Among other information about the sheet, it contains the start position of the two types of animation (lines 6 and 13). Here is an example:
+
 \begin{minted}[linenos,breaklines]{text}
 frog.png
 size: 256, 32
@@ -582,6 +653,7 @@ frog_attack
 \end{minted}
 
 All the texture atlases are defined in the game's \texttt{PlayScreen} class, using the following syntax:
+
 \begin{minted}[linenos,breaklines]{java}
 //Define frog atlas
 enemyFrogTextureAtlas = new TextureAtlas("sprites/enemies/frog/frog.atlas");
@@ -597,19 +669,11 @@ The defined atlases can be reached from other classes via a getter.
 We created the actual animations in the class for each specific character. 
 
 The first step is to add all the frames we'll need into an array, by selecting the start of the animation from the texture atlas and iterating until we have collected all the frames (in this case the frames are 4).
-The second step is to pass the the speed of animation to the Animation Class along with the animation frames.
+
+The second step is to pass the speed of the animation to the Animation Class along with the animation frames.
 
 \begin{minted}[linenos,breaklines]{java}
-//Define attack animation
-attackFrames = new Array<>();
-for(int i = 0; i < 4; i++) {
-    attackFrames.add(new TextureRegion(
-        screen.getEnemyFrogTextureAtlas().findRegion("frog_attack"), i * ENEMY_PIXEL_WIDTH, 0, ENEMY_PIXEL_WIDTH, ENEMY_PIXEL_HEIGHT)
-    );
-}
-attackAnimation = new Animation<>(0.4f, attackFrames);
-
-//Define move animation
+//Define jump animation
 jumpFrames = new Array<>();
 for(int i = 0; i < 4; i++) {
     jumpFrames.add(new TextureRegion(
@@ -619,7 +683,7 @@ for(int i = 0; i < 4; i++) {
 jumpAnimation = new Animation<>(0.4f, jumpFrames);
 \end{minted}
 
-It's up to the developer though to specify when and for how long the animation is run. In our case we jump animation is on a continuous loop, and the attack is used only when the enemy and player are in contact.
+It's up to the developer though to specify when and for how long the animation is run. In our case, we jump animation is in a continuous loop, and the attack is used only when the enemy and player are in contact.
 
 \begin{minted}[linenos,breaklines]{java}
 public void update(float deltaTime) {
@@ -627,28 +691,113 @@ public void update(float deltaTime) {
 }
 \end{minted}
 
+%------------------------------------------------
+
+\subsection{Weapon collecting} \label{DocWeaponCollection}
+
+When they player comes in contact with a weapon the item is added to the player's weapon collection. The logic behind that feature has been implemented in the \texttt{WeaponPickup} class. Every time the played collides with an enemy, the \texttt{onPlayerBeginContact} method is called, which detects what kind of weapon the player has picked up and adds it to the weapon's list if it is not already present. The weapon type is setup in the map. After the item is picked up, it is removed from the map.
+
+\begin{minted}[linenos,breaklines]{java}
+ public void onPlayerBeginContact(Player player) {
+        // Remove texture
+        getCell(map.getLayers().getIndex("graphics")).setTile(null);
+
+        // Add the picked up weapon
+        MapObject pickedUpWeapon = getCollidingMapObject(map.getLayers().getIndex("weapon"));
+        if (pickedUpWeapon != null && pickedUpWeapon.getProperties().containsKey("weapon_name")) {
+            String weaponName = pickedUpWeapon.getProperties().get("weapon_name", String.class);
+            playScreen.log("Picked up weapon: " +  weaponName);
+
+            boolean changedWeaponList = false;
+            ArrayList<WeaponObject> playerWeaponList = playScreen.getPlayer().getWeapons();
+            WeaponObject weapon;
+            
+            switch (weaponName) {
+                case "Fists":
+                    weapon = getWeaponObjectByName("Fists");
+                    if (weapon != null && !weaponAlreadyInList(weapon)) {
+                        playerWeaponList.add(weapon);
+                        changedWeaponList = true;
+                    }
+                    break;
+                case "Branch":
+                    weapon = getWeaponObjectByName("Branch");
+                    if (weapon != null && !weaponAlreadyInList(weapon)) {
+                        playerWeaponList.add(weapon);
+                        changedWeaponList = true;
+                    }
+                    break;
+                case "Swiss Army Knife":
+                    weapon = getWeaponObjectByName("Swiss Army Knife");
+                    if (weapon != null && !weaponAlreadyInList(weapon)) {
+                        playerWeaponList.add(weapon);
+                        changedWeaponList = true;
+                    }
+                    break;
+                case "Switchblade":
+                    weapon = getWeaponObjectByName("Switchblade");
+                    if (weapon != null && !weaponAlreadyInList(weapon)) {
+                        playerWeaponList.add(weapon);
+                        changedWeaponList = true;
+                    }
+                    break;
+                case "Katana":
+                    weapon = getWeaponObjectByName("Katana");
+                    if (weapon != null && !weaponAlreadyInList(weapon)) {
+                        playerWeaponList.add(weapon);
+                        changedWeaponList = true;
+                    }
+                    break;
+                case "Tommy Gun":
+                    weapon = getWeaponObjectByName("Tommy Gun");
+                    if (weapon != null && !weaponAlreadyInList(weapon)) {
+                        playerWeaponList.add(weapon);
+                        changedWeaponList = true;
+                    }
+                    break;
+                case "Bazooka":
+                    weapon = getWeaponObjectByName("Bazooka");
+                    if (weapon != null && !weaponAlreadyInList(weapon)) {
+                        playerWeaponList.add(weapon);
+                        changedWeaponList = true;
+                    }
+                    break;
+                default:
+                    playScreen.log("Weapon not defined");
+                    break;
+            }
+
+            if (changedWeaponList) {
+                playScreen.getPlayer().setWeapons(playerWeaponList);
+                playScreen.getPlayer().changeWeapon(weaponName);
+
+                // Save picked up item to statistics
+                playScreen.getStatistics() .setItemsCollected(playScreen.getStatistics().getItemsCollected() + 1);
+            }
+        }
+    }
+\end{minted}
+    
+ %------------------------------------------------
+
+\subsection{Player and enemy health management} \label{DocPlayerAndHealthManagement}
 
  %------------------------------------------------
 
-\subsection{Collision detection}
+\subsection{Sprites} \label{DocSprites}
 
  %------------------------------------------------
 
-\subsection{Item collecting}
+\subsection{Maps} \label{DocMaps}
+A game's map represents a lot about the game itself. Our game has 3 levels (maps).
 
- %------------------------------------------------
+\begin{itemize}
+  \item The first level is on the ground, where the player has to go from left to right to find his way to the next level. [Insert image]
+  \item The second level is inside the tree, where the player has to go from bottom to the top of the tree to get to the eagle (boss). [Insert image]
+  \item The last level is at the top of the tree where the player fights with the Eagle (boss). [Insert Image]
+\end{itemize}
 
-\subsection{Player and enemy health management}
-
- %------------------------------------------------
-
-\subsection{Sprites}
-
- %------------------------------------------------
-
-\subsection{Maps}
-
-Document maps \textbf{hi}
+We created these maps by using the software \texttt{Tiled}. Tiled is a map editor software, which is mostly used by developers to create maps. Tiled is mostly used for to make 8 bit styled based games, wherein our game we used 8 bit styled retro game.
 
  %------------------------------------------------
 
@@ -685,6 +834,22 @@ Project Conclusion.
 
 \newpage
 \appendix
+
+\section{Appendix}
+
+\subsection{Class diagram} \label{AppendixClassDiagramFull}
+
+The following figure is the full class diagram of the entire project. A high resolution version can be found here: \texttt{https://i.imgur.com/6zzDp6a.png}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Documentation/class_diagram}
+    \caption{Full class diagram}
+    \label{fig:ClassDiagramFull}
+\end{figure}
+
+%------------------------------------------------
+
 \section{Source Code Appendix}
 
 \subsection{MainGameClass} \label{MainGameClass.java}
@@ -704,6 +869,10 @@ Project Conclusion.
 \subsubsection{KeyBindings} \label{KeyBindings.java}
 \inputminted[linenos,breaklines]{java}{code/KeyBindings/KeyBindings.java}
 
+\subsection{Objects}
+\subsubsection{InteractiveMapTileObject} \label{InteractiveMapTileObject.java}
+\inputminted[linenos,breaklines]{java}{code/Objects/InteractiveMapTileObject.java}
+
 \subsection{Scenes}
 
 \subsection{Screens}
@@ -719,4 +888,5 @@ Project Conclusion.
 \subsection{Widgets}
 
 %------------------------------------------------
+
 \end{document}
