@@ -17,6 +17,7 @@
 \usepackage{url}
 \usepackage{minted} % Used for including code with syntax highlighting: https://www.sharelatex.com/learn/Code_Highlighting_with_minted
 \usepackage{fontawesome} % Allows usage of icons within text
+\usepackage{enumitem}
 
 \usepackage[
   style=numeric,
@@ -635,19 +636,19 @@ One of the most important aspects of a game is certainly the collision detection
 
 LibGDX utilizes \texttt{Box2D}, a famous physics engine for rigid body simulations, originally written in \texttt{C++} and since ported into many other languages. It was used in several well known games like \emph{Angry Birds}, \emph{Tiny Wings}, \emph{Limbo}, and \emph{Happy Wheels} \cite{box2DGithub}\cite{box2DWikipedia}.
 
-\subsubsection{Physics and body set up} \label{DocPhysicsAndBodySetup}
+\subsubsection{Physics and map objects setup} \label{DocPhysicsAndBodySetup}
 
-As described in the map documentation (see section \ref{DocMaps}), the maps that are created in the \texttt{Tiled} map editor, can contain so called object layers, which contain information about shapes, that will be used as collision shapes in the game. For example, when creating a simple two dimensional map in a map editor, you obviously add graphics. The game can't know, what the world actually looks like just by the textures though. It needs concrete information on what to treat as walkable ground, what enemies are, where a finish line might be, and so on. This is where the object layers come into play.
+As described in the map documentation (see section \ref{DocMaps}), the maps that are created in the \texttt{Tiled} map editor, can contain so-called object layers, which contain information about shapes, that will be used as collision shapes in the game. For example, when creating a simple two-dimensional map in a map editor, you obviously add graphics. The game can't know, what the world actually looks like just by the textures though. It needs concrete information on what to treat as walkable ground, what enemies are, where a finish line might be, and so on. This is where the object layers come into play.
 
-Before we can go on to detecting collisions and handling them, we obviously first need to create a world and all it's bodies, in order to play with them. The first step towards this is done in the \texttt{PlayScreen} class within the constructor. Here, a \texttt{World} object is created, which contains all bodies and controls the entire physics simulation. The following line of code initialises the world, with the parameter of the gravity, which is roughly $9.81m/s^2$ in the negative direction of the Y axis. This value is a final floating point value, defined in the main game class amongst the other constant values. The second parameter, \texttt{doSleep}, improves the performance of the simulation, if set to \texttt{true}, by not simulating inactive bodies, which means bodies that do not move or interact in any other way with the world, at the specific time.
+Before we can go on to detecting collisions and handling them, we obviously first need to create a world and all it's bodies, in order to play with them. The first step towards this is done in the \texttt{PlayScreen} class within the constructor. Here, a \texttt{World} object is created, which contains all bodies and controls the entire physics simulation. The following line of code initializes the world, with the parameter of the gravity, which is roughly $9.81m/s^2$ in the negative direction of the Y-axis. This value is a final floating point value, defined in the main game class amongst the other constant values. The second parameter, \texttt{doSleep}, improves the performance of the simulation if set to \texttt{true}, by not simulating inactive bodies, which means bodies that do not move or interact in any other way with the world, at the specific time.
 
 \mint{java}{world = new World(new Vector2(0, - MainGameClass.GRAVITY), true);}
 
-Furthermore, a \texttt{Box2DWorldCreator} and \texttt{WorldContactListener} class are initialised in the same constructor. Both of them are custom written classes, the first one being responsible for reading the shapes from the map file and translating them into actual bodies in the world. This is partially described in the maps documentation in section \ref{DocMaps}. The second class implements libGDX's \texttt{ContactListener} class and constantly listens for collisions between objects and calls the required methods. This is documented in the next section (\ref{DocCollisionDetection}).
+Furthermore, a \texttt{Box2DWorldCreator} and \texttt{WorldContactListener} class are initialized in the same constructor. Both of them are custom written classes, the first one being responsible for reading the shapes from the map file and translating them into actual bodies in the world. This is partially described in the maps documentation in section \ref{DocMaps}. The second class implements libGDX's \texttt{ContactListener} class and constantly listens for collisions between objects and calls the required methods. This is documented in the next section (\ref{DocCollisionDetection}).
 
-All static objects in the map are child objects of the abstract \texttt{InteractiveMapTileObject} class, which defines a standard structure for these objects. Since all objects in the map have a rectangular shape, this abstract class implements a standardised way of setting up the body of each object. All it needs to know is the rectangle, which defines shape and position of the object, and if it is a sensor. If an object is a sensor, collisions will be detected like usual, but other objects can't collide with it visually and will simply move through them. This can be useful for many different purposes, for example the weapon pick up mechanics.
+All static objects in the map are child objects of the abstract \texttt{InteractiveMapTileObject} class, which defines a standard structure for these objects. Since all objects in the map have a rectangular shape, this abstract class implements a standardized way of setting up the body of each object. All it needs to know is the rectangle, which defines shape and position of the object, and if it is a sensor. If an object is a sensor, collisions will be detected as usual, but other objects can't collide with it visually and will simply move through them. This can be useful for many different purposes, for example, the weapon pick-up mechanics.
 
-As an example, we take the \texttt{DeathTile} class and follow it's steps to creation. This type of object has the purpose of killing both players and enemies, if they come in contact with it. This will often be graphically represented by spikes. As described in section \ref{DocMaps}, for each object in an object layer, the program creates an instance of the related child class of an \texttt{InteractiveMapTileObject}. In this case, a \texttt{DeathTile}. The object will then be added to a list, which contains all objects of this type.
+As an example, we take the \texttt{DeathTile} class and follow it's steps to creation. This type of object has the purpose of killing both players and enemies if they come in contact with it. This will often be graphically represented by spikes. As described in section \ref{DocMaps}, for each object in an object layer, the program creates an instance of the related child class of an \texttt{InteractiveMapTileObject}. In this case, a \texttt{DeathTile}. The object will then be added to a list, which contains all objects of this type.
 
 \mint{java}{deathTileObjects.add(new DeathTile(screen, rectangle));}
 
@@ -726,11 +727,112 @@ public InteractiveMapTileObject(PlayScreen screen, Rectangle bounds, boolean isS
     }
 \end{minted}
 
-In here, the body of the map object is defined with the help of a \texttt{body definition}, \texttt{fixture definition} and \texttt{polygon shape}. The type of the body is \texttt{static}, since the map objects should not move upon contact with another object, like the player and enemies do (they are \texttt{dynamic}). The position of the body is then being set to the middle of the rectangle. \texttt{bounds.getX()} and \texttt{bounds.getY()} return the lower left corner of the object, which is why half ot the width and height is added. This value is then being divided by the \texttt{pixels per meter} scaling unit, which \texttt{Box2D} needs since it's never a good idea to code in pixels. A clarification can be found in a great Stackoverflow answer \cite{stackoverflowPPM}. The shape is then set to a box, with the width and height of the rectangle. The values are divided by two, because the \texttt{setAsBox} method takes in the radius of a box.
+In here, the body of the map object is defined with the help of a \texttt{body definition}, \texttt{fixture definition} and \texttt{polygon shape}. The type of the body is \texttt{static} since the map objects should not move upon contact with another object like the player and enemies do (they are \texttt{dynamic}). The position of the body is then being set to the middle of the rectangle. \texttt{bounds.getX()} and \texttt{bounds.getY()} return the lower left corner of the object, which is why half of the width and height is added. This value is then being divided by the \texttt{pixels per meter} scaling unit, which \texttt{Box2D} needs since it's never a good idea to code in pixels. A clarification can be found in a great Stackoverflow answer \cite{stackoverflowPPM}. The shape is then set to a box, with the width and height of the rectangle. The values are divided into two because the \texttt{setAsBox} method takes in the radius of a box.
+
+%------------------------------------------------
 
 \subsubsection{Collision detection} \label{DocCollisionDetection}
- 
- %------------------------------------------------
+
+In order to detect and handle collisions, libGDX provides a \texttt{ContactListener} interface, that we can use to process all collisions in the world. It is event-driven, which means the methods \texttt{beginContact} and \texttt{endContact} will only be triggered, when a collision happens, not each frame. You then get a \texttt{Contact} object, which manages two colliding shapes and gives the program information about them.
+
+The contact listener is simply attached to the \texttt{Box2D} world in the \texttt{PlayScreen}:
+
+\begin{minted}[linenos,breaklines]{java}
+worldContactListener = new WorldContactListener(this);
+world.setContactListener(worldContactListener);
+\end{minted}
+
+The following code snippet is from the \texttt{WorldContactListener} class and shows the collision handling for player contacts. The code for enemy collisions is very similar and can be found in the source code. To keep it short, the collision between player and enemies is also cut out.
+
+\begin{minted}[linenos,breaklines]{java}
+private void processContact(Contact contact, boolean beginOrEndContact) {
+
+        Fixture fixtureA = contact.getFixtureA();
+        Fixture fixtureB = contact.getFixtureB();
+
+        if (fixtureA.getUserData() instanceof Player || fixtureB.getUserData() instanceof Player) {
+            Fixture player = fixtureA.getUserData() instanceof Player ? fixtureA : fixtureB;
+            Fixture collidedObject = player == fixtureA ? fixtureB : fixtureA;
+
+            if (collidedObject.getUserData() instanceof InteractiveMapTileObject) {
+                if (beginOrEndContact) {
+                    ((InteractiveMapTileObject) collidedObject.getUserData()).onPlayerBeginContact((Player) player.getUserData());
+                } else {
+                    ((InteractiveMapTileObject) collidedObject.getUserData()).onPlayerEndContact((Player) player.getUserData());
+                }
+            }
+        }
+    }
+\end{minted}
+
+The method \texttt{processContact} is called from \texttt{beginContact} and \texttt{endContact}, passing a boolean as a parameter, to determine from what method it was called. This is done to avoid having almost identical code twice.
+
+The \texttt{contact} object provides the collided fixtures, which give information about the objects, including the \texttt{user data}, that was mentioned in section \ref{DocPhysicsAndBodySetup}. Since the user data is simply the class itself for map objects and also players and enemies, we can determine the type of object with the \texttt{instanceof} operator. In the first \texttt{if} statement, the operator returns true, if either of the collided fixtures is an instance of the \texttt{Player} class. By this, we can determine if the detected collision is at all related to the player.
+
+Going further, two new fixtures are created that simply store either fixture A or B. This is done to definitely know, which fixture is the player and which is the object the player collided with. The player fixture is assigned by checking, which of the two fixtures is an instance of the \texttt{Player} class. The collided object fixture is then simply the other one.
+
+After determining that, the collided object fixture is tested if it is an instance of the InteractiveMapTileObject class. If this is the case, the relevant method of the map object class is called, giving in the \texttt{Player} object, so the method can work with it. These methods are described in the previous section \ref{DocPhysicsAndBodySetup}.
+
+%------------------------------------------------
+
+\subsubsection{Collision filtering}
+
+Not all objects in the world should be able to collide with all other objects. These unwanted cases can be, of course, just be ignored in the \texttt{Contact Listener}. However, libGDX provides a neat way to create filters for each type of object.
+
+Each type of object is assigned a unique number. After that, filters for each object are created by combining the numbers of the objects that are wanted to collide with this specific object, into one single number. The fixture of each object type will then be assigned the unique number as the \texttt{category bits} and the filter number as the \texttt{mask bits}.
+
+To make this work, these unique numbers need to follow a certain pattern, or else it will not be possible to accurately determine, what numbers contributed to the merged number that is used as the \texttt{mask}.
+
+The pattern is a simple geometric sequence with the factor of two ($1, 2, 4, 8, 16, ...$). The numbers are stored in a 16-bit \texttt{short}, which has a maximum value of $32,767$. Representing these numbers in binary 16-bit notation, they look like this:
+
+\begin{itemize}[leftmargin=*]
+    \itemsep-0.75em 
+    \item[] $000000000000000\mathbf{1}$
+    \item[] $00000000000000\mathbf{1}0$
+    \item[] $0000000000000\mathbf{1}00$
+    \item[] $000000000000\mathbf{1}000$
+    \item[] $00000000000\mathbf{1}0000$
+    \item[] $...$
+\end{itemize}
+
+Using the \texttt{inclusive bitwise OR} operator \cite{bitwiseOROperator} of Java, we can combine these numbers into one.
+
+The following code snippet shows the definition of all the category bits in the project. They are defined in hexadecimal values (\texttt{0x}) for readability, it doesn't matter if they are written in binary (\texttt{0b}), hexadecimal or decimal. The hexadecimal notation simply allows putting zeros in front, which makes it more readable.
+
+\begin{minted}[linenos,breaklines]{java}
+public static final short CATEGORY_PLAYER               = 0x0001;
+public static final short CATEGORY_ENEMY                = 0x0002;
+public static final short CATEGORY_GROUND               = 0x0004;
+public static final short CATEGORY_DEATHTILE            = 0x0008;
+public static final short CATEGORY_WEAPON               = 0x0016;
+public static final short CATEGORY_FINISH               = 0x0032;
+public static final short CATEGORY_JUMPABLE             = 0x0064;
+public static final short CATEGORY_ENEMY_MOVE_BORDER    = 0x0128;
+public static final short CATEGORY_PLAYER_ATTACK        = 0x0256;
+\end{minted}
+
+The following example now shows the creation of the mask bits for the player, which determines what he can collide with.
+
+\begin{minted}[linenos,breaklines]{java}
+public static final short MASK_PLAYER = CATEGORY_ENEMY | CATEGORY_GROUND | CATEGORY_DEATHTILE | CATEGORY_WEAPON | CATEGORY_FINISH | CATEGORY_JUMPABLE;
+\end{minted}
+
+The \texttt{inclusive bitwise OR} operator now takes all the numbers that are in the statement above and compare them bit for bit. If any of these numbers contain a $1$ at the bit position, the result will also have a $1$ at that position. If none of them do, the result will have a $0$ at that position. Since all numbers only have one single bit where the value is a $1$, each bit in the final result represents one category and if it is contained in that mask or not.
+
+Taking all variables into consideration, the result of the above assignment to the mask of the player will look like that: $00\mathbf{111111}0$
+
+Or in 16-bit notation: $000000000\mathbf{111111}0$
+
+We can now assign a category and the corresponding mask to an object type, which was briefly mentioned in the previous section \ref{DocPhysicsAndBodySetup}.
+
+\begin{minted}[linenos,breaklines]{java}
+playerFixtureDef.filter.categoryBits = MainGameClass.CATEGORY_PLAYER;
+playerFixtureDef.filter.maskBits = MainGameClass.MASK_PLAYER;
+\end{minted}
+
+The \texttt{Contact Listener} will now only take objects into consideration, that have matching filter masks. For example, collisions between an enemy and the finish line, weapon pickups, and more will simply be ignored.
+
+%------------------------------------------------
 
 \subsection{Using key bindings for player input} \label{DocKeyBindings}
 
