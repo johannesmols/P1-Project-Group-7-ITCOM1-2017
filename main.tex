@@ -552,7 +552,7 @@ public class DesktopLauncher {
 
 Going further, the actual code is located in the \texttt{core} directory of the project. Beside that, the generated \texttt{bytecode}, the \texttt{build gradle} file and the \texttt{assets} folder are located here. The assets folder contains all external files, like graphics, fonts and text files, which are used by the game.
 
-The game starts off in the \texttt{MainGameClass} (see \ref{MainGameClass.java}), which runs the very basic foundation of the game, by setting up important public static parameters like screen size, camera settings, gravity, and more. The main class extends libGDX's \emph{abstract} \texttt{Game} class, which itself implements the \texttt{ApplicationListener} \emph{interface}. LibGDX mostly works in an event-driven fashion, which is why there is no game loop \cite{libGDXLifeCycle}. The \texttt{render} method, however, can be considered as such, as it runs every frame. The flowchart in figure \ref{fig:LibGDXLifeCycle} explains the life cycle of a libGDX application quite well.
+The game starts off in the \texttt{MainGameClass}, which runs the very basic foundation of the game, by setting up important public static parameters like screen size, camera settings, gravity, and more. The main class extends libGDX's \emph{abstract} \texttt{Game} class, which itself implements the \texttt{ApplicationListener} \emph{interface}. LibGDX mostly works in an event-driven fashion, which is why there is no game loop \cite{libGDXLifeCycle}. The \texttt{render} method, however, can be considered as such, as it runs every frame. The flowchart in figure \ref{fig:LibGDXLifeCycle} explains the life cycle of a libGDX application quite well.
 
 \begin{figure}[ht]
   \center
@@ -584,7 +584,7 @@ The methods \texttt{resetTimer()} and \texttt{resetPlayerLifes()} reset the valu
 
 The game is then being closed by calling the libGDX method \texttt{Gdx.app.exit()}, which disposes of all disposable resources in the application and close the game. This works just fine, but usually prints out a bunch of irrelevant errors, which can be more or less suppressed by calling the native Java method \texttt{System.exit()}. The error code \texttt{0} means the execution went just fine with no errors.
 
-When the main class is done setting things up, including the creation of a new Thread for a connectivity with Twitch (see documentation at \ref{Twitch}), the game switches the \texttt{Screen} to the \texttt{SplashScreen} class, which simply displays a splash screen and then switches to the \texttt{PlayScreen} class \ref{PlayScreen.java}, which is the main screen of the game, containing the actual gameplay and manages, how it all comes together. It implements libGDX's \texttt{Screen} class and follows a similar life cycle as described for the main game class.
+When the main class is done setting things up, including the creation of a new Thread for a connectivity with Twitch (see documentation at \ref{Twitch}), the game switches the \texttt{Screen} to the \texttt{SplashScreen} class, which simply displays a splash screen and then switches to the \texttt{PlayScreen} class, which is the main screen of the game, containing the actual gameplay and manages, how it all comes together. It implements libGDX's \texttt{Screen} class and follows a similar life cycle as described for the main game class.
 
 %------------------------------------------------
 
@@ -637,17 +637,96 @@ LibGDX utilizes \texttt{Box2D}, a famous physics engine for rigid body simulatio
 
 \subsubsection{Physics and body set up} \label{DocPhysicsAndBodySetup}
 
-As described in the map documentation (see section \ref{DocMaps}), the maps that are created in the \texttt{Tiled} map editor, can contain so called object layers, which contain information about shapes, that will be used as collision shapes in the game. For example, when creating a simple two dimensional map in a map editor, you obviously add graphics. The game can't know, what the world actually looks like just by the textures though. It needs solid information on what to treat as walkable ground, what enemies are, where a finish line might be, and so on. This is where the object layers come into play.
+As described in the map documentation (see section \ref{DocMaps}), the maps that are created in the \texttt{Tiled} map editor, can contain so called object layers, which contain information about shapes, that will be used as collision shapes in the game. For example, when creating a simple two dimensional map in a map editor, you obviously add graphics. The game can't know, what the world actually looks like just by the textures though. It needs concrete information on what to treat as walkable ground, what enemies are, where a finish line might be, and so on. This is where the object layers come into play.
 
-Before we can go on to detecting collisions and handling them, we obviously first need to create a world and all it's bodies, in order to play with them. The first step towards this is done in the \texttt{PlayScreen} class (see \ref{PlayScreen.java}) within the constructor. Here, a \texttt{World} object is created, which contains all bodies and controls the entire physics simulation. The following line of code initialises the world, with the parameter of the gravity, which is roughly $9.81m/s^2$ in the negative direction of the Y axis. This value is a final floating point value, defined in the main game class amongst the other constant values. The second parameter, \texttt{doSleep}, improves the performance of the simulation, if set to \texttt{true}, by not simulating inactive bodies, which means bodies that do not move or interact in any other way with the world, at the specific time.
+Before we can go on to detecting collisions and handling them, we obviously first need to create a world and all it's bodies, in order to play with them. The first step towards this is done in the \texttt{PlayScreen} class within the constructor. Here, a \texttt{World} object is created, which contains all bodies and controls the entire physics simulation. The following line of code initialises the world, with the parameter of the gravity, which is roughly $9.81m/s^2$ in the negative direction of the Y axis. This value is a final floating point value, defined in the main game class amongst the other constant values. The second parameter, \texttt{doSleep}, improves the performance of the simulation, if set to \texttt{true}, by not simulating inactive bodies, which means bodies that do not move or interact in any other way with the world, at the specific time.
 
 \mint{java}{world = new World(new Vector2(0, - MainGameClass.GRAVITY), true);}
 
 Furthermore, a \texttt{Box2DWorldCreator} and \texttt{WorldContactListener} class are initialised in the same constructor. Both of them are custom written classes, the first one being responsible for reading the shapes from the map file and translating them into actual bodies in the world. This is partially described in the maps documentation in section \ref{DocMaps}. The second class implements libGDX's \texttt{ContactListener} class and constantly listens for collisions between objects and calls the required methods. This is documented in the next section (\ref{DocCollisionDetection}).
 
-All static objects in the map are child objects of the abstract \texttt{InteractiveMapTileObject} class (see \ref{InteractiveMapTileObject.java}).
+All static objects in the map are child objects of the abstract \texttt{InteractiveMapTileObject} class, which defines a standard structure for these objects. Since all objects in the map have a rectangular shape, this abstract class implements a standardised way of setting up the body of each object. All it needs to know is the rectangle, which defines shape and position of the object, and if it is a sensor. If an object is a sensor, collisions will be detected like usual, but other objects can't collide with it visually and will simply move through them. This can be useful for many different purposes, for example the weapon pick up mechanics.
 
-\textbf{To be continued...}
+As an example, we take the \texttt{DeathTile} class and follow it's steps to creation. This type of object has the purpose of killing both players and enemies, if they come in contact with it. This will often be graphically represented by spikes. As described in section \ref{DocMaps}, for each object in an object layer, the program creates an instance of the related child class of an \texttt{InteractiveMapTileObject}. In this case, a \texttt{DeathTile}. The object will then be added to a list, which contains all objects of this type.
+
+\mint{java}{deathTileObjects.add(new DeathTile(screen, rectangle));}
+
+The constructor demands the \texttt{PlayScreen} object as the first parameter, so it has access to it. The second parameter is the rectangle that was read from the map file.
+
+The following code snippet is from the \texttt{DeathTile} class in order to explain the creation of such objects.
+
+\begin{minted}[linenos,breaklines]{java}
+public class DeathTile extends InteractiveMapTileObject {
+
+    private PlayScreen playScreen;
+
+    public DeathTile(PlayScreen screen, Rectangle bounds) {
+        super(screen, bounds, true);
+        this.playScreen = screen;
+
+        fixture.setUserData(this);
+        createFilterMask();
+    }
+
+    @Override
+    public void onPlayerBeginContact(Player player) {
+        playScreen.setPlayerCurrentHealth(-1);
+    }
+
+    @Override
+    public void onPlayerEndContact(Player player) { }
+
+    @Override
+    public void onEnemyBeginContact(Enemy enemy) {
+        enemy.setHealth(-1);
+    }
+
+    @Override
+    public void onEnemyEndContact(Enemy enemy) { }
+
+    @Override
+    public void createFilterMask() {
+        Filter filter = new Filter();
+        filter.categoryBits = MainGameClass.CATEGORY_DEATHTILE;
+        filter.maskBits = MainGameClass.MASK_DEATHTILE;
+        fixture.setFilterData(filter);
+    }
+}
+\end{minted}
+
+In the constructor, the \texttt{super} method is called, which is the constructor of the InteractiveMapTileObject, which handles the physics setup. In addition to the \texttt{PlayScreen} and the rectangle, a boolean variable is passed as a parameter. It defines, if the object is a sensor, as described above.
+
+Still in the constructor, the \texttt{User Data} of the \texttt{fixture} is set to the class itself, \texttt{this}. The \texttt{fixture} is a \texttt{protected} variable of the parent class and therefore available in the child class scope. The \texttt{User Data} is a value that is important for collision detection. It can be any \texttt{Object} and will later be used to identify a collided object, as described in section \ref{DocCollisionDetection}.
+
+The method \texttt{createFilterMask} is an abstract method of the parent class, that each child has to implement. It sets up collision filtering, which is also described in section \ref{DocCollisionDetection}.
+
+The four remaining abstract methods are always called, when either a player or enemy is colliding with this specific \texttt{DeathTile} object. In this case, when a contact begins, the health of either of those will be set to $-1$, which kills them in the next frame.
+
+The last code snippet for this section finally shows, how a map object is actually created. The code is from the \texttt{InteractiveMapTileObject} class. Besides the shown constructor, the class defines the five abstract methods and contains two methods that are used for picking up weapons (see section \ref{DocWeaponCollection}).
+
+\begin{minted}[linenos,breaklines]{java}
+public InteractiveMapTileObject(PlayScreen screen, Rectangle bounds, boolean isSensor) {
+        this.playScreen = screen;
+        this.world = screen.getWorld();
+        this.map = screen.getMap();
+        this.bounds = bounds;
+
+        BodyDef bodyDef = new BodyDef();
+        FixtureDef fixtureDef = new FixtureDef();
+        PolygonShape shape = new PolygonShape();
+
+        bodyDef.type = BodyDef.BodyType.StaticBody;
+        bodyDef.position.set((bounds.getX() + bounds.getWidth() / 2) / MainGameClass.PPM, (bounds.getY() + bounds.getHeight() / 2) / MainGameClass.PPM);
+        body = world.createBody(bodyDef);
+
+        shape.setAsBox(bounds.getWidth() / 2 / MainGameClass.PPM, bounds.getHeight() / 2 / MainGameClass.PPM);
+        fixtureDef.shape = shape;
+        fixtureDef.isSensor = isSensor;
+        fixture = body.createFixture(fixtureDef);
+    }
+\end{minted}
+
+In here, the body of the map object is defined with the help of a \texttt{body definition}, \texttt{fixture definition} and \texttt{polygon shape}. The type of the body is \texttt{static}, since the map objects should not move upon contact with another object, like the player and enemies do (they are \texttt{dynamic}). The position of the body is then being set to the middle of the rectangle. \texttt{bounds.getX()} and \texttt{bounds.getY()} return the lower left corner of the object, which is why half ot the width and height is added. This value is then being divided by the \texttt{pixels per meter} scaling unit, which \texttt{Box2D} needs since it's never a good idea to code in pixels. A clarification can be found in a great Stackoverflow answer \cite{stackoverflowPPM}. The shape is then set to a box, with the width and height of the rectangle. The values are divided by two, because the \texttt{setAsBox} method takes in the radius of a box.
 
 \subsubsection{Collision detection} \label{DocCollisionDetection}
  
@@ -659,20 +738,20 @@ Key bindings in games are used to give the players the possibility to individual
 
 LibGDX has two different kinds of input processing, the first one being the \texttt{Input} class included in the framework, which uses polling to get key presses. The second method is using an \texttt{InputProcessor}, also included in the framework, which uses events to control input. The key difference between those is, that one can check if a specific key is being pressed at the time of checking with the polling method. An input processor, however, triggers events when certain input events happen, like pressing down a key and then delivering the key code of the pressed key. This allows the input management to be more "clean" and efficient since one can't easily check if one of many flexible keys is being pressed without an input processor.
 
-In order to change and save key bindings, there needs to be a data structure. This is represented in the \texttt{KeyBindingObject} class (see \ref{KeyBindingObject.java}). One object each represents a single action in the game, represented by a String, and an array of integers, which represent the codes of the keys that are assigned to this action. Therefore, multiple keys can be assigned to one action.
+In order to change and save key bindings, there needs to be a data structure. This is represented in the \texttt{KeyBindingObject} class. One object each represents a single action in the game, represented by a String, and an array of integers, which represent the codes of the keys that are assigned to this action. Therefore, multiple keys can be assigned to one action.
 
-Furthermore, the game has to save this information in a file to make it persistent, or the information will be lost once the application is closed. Therefore, the game will save and load the key bindings into a JSON (JavaScript Object Notation) file, which is a standard data interchange format. Handling this operation is done by the \texttt{KeyBindings} class (see \ref{KeyBindings.java}) class. 
+Furthermore, the game has to save this information in a file to make it persistent, or the information will be lost once the application is closed. Therefore, the game will save and load the key bindings into a JSON (JavaScript Object Notation) file, which is a standard data interchange format. Handling this operation is done by the \texttt{KeyBindings} class. 
 
 This class has public lists of the type Integer, which store the key codes for each individual action. These lists are read by the game to process input. In the constructor of the class, the program searches for the JSON file and if it exists, it reads it with the help of \texttt{GSON} \cite{GSON}, an open-source library by Google to convert Java Objects into JSON strings and back. If the file doesn't exist or is empty, a new one will be created and the default keys will be assigned to each action by writing them to the new file and then read them again. Those default keys are hardcoded in the constructor as a \texttt{KeyBindingObject} array.
 
-However, if the file does exist, the JSON string is read from it and converted to an array of \texttt{KeyBindingObject}'s. Each key object will then be assigned to the proper list, that was mentioned earlier. This is done by looping through each object and adding it to the lists by comparing the String attribute, described as \texttt{}{action}. This procedure is called deserialization and can be seen in \ref{KeyBindings.java} in the \texttt{deserializeKeyBindings()} method.
+However, if the file does exist, the JSON string is read from it and converted to an array of \texttt{KeyBindingObject}'s. Each key object will then be assigned to the proper list, that was mentioned earlier. This is done by looping through each object and adding it to the lists by comparing the String attribute, described as \texttt{}{action}. This procedure is called deserialization and can be seen in the \texttt{deserializeKeyBindings()} method of the \texttt{KeyBindings} class.
 
 An exemplary key bindings JSON key binding file looks like this:
 \inputminted[linenos,breaklines]{json}{code/json/keybindings.json}
 
-An array in JSON starts with a \texttt{[}, hence the bracket at the start and end. The \texttt{KeyBindingObject}'s in between are items of that array. Each item has a String identifier and another array for the corresponding key codes. JSON separates key and value with a \texttt{:} symbol.
+An array in JSON starts with a \texttt{[}, hence the bracket at the start and end. The \texttt{KeyBindingObject} objects in between are items of that array. Each item has a String identifier and another array for the corresponding key codes. JSON separates key and value with a \texttt{:} symbol.
 
-As described earlier, the game uses an \texttt{InputProcessor} to handle gameplay relevant input. Since the game has to recognize when a key is pressed, and not just fire an event once a key is pressed down once, it uses public booleans to toggle between an action being active or not. Otherwise, the player would get a move impulse, for example, only once instead of for the duration of the key press. This logic is located in the \texttt{GameplayInputProcessor} class (see \ref{GameplayInputProcessor.java}). When a key is being pressed down or being released, it checks, if the key code of the pressed key is in one of the lists. If that is the case, the \texttt{boolean} is toggled. This \texttt{boolean} is a member of the \texttt{PlayScreen} class and is \texttt{public static} to be available in this class, and is being imported in a static context, hence the missing class reference in the Input Processor class.
+As described earlier, the game uses an \texttt{InputProcessor} to handle gameplay relevant input. Since the game has to recognize when a key is pressed, and not just fire an event once a key is pressed down once, it uses public booleans to toggle between an action being active or not. Otherwise, the player would get a move impulse, for example, only once instead of for the duration of the key press. This logic is located in the \texttt{GameplayInputProcessor} class. When a key is being pressed down or being released, it checks, if the key code of the pressed key is in one of the lists. If that is the case, the \texttt{boolean} is toggled. This \texttt{boolean} is a member of the \texttt{PlayScreen} class and is \texttt{public static} to be available in this class, and is being imported in a static context, hence the missing class reference in the Input Processor class.
 
 Finally, all of this is then used in the \texttt{update} loop of the \texttt{PlayScreen}, which is executed each frame. This is an example of the movement in the right direction:
 
@@ -882,16 +961,23 @@ A game's map represents a lot about the game itself. Our game has 3 levels (maps
  \item The last level is at the top of the tree where the player fights with the Eagle (boss). \textbf{[Insert Image]}
 \end{itemize}
 
-We created these maps by using the software \texttt{Tiled}. Tiled is a map editor software, which is mostly used by developers to create maps. Tiled is mostly used for to make 8 bit styled based games, wherein our game we used 8 bit styled retro game.
+We created these maps by using the software \texttt{Tiled}. Tiled is a map editor software, which is mostly used by developers to create maps. Tiled is mostly used for to make 8 bit styled based games, where in our game we used 8 bit styled retro game.
 
 In order to make a map we needed to make some textures/spritesheets, for example for the player (squirrel), the ground, background, weapons, grass, etc. We made the spritesheets / textures by using piskelapp website[0], which allows us to draw textures as we want . We also used some ready made textures from a website called opengameart, which has a lot of free textures.
 
 A Tiled map supports different types of layers, such as Tile Layer \& Object Layer. 
 \begin{itemize}
-\item We used Tile Layers for all the textures, such as ground, background, ladders, weapons, trees and etc. 
+\item We used Tile Layers to make the graphics, such as ground, background, trees and etc.
 \item We used Object Layers to make our textures collidable for LibGDX, for instance colliding of the player with objects like the ground, weapons, enemies and etc.
 \end{itemize}
-\textbf{[Image of layers]}
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.5\textwidth]{Documentation/layers}
+  \caption{An example of layers}
+  \label{fig:ExampleOfMapLayers}
+\end{figure}
+
 
 After making the map in the Tiled program, we exported it in a .tmx file and used it in the project. TMX file contains all the map’s custom properties and all the layers, which has been made in the Tiled program. The following code is an example on how the .tmx file works with our project:
 
@@ -969,7 +1055,7 @@ The following figure is the full class diagram of the entire project. A high res
 
 %------------------------------------------------
 
-\section{Source Code}
+\section{Source Code} \label{SourceCode}
 
 The following appendix contains direct links to each Java class file and possibly other relevant files on the GitHub repository since the raw code is too long to put here.
 
@@ -1064,41 +1150,6 @@ The following appendix contains direct links to each Java class file and possibl
         \item TwitchThread: \url{https://goo.gl/PCXpqz}
     \end{itemize}
 \end{itemize}
-
-\subsection{MainGameClass} \label{MainGameClass.java}
-\inputminted[linenos,breaklines]{java}{code/MainGameClass.java}
-
-\subsection{GameProgress}
-
-\subsection{Input}
-\subsubsection{GameplayInputProcessor} \label{GameplayInputProcessor.java}
-\inputminted[linenos,breaklines]{java}{code/Input/GameplayInputProcessor.java}
-
-\subsection{Items}
-
-\subsection{KeyBindings}
-\subsubsection{KeyBindingObject} \label{KeyBindingObject.java}
-\inputminted[linenos,breaklines]{java}{code/KeyBindings/KeyBindingObject.java}
-\subsubsection{KeyBindings} \label{KeyBindings.java}
-\inputminted[linenos,breaklines]{java}{code/KeyBindings/KeyBindings.java}
-
-\subsection{Objects}
-\subsubsection{InteractiveMapTileObject} \label{InteractiveMapTileObject.java}
-\inputminted[linenos,breaklines]{java}{code/Objects/InteractiveMapTileObject.java}
-
-\subsection{Scenes}
-
-\subsection{Screens}
-\subsubsection{PlayScreen} \label{PlayScreen.java}
-\inputminted[linenos,breaklines]{java}{code/Screens/PlayScreen.java}
-
-\subsection{Sprites}
-
-\subsection{Statistics}
-
-\subsection{Tools}
-
-\subsection{Widgets}
 
 %------------------------------------------------
 
