@@ -141,12 +141,7 @@
 \begin{abstract}
 \thispagestyle{plain} %Sets the page style for this specific page to plain, to remove the header and show the page number at the bottom
 
-\begin{figure}[ht]
-  \center
-  \includegraphics[width=0.25\textwidth]{mydudes.png}
-\end{figure}
-
-  This is our Abstract, my dudes.
+\noindent The purpose of this project is to develop a retro style game, Gangster Squirrel. The Gangster Squirrel is a retro game, where the main objective of the player is to reach to the top of a tree to find the eggs, which were stolen by an Eagle. To obtain the development of this game, JAVA has been used as our programming language and furthermore LibGDX library as our game engine. We also used Tiled program as our design level editor. The project succeeded and three playable stages were made during the process of development. 
 
 \end{abstract}
 
@@ -159,7 +154,7 @@
 \tableofcontents % Include a table of contents
 \thispagestyle{plain} %Sets the page style for this specific page to plain, to remove the header and show the page number at the bottom
 
-\newpage % Begins the essay on a new page instead of on the same page as the table of contents 
+\newpage % Begins the report on a new page instead of on the same page as the table of contents 
 
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
@@ -210,7 +205,7 @@ To figure out the basic features of our game we did a qualitative analysis of th
 
 \subsection{Game Engine}
 
-% #TODO: @all
+In order to determine the best game engine for our game, we did an analysis on various different java game engines. We compared the learning curve of the different engines, and looked at their features compared to what features we need in our game.
 
 \subsection{Playtesting}
 
@@ -225,11 +220,19 @@ To figure out the basic features of our game we did a qualitative analysis of th
 \section{State of the Art} \label{sec:StateOfTheArt}
 \subsection{Introduction}
 
-In this section, we have been looking for inspirations for our project. We have identified many of other games that are congruous to what we wanted to do.
-We were looking for our competitors via Google and we also knew a few of them beforehand. The Google search results we have found looking for key terms "2D mine games", "2D platform games" and similar. We picked the best-positioned examples and we chose the ones that are, in our opinion, the most similar and related to our game idea. Through this research, we wanted to get an overview of general features that this type of games has. Then we decided to discuss which of them were the most relevant and which we would like to implement. This section also helped us to understand the market that we are working in and decide what our pricing and platform support we should offer.
+% OLD STATE OF THE ART INTRO
+
+% In this section, we have been looking for inspirations for our project. We have identified many of other games that are congruous to what we wanted to do. We were looking for our competitors via Google and we also knew a few of them beforehand. The Google search results we have found looking for key terms "2D mine games", "2D platform games" and similar. We picked the best-positioned examples and we chose the ones that are, in our opinion, the most similar and related to our game idea. Through this research, we wanted to get an overview of general features that this type of games has. Then we decided to discuss which of them were the most relevant and which we would like to implement. This section also helped us to understand the market that we are working in and decide what our pricing and platform support we should offer.
 
 %------------------------------------------------
 
+In this section, we have been looking at possible competitors which have a similar game concept as we do. The purpose of this is to determine strengths and weaknesses of these games and learn from their success or failure to create the best possible game ourselves, not only regarding the features and gameplay, but also the marketing, availability on different platforms and price.
+
+The market for 2D side-scrolling games is basically infinitely large and not comprehensible in terms of picking the best games because there are too many. This is the reason, why we did not spend hours on searching for games on Google or the Steam charts or similar research possibilities, but rather decided to let each team member pick one game that he thinks fits best with the game concept that we brainstormed earlier, and research that one game. Of course, we discussed each choice in the group and if everyone thought it is a good choice and made changes based on that discussion. Most games in the upcoming list were played by one or more team members previously, which made it easier and more accurate to determine it's main features, as well as good and bad points about it.
+
+%------------------------------------------------
+
+\newpage
 \subsection{Our competitiors}
 
 \subsubsection[Tallowmere]{Tallowmere \cite{Tallowmere}} \label{sec:StateOfTheArt_Tallowmere}
@@ -242,10 +245,6 @@ We were looking for our competitors via Google and we also knew a few of them be
 \end{figure}
 
 A 2D action platformer with an emphasis on executing your hero's jumping, shield-blocking, and weapon-attacking at the right moments as you move through a procedurally-generated dungeon.
-
-% REMOVE IF SOMETHING CHANGES
-\newpage
-% REMOVE IF SOMETHING CHANGES
 
 Features:
 
@@ -607,7 +606,7 @@ As we mentioned in subconclusions above, many games that are similar to what we 
 \section{Business Strategy} \label{MarketAnalysis}
 
 \subsection{Business Model} 
-Ever since the release of Pong\cite{Pong} in the U.S. and the beginning of the first generation of video game consoles in 1972 the gaming industry has been growing steadily and sees no end it sight. It has spread throughout the globe and game development companies have become international organisations. The only part of the globe where games are not popular is South America.\cite{GamesMarketRevenue} In the past few years the mobile gaming segment has overtaken all others in revenue and is expected to increase its lead over the coming years.
+Ever since the release of Pong \cite{Pong} in the U.S. and the beginning of the first generation of video game consoles in 1972 the gaming industry has been growing steadily and sees no end in sight. It has spread throughout the globe and game development companies have become international organizations. The only part of the globe where games are not popular is South America \cite{GamesMarketRevenue}. In the past few years, the mobile gaming segment has overtaken all others in revenue and is expected to increase its lead over the coming years.
 
 \begin{figure}[ht]
   \center
@@ -616,28 +615,28 @@ Ever since the release of Pong\cite{Pong} in the U.S. and the beginning of the f
   \caption{Newzoo 2017 Global Games Market Per Segment \cite{NezooScreenshot}}
 \end{figure}
 
-One of the reasons for this growth is the inclusion of new players - mostly females and elders, has induced the popularity of casual games in social networks and mobile apps. Another is the constant development of the different business models used by game developers. The most successful in recent years has been the free-to-model.\cite{BusinessModelsAndStrategy}
+One of the reasons for this growth is the inclusion of new players - mostly females and elders, has induced the popularity of casual games in social networks and mobile apps. Another reason is the constant development of the different business models used by game developers. The most successful in recent years has been the free-to-play-model \cite{BusinessModelsAndStrategy}.
 
 So how to combine these strengths into a model that will help us establish our project in this competitive market?
 
 We plan to use the trends in gaming to our advantage - PC games are still popular, but players expect an impressive gaming experience in return for their money. Mobile games are growing in popularity and lots of people are happy to pay for a simple entertaining experience.
 
-Therefore we plan to release the first level of Gangster Squirrel for free for Mobile and Desktop devices as an effort to boost interest. The full length game will be available on mobile for 1.99\$ and desktop for 3.99\$. These prices make our game competitively prices compared to our competitors, listed in section \ref{sec:StateOfTheArt}.
+Therefore we plan to release the first level of Gangster Squirrel for free for Mobile and Desktop devices as an effort to boost interest. The full-length game will be available on mobile for 1.99\$ USD and desktop for 3.99\$ USD. These prices make our game competitive with our competitors, many listed in section \ref{sec:StateOfTheArt}.
 
 A subscription-based model, though other games have had great success with it, doesn’t make sense in our case, because our game is very short. We plan to build a strong brand with successful sequels of the game, which will help with establishing ourselves in the market.
 
 \subsection{Marketing Strategy}
-Through the long history of game development, the marketing utilised by game producers has been quite varied \cite{MarketingStrategyExamples}. Users have been bombarded with promotional videos, print ads, billboards, newsletters and much more. Some companies have benefited from their marketing materials going viral.
-Our game will not be distributed on physical media, due to the added cost, it will available solely online. Therefore to aid with the advertisement our marketing will also be online, due to it's high return of investment, analytic capabilities and ease of use.
+
+Through the long history of game development, the marketing utilized by game producers has been quite varied \cite{MarketingStrategyExamples}. Users have been bombarded with promotional videos, print ads, billboards, newsletters and much more. Some companies have benefited from their marketing materials going viral.
+Our game will not be distributed on physical media, due to the added cost, it will available solely online. Therefore to aid with the advertisement our marketing will also be online, due to its high return on investment, analytic capabilities and ease of use.
 
 %------------------------------------------------
 
 \subsection{Market Segmentation}
 
-\textbf{Introduction:} Market segmentation is the process of dividing a broad consumer or business market, normally consisting of existing or potential customers, into sub-groups of consumers which are known as segments. The segments are based on some type of characteristics. Which typically are common characteristics, such as shared needs, common interests, or similar lifestyles. Market segmentation has become critical in any business or marketing plan. \cite{MarketSegmentation}
+Market segmentation is the process of dividing a broad consumer or business market, normally consisting of existing or potential customers, into sub-groups of consumers which are known as segments. The segments are based on some type of characteristics. Which typically are common characteristics, such as shared needs, common interests, or similar lifestyles. Market segmentation has become critical to any business or marketing plan \cite{MarketSegmentation}.
 
-The market is highly competitive as major vendors are competing against each other to acquire a greater market share.  As specified further under the “Business Model” section  in the report, there has been a peak in the past few years in mobile gaming, which has opened up the doors for new players - mostly females and elders, has induced the popularity of casual games in social networks and mobile apps. The statistic below shows the gender split among U.S. computer and video games from 2006-2017. Moreover, the calculation showed that nearly 42\% of all gamers in the United States, were women, a slight increase over the previous year. Based on a 2015 forecast, worldwide video game sales have increased to nearly 75 billion U.S. dollars in 2015 and are expected to grow to 90 billion by 2020.
-In 2014, it was also calculated that there were some 1.8 billion gamers in the world, which equals to about 25 percent of the entire global population. Therefore, video gaming is not only a hobby or for entertainment. It is the basis of a tremendous industry, worth over tens of billions U.S. dollars.\cite{VideoGamerGender}
+The market is highly competitive as major vendors are competing against each other to acquire a greater market share.  As specified further under the “Business Model” section in the report, there has been a peak in the past few years in mobile gaming, which has opened up the doors for new players - mostly females and elders have induced the popularity of casual games in social networks and mobile apps. The statistic below shows the gender split among U.S. computer and video games from 2006-2017. Moreover, the calculation showed that nearly 42\% of all gamers in the United States, were women, a slight increase over the previous year. Based on a 2015 forecast, worldwide video game sales have increased to nearly 75 billion U.S. dollars in 2015 and are expected to grow to 90 billion by 2020. In 2014, it was also calculated that there were some 1.8 billion gamers in the world, which equals to about 25 percent of the entire global population. Therefore, video gaming is not only a hobby or for entertainment. It is the basis of a tremendous industry, worth over tens of billions U.S. dollars \cite{VideoGamerGender}.
 
 \begin{figure}[ht]
   \center
@@ -647,38 +646,29 @@ In 2014, it was also calculated that there were some 1.8 billion gamers in the w
 \end{figure}
 
 \newpage
-Today, 27 percent of U.S. video gamers are between the ages of 18 and 35, so roughly every third game enthusiast is a Millennial, with figures going further towards the younger generation with recent years. However, 26 percent of surveyed Americans who admitted having playing video games were at least 50 years old. \cite{VideoGamerGender}
+Today, 27 percent of U.S. video gamers are between the ages of 18 and 35, so roughly every third game enthusiast is a Millennial, with figures going further towards the younger generation in recent years. However, 26 percent of surveyed Americans who admitted having playing video games were at least 50 years old \cite{VideoGamerGender}.
 
-Our segmentation is generally based on gamers, who have interest in retro gaming. We target people who wants to bring the old retro games back on the market. There is a slightly decreasement in the Boxed/Downloaded PC Games for this year. However, there has been an immense growth in mobile gaming, throughout the past few years. Which will eventually make the market size expand for the years to come. One thing our customers have in common is retro gaming, whether it's for a small platform (mobile gaming) or a big (PC-games). Segmentation basically divides a population based on variables. We believe that our target group will be suitable for the psychographic market segmentation-strategy. 
+Our segmentation is generally based on gamers, who have interest in retro gaming. We target people who want to bring the old retro games back on the market. There is a slight decreasement in the Boxed/Downloaded PC Games for this year. However, there has been an immense growth in mobile gaming, throughout the past few years. Which will eventually make the market size expand for the years to come. One thing our customers have in common is retro gaming, whether it's for a small platform (mobile gaming) or a big platform (PC-games). Segmentation basically divides a population based on variables. We believe that our target group will be suitable for the psychographic market segmentation-strategy. 
 
 \newpage
 There are four basic market segmentation-strategies which are based on: 
 
 \begin{itemize}
     \item behaviour
-\end{itemize}
-
-\begin{itemize}
     \item demographic
-\end{itemize}
-
-\begin{itemize}
     \item geographical differences
+    \item psychographic
 \end{itemize}
 
-\begin{itemize}
-    \item psychographic
-    \end{itemize}
+Segmentation according to demographic is based on consumer-demographic variables such as age, income, family size, economic status etc. This kind of segmentation assumes that consumers with similar demographic profiles will exhibit similar purchasing patterns, and have similar interests, lifestyles and motivations. Moreover, that these characteristics will translate into similar product/brand preferences. The demographic segmentation is one of the simplest and widest types of market segmentation used. 
 
-Segmentation according to demographic is based on consumer-demographic variables such as age, income, family size, economic status etc. This kind of segmentation assumes that consumers with similar demographic profiles will exhibit similar purchasing patters, and have similar interests, lifestyles and motivations. Moreover, that these characteristics will translate into similar product/brand preferences. The demographic segmentation is one of the simplest and most widest type of market segmentation used. 
+Behavioral segmentation divides the population on the basis of their behavior, usage and decision-making pattern. For example, young people will always prefer a smartphone whereas elder people will prefer a standard cellphone. This is an example of behavior based on segmentation. The product is marketed, by the behavior of an individual. 
 
-Behavioral segmentation divides the population on the basis of their behavior, usage and decision making pattern. For example young people will always prefer a smartphone whereas elder people will prefer a standard cellphone. This is an example of behavior based on segmentation. The product is marketed, by the behavior of an individual. 
+Geographical segmentation divides people on the geographic criteria. The potential customers will have different needs based on the geography they are located in. In practice, markets can be segmented as broadly as continents and as narrowly as neighborhoods or postal codes. This type of segmentation is the easiest but it was actually used in the last decade where the industries were new and the reach was less.
 
-Geographical segmentation divides people on the geographic criteria. The potential customers will have different needs based on the geography they are located in. In practise, markets can be segmented as broadly as continents and as narrowly as neighbourhoods or postal codes. This type of segmentation is the easiest but it was actually used in the last decade where the industries were new and the reach was less.
+The psychographic segmentation is one which uses lifestyle of people, their interests, activities, and hobbies as well as opinions to define a market segmentation. It’s quite similar to the behavioral segmentation. But psychographic also takes the psychological aspects of consumer buying behavior into accounts. Having the statistics and latest Games Market Report in mind, we have chosen to limit our target group to consumers aged between 18-50 years old, and to categorize our segmentation as psychographic \cite{MarketSegmentation}.
 
-The psychographic segmentation is one which uses lifestyle of people, their interests, activities and hobbies as well as opinions to define a market segmentation. It’s quite similar to the behavioral segmentation. But psychographic also takes the psychological aspects of consumer buying behavior into accounts. Having the statistics and latest Games Market Report in mind, we’ve chosen to limit our target group to consumers aged between 18-50 years old, and to categorize our segmentation as psychographic.\cite{MarketSegmentation}  
-
-The latest quarterly update of the Global Games Market Report, released by Newzoo, displays the essence of computer gaming. Throughout the infographic, is illustrated the big part computer gaming has on the global games market since 2016 and will have till est. 2020. Having this in mind we’ve chosen to release Gangster Squirrel for free for Desktop devices as an effort to boost interest. The full length game will be available for 3.99\$ for desktop. Furthermore, if the desktop-version succeeds, a mobile version will be available as well for 1.99\$
+The latest quarterly update of the Global Games Market Report, released by Newzoo, displays the essence of computer gaming. Throughout the infographic, is illustrated the big part computer gaming has on the global games market since 2016 and will have until est. 2020. Having this in mind we have chosen to release Gangster Squirrel for free for Desktop devices as an effort to boost interest. The full-length game will be available for 3.99\$ for the desktop. Furthermore, if the desktop-version succeeds, a mobile version will be available as well for 1.99\$
 
 \begin{figure}[ht]
   \center
@@ -694,8 +684,9 @@ The latest quarterly update of the Global Games Market Report, released by Newzo
 \clearpage
 \section{Visual Documentation} \label{VisualDocumentation}
 
-\subsection{Player textures}
-Since our original idea of the game and the main character was ludicrous, we realized that we wouldn’t find any finished game concepts with all the accessories and features that we desired. Instead we decided to figure out the look of the squirrel, as well as brainstorming accessory-clothing and weapons that we found fitting for the overall theme of the game.
+\subsection{Player textures} \label{DocVisualPlayerTextures}
+
+Since our original idea of the game and the main character was ludicrous, we realized that we wouldn’t find any finished game concepts with all the accessories and features that we desired. Instead, we decided to figure out the look of the squirrel, as well as brainstorming accessory-clothing and weapons that we found fitting for the overall theme of the game.
 
 Since the original idea was that we wanted to do custom textures for every character in the game, we made sure to research the general opinion on both software and online solutions for making 8-bit textures. Logically, it quickly came apparent that downloaded software is the superior option, as they allow for more advanced features, as well as adding animation. According to our research it came clear, that the general opinion is that \emph{PyxelEdit} \cite{PyxelEdit} and \emph{GIMP} \cite{GIMP} are the best free options, so the group members decided to use one of these depending on preference.
 
@@ -711,31 +702,16 @@ The main character was created with PyxelEdit, since the program allows for easy
 \newpage 
 The look of the squirrel was done with inspiration from the “White-tailed Antelope Ground Squirrel”. The weapons are made with inspiration from the weapons listed chronologically below:
 
- \begin{itemize}
-        \item Branch
-    \end{itemize}
-    
-    \begin{itemize}
-        \item Swiss-Army Knife 
-    \end{itemize}
-    
-    \begin{itemize}
-        \item Switchblade
-    \end{itemize}
-    
-    \begin{itemize}
-        \item Katana
-    \end{itemize}
-    
-    \begin{itemize}
-        \item Tommy Gun
-    \end{itemize}
-    
-    \begin{itemize}
-        \item Rocket Launcher
-    \end{itemize}
+\begin{itemize}
+    \item Branch
+    \item Swiss-Army Knife
+    \item Switchblade
+    \item Katana
+    \item Tommy Gun
+    \item Rocket Launcher
+\end{itemize}
 
-As it appears, some of the peculiar details were lost when trying to recreate the weapons, as 8-bit textures has its delimitations. 
+As it appears, some of the peculiar details were lost when trying to recreate the weapons, as 8-bit textures have its delimitations. 
 
 The attacking animations were done with the same approach as any other animation in our game. In this particular case, it is only done with a single different texture with the weapon stretching out from the body of the squirrel, as shown in the image below.
 
@@ -748,18 +724,20 @@ The attacking animations were done with the same approach as any other animation
 
 \newpage 
 \subsection{Enemy textures}
+
 We wanted to be in complete control of the actual look of characters, and although it would be ideal to have our own design for every enemy as well, we quickly realized that this would be a time-consuming process, so we decided to research different possibilities. The group decided to research the web for finished designs for enemies, and it quickly came apparent, that there’s a plenitude of animated 8-bit GIF’s (Graphics Interchange Format) available online. 
 
 We decided not to have an excess number of enemies, as it could ruin the playing experience, as well as being time-consuming to implement. We went with only three enemies, a frog \cite{FrogEnemyDesign}, a bird \cite{BirdEnemyDesign} and a monkey \cite{MonkeyEnemyDesign}, as well as a boss \cite{BossEnemyDesign} at the end of the third level, as we felt like that would be the suitable amount to also make room for other features. 
 
 All the three added enemies are GIFs. A GIF is a bitmap image format, which basically is a series of images composing an animation in a loop.
 
+An image of the spritesheet of the frog enemy can be found in the animation section (\ref{DocAnimations}).
+
 \subsection{Maps} \label{VisualDocMaps}
 
 \subsubsection{Map textures}
 
-The textures are the graphical images by which one can construct the whole map. In order to make a map for our project we needed to make some textures / spritesheets, for example for the player (squirrel), the ground, background and weapons. We made the spritesheets / textures by using the web-application piskelapp \cite{piskelapp}, which allows the users to draw the textures according to their requirements. We also used some premade textures from a website called opengameart \cite{opengameart}, which provides a large variety of free textures.
-
+The textures are the graphical images by which one can construct the whole map. In order to make a map for our project, we needed to make some textures / spritesheets, for example for the player (squirrel), the ground, background, and weapons. We made the spritesheets / textures by using the web-application piskelapp \cite{piskelapp}, which allows the users to draw the textures according to their requirements. We also used some premade textures from a website called opengameart \cite{opengameart}, which provides a large variety of free textures.
 
 \subsubsection{Map creation}
 
@@ -794,15 +772,15 @@ A game's map represents a lot about the game itself. The Gangster Squirrel consi
     \end{figure}
 \end{itemize}
 
-We created these maps by using a software called \texttt{Tiled}. Tiled is a map editor software, which is mostly used by developers to create maps \cite{TiledMapEditor}. Tiled is mostly used to make 8 bit styled based games, where in our game we used the 8-bit styled retro game.
+We created these maps by using a software called \texttt{Tiled}. Tiled is a map editor software, which is mostly used by developers to create maps \cite{TiledMapEditor}. Tiled is mostly used to make 8-bit styled based games, which is perfect for our game.
 
-One of the reasons why we choose Tiled program as a map editor was that it's recommended by LibGDX documentation [Put a ref]. Another reason was that the Tutorial series for LibGDX on youtube [Put a reference], which we followed had also used the Tiled map editor. From our point of view working with the Tiled program was really easy to understand, because it was really simple to create a map with it.
+One of the reasons why we chose \emph{Tiled} as a map editor was that it's recommended by LibGDX itself in the documentation \cite{TileMaps}. Another reason was that the tutorial series for LibGDX on YouTube \cite{BrentAureliSuperMarioBros}, which we followed, had also used the Tiled map editor, which made it easy to get into it. From our point of view working with the Tiled program was really easy to understand, because it was really simple to create a map with it.
 
 \subsection{Head-up display}
 
-For the head-up display, we needed an icon for both the remaining lives and the weapon strength. The health bar was trickier because it had to be resizable in the horizontal direction. The images in this section were all created with the image manipulation software GIMP \cite{GIMP}.
+For the head-up display, we needed an icon for the remaining lives, the weapon strength and the Twitch effects (see section \ref{Twitch}). The health bar was trickier because it had to be resizable in the horizontal direction. The images in this section were all created with the image manipulation software GIMP \cite{GIMP}.
 
-For the remaining lives, we used our own version of the iconic 8-bit heart (see figure \ref{fig:hud_heart_icon}). Thousands of those hearts can be found when googling "8-bit heart". The image size is 48 by 32 pixels, 16 extra pixels were added to the right side of the image to have a margin between the icon and the text in the game, since it doesn't have a feature to do it itself.
+For the remaining lives, we used our own version of the iconic 8-bit heart (see figure \ref{fig:hud_heart_icon}). Thousands of those hearts can be found when googling "8-bit heart". The image size is 48 by 32 pixels, 16 extra pixels were added to the right side of the image to have a margin between the icon and the text in the game since it doesn't have a feature to do it itself. The icon can be seen in figure \ref{fig:hud_heart_icon}.
 
 \begin{figure}[ht]
   \center
@@ -811,7 +789,7 @@ For the remaining lives, we used our own version of the iconic 8-bit heart (see 
   \label{fig:hud_heart_icon}
 \end{figure}
 
-The icon for the weapon strength is similar. It is also a 48 by 32 pixel image and based on already existing 8-bit art, but still created by ourselves completely (see figure \ref{fig:hud_weapon_strength_icon}). The icon shows a military knife with blood on it's tip and around it, creating the illusion that it was just used. We think this is the clearest way to represent the strength of a weapon in an icon.
+The icon for the weapon strength is similar. It is also a 48 by 32-pixel image and based on already existing 8-bit art, but still created by ourselves completely (see figure \ref{fig:hud_weapon_strength_icon}). The icon shows a military knife with blood on its tip and around it, creating the illusion that it was just used. We think this is the clearest way to represent the strength of a weapon in an icon. The icon can be seen in figure \ref{fig:hud_weapon_strength_icon}
 
 \begin{figure}[ht]
   \center
@@ -820,7 +798,16 @@ The icon for the weapon strength is similar. It is also a 48 by 32 pixel image a
   \label{fig:hud_weapon_strength_icon}
 \end{figure}
 
-The progress bars are a bit trickier, because it has to be resizable in the horizontal direction to make it fit every screen size. LibGDX solves this scaling issue by using 9-Patch files \cite{NinePatchImage}. These images are normal PNG's, but with the extension \texttt{*.9.png}. Each nine patch image has to be bigger by one pixel on each side of the image, which then contain black bars which describe the so called \emph{patches}. A patch is simply the area of the image that is scalable, so the other graphical elements stay unaffected. IntelliJ has a built-in editor for nine patch images, which is a bit tricky to use but does the trick. When creating the skin for the HUD (see section \ref{DocHUD}), we needed to define a \texttt{knobBefore} image, which fills the progress bar. This image is simply one pixel wide and contains green pixels.
+The last of these icons simply shows the Twitch icon to represent the remaining time of an active effect that was given by Twitch chat (see section \ref{Twitch}). The icon has a 48 by 32-pixel resolution like the other icons and was self-drawn with the original logo as a template. The icon can be seen in figure \ref{fig:hud_twitch_icon}.
+
+\begin{figure}[ht]
+  \center
+  \includegraphics[width=0.1\textwidth]{Documentation/twitch.png}
+  \caption{The Twitch icon in the HUD}
+  \label{fig:hud_twitch_icon}
+\end{figure}
+
+The progress bars are a bit trickier because it has to be resizable in the horizontal direction to make it fit every screen size. LibGDX solves this scaling issue by using 9-Patch files \cite{NinePatchImage}. These images are normal PNG's, but with the extension \texttt{*.9.png}. Each nine-patch image has to be bigger by one pixel on each side of the image, which then contains black bars which describe the so-called \emph{patches}. A patch is simply the area of the image that is scalable, so the other graphical elements stay unaffected. IntelliJ has a built-in editor for nine patch images, which is a bit tricky to use but does the trick. When creating the skin for the HUD (see section \ref{DocHUD}), we needed to define a \texttt{knobBefore} image, which fills the progress bar. This image is simply one pixel wide and contains green pixels. The progress bar can be seen in figure \ref{fig:hud_health_bar}.
 
 \begin{figure}[ht]
   \center
@@ -831,10 +818,25 @@ The progress bars are a bit trickier, because it has to be resizable in the hori
 
 The visuals of the health bar were inspired by the health bar of \emph{Stardew Valley} (see section \ref{StardewValley}). We adapted some of the main colors of their progress bar and also included a red cross on the left side of the progress bar. It is similar style-wise but created by ourselves completely and with our own ideas.
 
-\newpage
-\section{Technical Documentation}
+%------------------------------------------------
+
+\subsection{Menus} \label{VisualDocMenus}
+
+The navigational menus of the game were added as one of the last features. LibGDX provides a scene graph functionality with a few user interface widgets, but without any default style \cite{Scene2DUI}. Since the priority is functionality and not visuals, we used a community template called \emph{Flat Earth UI Skin} \cite{FlatEarthUISkin} to speed up the process of creating a working menu system. This might still change until the exam.
+
+The following figure \ref{fig:flat_earth_ui_skin} shows a template application, provided on the website, with all widgets to show the visuals of this template.
+
+\begin{figure}[ht]
+  \center
+  \includegraphics[width=0.75\textwidth]{Documentation/preview.png}
+  \caption{Flat Earth UI Skin \cite{FlatEarthUISkin}}
+  \label{fig:flat_earth_ui_skin}
+\end{figure}
 
 %------------------------------------------------
+
+\clearpage
+\section{Technical Documentation}
 
 \subsection{Choosing the game engine} \label{DocGameEngine}
 
@@ -873,9 +875,9 @@ The import into IntelliJ is easy, just open the project and an import pop-up app
 \newpage
 \subsection{Starting off}
 
-Since no one in this group had any experience with LibGDX previously, we had to find a way to learn it and be able to set up a viable project structure. When searching for relevant tutorials online, we stumbled upon a YouTube playlist by Brent Aureli with tutorials on how to create a \emph{Super Mario Bros} \cite{SuperMarioBros} clone with LibGDX \cite{BrentAureliSuperMarioBros}.
+Since no one in the group had any experience with LibGDX previously, we had to find a way to learn it and be able to set up a viable project structure. When searching for relevant tutorials online, we stumbled upon a YouTube playlist by Brent Aureli with tutorials on how to create a \emph{Super Mario Bros} \cite{SuperMarioBros} clone with LibGDX \cite{BrentAureliSuperMarioBros}.
 
-The tutorial series helped us by a great amount to understand how LibGDX works and how we have to set up and structure our game. This is mainly due to the nature of our game, which is very similar to the original \emph{Super Mario Bros} in terms of gameplay. The playlist furthermore covers the creation of maps with the open source map editor \texttt{Tiled} (see section \ref{VisualDocMaps}) and the usage of the physics engine \texttt{Box2D} (see section \ref{DocCollisions}). The group reviewed about half of the playlist until we decided that we learned all basics that we need to create our own game.
+The tutorial series helped us by a great amount to understand how LibGDX works and how we have to set up and structure our game. This is mainly due to the nature of our game, which is similar to the original \emph{Super Mario Bros} in terms of gameplay. The playlist furthermore covers the creation of maps with the open source map editor \texttt{Tiled} (see section \ref{VisualDocMaps}) and the usage of the physics engine \texttt{Box2D} (see section \ref{DocCollisions}). The group reviewed about half of the playlist until we decided that we learned all basics that we need to create our own game.
 
 However, it is important to note that we solely used this tutorial to learn about LibGDX and set up a basic 2D game. All code in the project is completely written by ourselves and we did not use any pre-made projects or classes from third parties.
 
@@ -935,7 +937,7 @@ public void exitApplication(String errorMessage) {
 }
 \end{minted}
 
-The methods \texttt{resetTimer()} and \texttt{resetPlayerLifes()} reset the values for the current game time and the current lives of the player in the JSON save files, because they are being used by the game and need to be temporary, or the lives or the time will not start from the default value, when starting the game the next time. These values need to be stored in a file, because the entire play screen class is being reloaded, when the player respawns, and therefore resetting all run time variables.
+The methods \texttt{resetTimer()} and \texttt{resetPlayerLifes()} reset the values for the current game time and the current lives of the player in the JSON save files, because they are being used by the game and need to be temporary, or the lives or the time will not start from the default value, when starting the game the next time. These values need to be stored in a file, because the entire play screen class is being reloaded, when the player respawns, and therefore resetting all run time variables (see section \ref{DocJSONfiles}).
 
 The game is then being closed by calling the libGDX method \texttt{Gdx.app.exit()}, which disposes of all disposable resources in the application and close the game. This works just fine, but usually prints out a bunch of irrelevant errors, which can be more or less suppressed by calling the native Java method \texttt{System.exit()}. The error code \texttt{0} means the execution went just fine with no errors.
 
@@ -966,12 +968,12 @@ Following that, the main game class creates the \texttt{SplashScreen}, which jus
 The following list briefly describes each class that can be seen in the minimised class diagram, except the ones already described. Many of these classes have subclasses or associated classes, which are not relevant for the structure but can be seen in the full diagram (see section \ref{AppendixClassDiagramFull}).
 
 \begin{itemize}
-  \item \textbf{Box2DWorldCreator}: responsible for creating the physics environment of the map (see section \ref{DocPhysicsAndBodySetup} and \ref{DocMaps})
+  \item \textbf{Box2DWorldCreator}: responsible for creating the physics environment of the map (see section \ref{DocMaps})
   \item \textbf{WorldContactListener}: detects and handles all collision between physics objects (see section \ref{DocCollisionDetection})
   \item \textbf{InteractiveMapTileObject}: an abstract class for static map objects, includes physical body set up and collision handling (see section \ref{DocPhysicsAndBodySetup})
   \item \textbf{Enemy}: an abstract class for different enemy objects, includes physical body set up, collision handling and enemy movement (see section \ref{DocEnemyClass})
   \item \textbf{Player}: the definition of the player as physical entity and as texture. Everything from player animations, moving, attacking and switching weapons is done here (see section \ref{DocPlayerClass})
-  \item \textbf{PlayScreenHud}: sets up and manages the "Heads Up Display", containing items like the health bar and the timer (see section \ref{DocHUD})
+  \item \textbf{PlayScreenHud}: sets up and manages the "Head-Up Display", containing items like the health bar and the timer (see section \ref{DocHUD})
   \item \textbf{GameplayInputProcessor}: registers key press events and handles them appropriately (see section \ref{DocKeyBindings})
   \item \textbf{KeyBindings}: reads and writes associated keys with certain actions to a file (see section \ref{DocKeyBindings})
   \item \textbf{GameProgress}: reads and writes the user's progress in the game to a file (see section \ref{DocJSONfiles})
@@ -1412,12 +1414,171 @@ In conclusion, this method checks for destroyable items each frame and removes t
 \newpage
 \subsection{The player class} \label{DocPlayerClass}
 
+The player class \texttt{extends} LibGDX's \texttt{Sprite} class and is therefore perfect as a base for this class because it's very easy to set up and move the player's texture by this. The class also maintains the body and fixtures of the player in the physics simulation, as well as changing weapons, attacking and generally managing variables like the health.
+
+\subsubsection{Constructor}
+
+\begin{minted}[linenos,breaklines]{java}
+public Player(PlayScreen screen, int spawnPosition_X, int spawnPosition_Y) {
+    super(screen.getPlayerTextureAtlas().findRegion("squirrel_default"));
+    
+    // several assignments omitted
+
+    definePlayer();
+    setUpTextureRegions();
+    setBounds(0, 0, PLAYER_PIXEL_WIDTH / MainGameClass.PPM, PLAYER_PIXEL_HEIGHT / MainGameClass.PPM);
+
+    if (weapons.size() > screen.getGameProgress().getCurrentlyEquippedWeapon()) 
+    {
+        setRegion(
+            textureRegions.get(
+            weapons.get(
+            screen.getGameProgress().
+            getCurrentlyEquippedWeapon())
+            .getName())
+        );
+    } else {
+        setRegion(textureRegions.get("Fists"));
+    }
+}
+\end{minted}
+
+The constructor takes in an instance of the \texttt{PlayScreen} in order to have access to the game flow, as well as a spawn position on the map, counting from the lower left corner in tile indices. The actual spawn position in pixels is later calculated by multiplying the values with the pixel size of a tile in the map.
+
+The constructor of the superclass is then fed with the texture region of the default squirrel sprite, meaning that the sprite of this class is now assigned this texture and will display it when rendering. When the user switches weapons or attacks, this texture will be changed. 
+
+The \texttt{definePlayer} method creates a body for the physics simulation and three fixtures: the squirrel's body and two "attack" fixtures, that serve as a sensor to determine which enemies are in range to be attacked at any time. More information of the set-up of bodies can be found in section \ref{DocCollisions}.
+
+The method \texttt{setUpTextureRegions} sets up a \texttt{HashMap} that contains the display name of each weapon as the key and the actual \texttt{TextureRegion} as the value, which makes it easy to switch between textures later, because we can simply search the \texttt{HashMap} for values with the key of the weapon that we want to equip and we automatically receive the texture. It also contains each texture in the attack state, but with the syntax of \texttt{katana\_attack}, replacing the first word with the desired weapon name in lower case.
+
+The method \texttt{setBounds} of the superclass simply defines the position and size of the texture, which is at the zero coordinates and with the texture width and height in pixels, divided by the scaling unit \texttt{PPM}.
+
+The following if-condition determines if the player has a valid weapon equipped, and if it does, sets the texture of the superclass to the texture of the currently equipped weapon. This is done by searching the previously mentioned \texttt{HashMap} for the weapon name of the weapon that the player has currently equipped.
+
+\subsubsection{Changing weapons}
+
+\begin{minted}[linenos,breaklines]{java}
+public void changeWeapon(int indexInWeaponList) {
+    if (weapons.size() - 1 >= indexInWeaponList) {
+        setRegion(
+            textureRegions.get(weapons.get(indexInWeaponList).getName())
+        );
+        screen.getGameProgress().setCurrentlyEquippedWeapon(indexInWeaponList);
+    }
+
+    flipPlayerDirection(isFacingLeft);
+}
+\end{minted}
+
+Switching weapons can be done in a very similar way, by giving in the index in the list of the player's weapons and then changing the texture to the desired weapon texture. The method \texttt{flipPlayerDirection} is being used to flip the player's texture depending on the movement direction (see section \ref{DocPlayerFlipping}). It is called after changing weapons to prevent the texture not being flipped when currently walking in the wrong direction when changing weapons.
+
+\newpage
+\subsubsection{Flipping directions} \label{DocPlayerFlipping}
+
+In order to flip the texture, the following method needs to be called.
+
+\begin{minted}[linenos,breaklines]{java}
+public void flipPlayerDirection(boolean left) {
+    setFlip(left, false);
+    isFacingLeft = left;
+}
+\end{minted}
+
+The \texttt{setFlip} method belongs to the super class of the type \texttt{Sprite} and the field variable \texttt{isFacingLeft} is a simple way to store the player's direction.
+
+In the \texttt{update} method, which is called each frame, the position of the texture is being adjusted in order to maintain the texture in the same position all the time. Each player texture is double as wide as the actual body to have space for displaying weapons. The body is only half of that texture. The player is always on the left side of the texture, which means that it would suddenly appear on the right side when flipping the texture. The player would then be out of body's shape since the body itself is only half the width of the texture and on it's left side. Because of this, whenever the player is facing the left direction, we have to shift the texture to the left by half it's width to keep it in place. The following code snippet shows how it is done.
+
+\begin{minted}[linenos,breaklines]{java}
+if (isFacingLeft) {
+    setPosition(body.getPosition().x - getWidth(), body.getPosition().y - getHeight() / 2);
+} else {
+    setPosition(body.getPosition().x - getWidth() / 2, body.getPosition().y - getHeight() / 2);
+}
+\end{minted}
+
+\newpage
+\subsubsection{Attacking}
+
+The player class implements a public method called \texttt{attack}, which needs no parameters and will handle everything from there. This method is called when the game detects a keypress that is associated with the attack action.
+
+\begin{minted}[linenos,breaklines]{java}
+public void attack() {
+    if (!attackAnimationPlaying) {
+        attackAnimationPlaying = true;
+
+        // Deal damage to all enemies in range
+        if (isFacingLeft) {
+            for (Enemy enemy : screen.getEnemiesCurrentlyInLeftAttackRange()) {
+                enemy.setHealth(
+                    enemy.getHealth() - 
+                    screen.getGameProgress().getPlayerWeaponList().get(
+                        screen.getGameProgress()
+                        .getCurrentlyEquippedWeapon()
+                    ).getStrength()
+                );
+            }
+        } else {
+            // the same with the enemies in the right attack range
+        }
+    }
+}
+\end{minted}
+
+The boolean \texttt{attackAnimationPlaying} will be set to false, when the duration of the attack is done, which is counted by the \texttt{update} method. If an attack is not already in progress, all enemies that are currently in range will be attacked. This is done by looping through a public list of enemies in the play screen, which constantly gets updated with the objects of the type \texttt{Enemy} that are currently in contact with the two "attack shapes" that were previously mentioned. There are two lists, for the right and the left side of the player. Depending on the direction of the player, the appropriate list will be looped through and each enemy will lose health points. The amount of the loss is defined by the strength of the weapon.
+
+The visual side of the attack is done in the \texttt{update} method.
+
+% REMOVE IF SOMETHING CHANGES
+\newpage
+% REMOVE IF SOMETHING CHANGES
+
+\begin{minted}[linenos,breaklines]{java}
+if (attackTime <= ATTACK_DURATION) {
+    if (attackAnimationPlaying) {
+        attackTime += deltaTime;
+
+        switch (
+            screen
+            .getGameProgress()
+            .getPlayerWeaponList()
+            .get(
+                screen
+                .getGameProgress()
+                .getCurrentlyEquippedWeapon()
+            ).getName()) 
+        {
+            case "Katana":
+                setRegion(textureRegions.get("katana_attack"));
+                flipPlayerDirection(isFacingLeft);
+                break;
+            // Other cases omitted because of redundancy
+            default:
+                break;
+        }
+    }
+} else {
+    attackTime = 0f;
+    attackAnimationPlaying = false;
+    changeWeapon(
+        screen
+        .getGameProgress()
+        .getPlayerWeaponList()
+        .get(
+            screen
+            .getGameProgress()
+            .getCurrentlyEquippedWeapon()
+        ).getName());
+}
+\end{minted}
+
+If the maximum duration of the attack is not yet over, the time of the current delta time will be added to the counter. Depending on the currently equipped weapon, the attack texture of that weapon is then displayed by searching the \texttt{HashMap} of all player-related textures by name. However, if the attack duration has reached the maximum duration, the timer will be reset to zero and the boolean is set to \texttt{false} again. To change the texture back to the normal state again, the \texttt{changeWeapon} method is called, which will automatically change the texture back to normal, even if we didn't actually change weapons.
+
 %------------------------------------------------
 
 \newpage
 \subsection{The enemy class} \label{DocEnemyClass}
 
-The abstract \texttt{Enemy} class extends libGDX's \texttt{Sprite} class in order to have easy access to displaying an enemy with a sprite. The \texttt{Enemy} class is where the gameplay relevant variables such as damage, health, movement capabilities and spawn position are initialized, as well as constant values such as pixel height and –width as shown in the code snippet below. 
+The abstract \texttt{Enemy} class extends libGDX's \texttt{Sprite} class in order to have easy access to displaying an enemy with a sprite. The \texttt{Enemy} class is where the gameplay relevant variables such as damage, health, movement capabilities and spawn position are initialized, as well as constant values such as pixel height and –width as shown in the code snippet below. The functionality of this class is similar to the player class (see section \ref{DocPlayerClass}).
 
 \begin{minted}[linenos,breaklines]{java}
 public abstract class Enemy extends Sprite {
@@ -1440,6 +1601,8 @@ public abstract class Enemy extends Sprite {
     protected boolean isMovingLeftOrRight;
 \end{minted}
 
+Furthermore, the constructor sets up the body and fixtures of each enemy, so that each child class is automatically added to the physics simulation upon creation.
+
 The \texttt{FrogEnemy}, \texttt{MonkeyEnemy} and \texttt{BossEnemy} classes then extend the \texttt{Enemy} class. As soon as the rectangle connected to the enemy and the rectangle connected to the player collide, the player’s health is reduced by an amount depending on which enemy is in contact, as they do different amounts of damage. The logic behind the damage implementation is shown below.
 
 \begin{minted}[linenos,breaklines]{java}
@@ -1453,7 +1616,7 @@ public void onPlayerBeginContact(Player player) {
 }
 \end{minted}
 
-The enemies also have invisible barriers on the map to ensure that they don’t fall over edges or run into a hole. As soon as an enemy collide with these barriers, they turn around until either the player, an enemy or a different barrier is engaged. These borders are shown in the map creator in Figure \ref{fig:EnemyMoveBorders}, and the logic is explained in the code:
+The enemies also have invisible barriers on the map to ensure that they don’t fall over edges or run into a hole. As soon as an enemy collides with these barriers, they turn around until either the player, an enemy or a different barrier is engaged. These borders are shown in the map creator in Figure \ref{fig:EnemyMoveBorders}.
 
 \begin{figure}[ht]
   \center
@@ -1461,6 +1624,8 @@ The enemies also have invisible barriers on the map to ensure that they don’t 
   \caption{Invisible collision boxes that signal enemies to turn around}
   \label{fig:EnemyMoveBorders}
 \end{figure}
+
+The following method is implemented in the \texttt{EnemyMoveBorder} class. Whenever the collision listener detects, that an object of the type \texttt{Enemy} collided with a move border, this method is called and given the related enemy as a parameter.
 
 \begin{minted}[linenos,breaklines]{java}
 @Override
@@ -1490,6 +1655,11 @@ However, if the file does exist, the JSON string is read from it and converted t
 A more detailed explanation of how we utilize JSON files can be found in section \ref{DocJSONfiles}.
 
 An exemplary key bindings JSON key binding file looks like this:
+
+% REMOVE IF SOMETHING CHANGES
+\newpage
+% REMOVE IF SOMETHING CHANGES
+
 \inputminted[linenos,breaklines]{json}{code/json/keybindings.json}
 
 An array in JSON starts with a \texttt{[}, hence the bracket at the start and end. The \texttt{KeyBindingObject} objects in between are items of that array. Each item has a String identifier and another array for the corresponding key codes. JSON separates key and value with a \texttt{:} symbol.
@@ -1513,17 +1683,18 @@ Here, it is simply being checked, if the user presses a key that is associated w
 \newpage
 \subsection{JSON files} \label{DocJSONfiles}
 
-We use JSON files for many different purposes in the game, not only for storing key bindings (as described in \ref{DocKeyBindings}). The application currently manages five different JSON files: 
+We use JSON files for many different purposes in the game, not only for storing key bindings (as described in \ref{DocKeyBindings}). The application currently manages six different JSON files: 
 
 \begin{itemize}
     \item[\faFile] \texttt{gameprogress.json} : stores the general progress of the player in the game
     \item[\faFile] \texttt{keybindings.json} : stores the currently assigned keys to all actions in the game
+    \item[\faFile] \texttt{settings.json} : stores the settings that can be changed in the menu
     \item[\faFile] \texttt{statistics.json} : stores a broad amount of statistical values
     \item[\faFile] \texttt{twitchcredentials.json} : stores the information needed to connect with the correct twitch channel
     \item[\faFile] \texttt{weaponlist.json} : stores a list of all available weapons in the game
 \end{itemize}
 
-All five cases use the same approach to reading and writing to these files. We will use the \texttt{statistics} file to explain this process. The only difference in the code is the data structure of each file.
+All six cases use the same approach to reading and writing to these files. We will use the \texttt{statistics} file to explain this process. The only difference in the code is the data structure of each file.
 
 As already mentioned in section \ref{DocKeyBindings}, the program uses the \texttt{GSON} library to serialize and deserialize all JSON files. It is very easy to use since the library can convert any Java object into the JSON format. All it needs is therefore a class that contains all variables, which the program should store.
 
@@ -1840,7 +2011,7 @@ For an explanation on how the atlas is used and the game engine renders the anim
 \newpage
 \subsection{Maps} \label{DocMaps}
 
-After making the map in the Tiled program, we exported it in a .tmx file and used it in the project. TMX file contains all the map’s custom properties and all the layers, which has been made in the Tiled program. The following code is an example on how the .tmx file works with our project.
+After making a map in the \texttt{Tiled} map editor, we exported it to a .tmx file and used it in the project. A TMX file contains all the map’s custom properties and all the layers, which have been made in the map editor. The following code is an example of how the .tmx file is loaded when starting a new level.
 
 \begin{minted}[linenos,breaklines]{java}
 mapLoader = new TmxMapLoader();
@@ -1861,9 +2032,13 @@ switch (gameProgress.getCurrentLevel()) {
 }
 \end{minted}
 
-The above code creates an instance of the map and it loads the current level by reading the JSON-file (see section \ref{DocJSONfiles}). If the current level is set to 1 then it loads the first level. If the current level is set to 2 then loads the second level and so on.
+The above code creates an instance of the map and loads the current level by reading the JSON file (see section \ref{DocJSONfiles}). If the current level is set to one, it loads the first level. If the current level is set to two then loads the second level, and so on.
 
-The following class reads out the object layers of the map and create the relevant objects in the physics simulation. Only rectangular objects are considered.
+The following constructor of the class \texttt{Box2DWorldCreator} reads out the object layers of the map and creates the relevant objects in the physics simulation. Only rectangular objects are considered.
+
+% REMOVE IF SOMETHING CHANGES
+\newpage
+% REMOVE IF SOMETHING CHANGES
 
 \begin{minted}[linenos,breaklines]{java}
 public Box2DWorldCreator(PlayScreen screen) {
@@ -1877,6 +2052,7 @@ public Box2DWorldCreator(PlayScreen screen) {
                     case "ground":
                         groundObjects.add(new Ground(screen, rectangle));
                         break;
+                    // Other types omitted because of redundancy
                     default:
                         break;
                 }
@@ -1897,6 +2073,7 @@ The head-up display consist of several elements, which are:
     \item A health bar
     \item A label to display the player's remaining lives
     \item A label to display the strength of the currently equipped weapon
+    \item A label to display the remaining time of an active effect by Twitch (see section \ref{Twitch})
 \end{itemize}
 
 As described in the discussion (see section \ref{Discussion}), we also wanted to add a toolbar to show all the weapons that the player has in his inventory, and in which slots they are. This failed due to the time limitation.
@@ -1989,9 +2166,73 @@ healthBar.setValue(playScreen.getPlayer().getHealth());
 %------------------------------------------------
 
 \newpage
+\subsection{Menus} \label{DocMenus}
+
+The main menu system consists of four different screens:
+
+\begin{itemize}
+    \item the main menu
+    \item the level selection menu
+    \item the settings menu
+    \item the statistics menu
+\end{itemize}
+
+Each screen is \texttt{extends} the \texttt{abstract} \texttt{MenuScreen} class. This class loads the \texttt{Skin} of the template that we use (see section \ref{VisualDocMenus}), creates an empty layout table and handles rendering and other methods that a \texttt{Screen} needs to override.
+
+Each child class can now simply extend this class and create widgets to add to the layout table. As an example, we can take a look at the \texttt{MainMenu} class, which displays four different buttons: \emph{Play}, \emph{Settings}, \emph{Statistics} and \emph{Exit}. A screenshot of the menu can be found in figure \ref{fig:main_menu_screenshot}.
+
+\begin{figure}[ht]
+  \center
+  \includegraphics[width=1\textwidth]{Documentation/main_menu.png}
+  \caption{Screenshot of the main menu}
+  \label{fig:main_menu_screenshot}
+\end{figure}
+
+A \texttt{TextButton} can be created with the following constructor, giving three parameters: The text on the button, the \texttt{Skin} and the name of the style in the skin, which is "\texttt{default}" in this case. Each widget can have several styles in a \texttt{Skin}.
+
+\mint{java}{playButton = new TextButton("Play", skin, "default");}
+
+To add a button or any other widget to the menu, it has to be added to the layout table that will be added as an \texttt{Actor} to the \texttt{Stage}. This was briefly described in the documentation of the head-up display (see section \ref{DocHUD}). The following code snippet adds the play button to the table with two empty actors to the left and right that share the space, so the button doesn't take up the entire width of the screen.
+
+\begin{minted}[linenos,breaklines]{java}
+layoutTable.add(new Actor())
+    .expandX()
+    .spaceBottom(getPixelSizeFromDensityIndependentPixels(25f));
+layoutTable.add(playButton)
+    .top().center().growX().expandX()
+    .spaceBottom(getPixelSizeFromDensityIndependentPixels(25f));
+layoutTable.add(new Actor())
+    .expandX()
+    .spaceBottom(getPixelSizeFromDensityIndependentPixels(25f));
+layoutTable.row();
+\end{minted}
+
+The last thing to do now is to add event listeners to the widgets. For example, the checkbox will have a \texttt{change} listener, the buttons will have \texttt{click} listeners, and so on.
+
+\begin{minted}[linenos,breaklines]{java}
+private ChangeListener fullscreenCheckBoxChangeListener = new ChangeListener() {
+    @Override
+    public void changed(ChangeEvent event, Actor actor) {
+        settings.setFullscreen(fullscreenCheckBox.isChecked());
+        game.changeGameResolution();
+    }
+};
+\end{minted}
+
+This change listener first toggles the value in the settings file, depending on if the checkbox is checked or not. After that, the method \texttt{changeGameResolution} is called which reads the settings from the JSON file and then changes the application's resolution based on it.
+
+Since the change listener is simply an object of the type \texttt{ChangeListener}, it can be added to a widget like this:
+
+\mint{java}{fullscreenCheckBox.addListener(fullscreenCheckBoxChangeListener);}
+
+Navigating through the menus is generally done by simply creating new instances of the relevant screen and assigning it to the instance of the main game class as the next screen.
+
+%------------------------------------------------
+
+\newpage
 \subsection{Twitch} \label{Twitch}
 
-Twitch.tv is a livestreaming platform with 15 million daily active users \cite{twitchAbout}, it features an IRC chat alongside the livestream so the viewers can interact with the livestreamer. Twitch has a few emotes defined in the IRC chat, for example if you type "Kreygasm" in the chat a little face appears.
+Twitch.tv is a live streaming platform with 15 million daily active users \cite{twitchAbout}, it features an IRC chat alongside the live stream so the viewers can interact with the livestreamer. Twitch has a few emotes defined in the IRC chat, for example, if you type "Kreygasm" in the chat, a little face appears.
 
 \begin{figure}[ht]
   \center
@@ -2000,7 +2241,7 @@ Twitch.tv is a livestreaming platform with 15 million daily active users \cite{t
   \caption{Kreygasm emote on Twitch \cite{TwitchEmotes}}
 \end{figure}
 
-A few newer games, such as Jackbox games \cite{JackboxGames}, have added twitch integration to their games, meaning what the viewers say in chat affects the game the streamer is playing. Using a Java IRC framework called Pircbot\cite{pircbot} we can connect to the twitch IRC server. In order to not have the IRC connection slow down the rest of the game we start a seperate thread for handling the IRC connection. We use an interface to listen to the chat and call a function in the TwitchChat object whenever a messaged is received.
+A few newer games, such as Jackbox games \cite{JackboxGames} have added twitch integration to their games, meaning what the viewers say in chat affects the game the streamer is playing. Using a Java IRC framework called Pircbot \cite{pircbot} we can connect to the twitch IRC server. In order to not have the IRC connection slow down the rest of the game, we start a separate thread for handling the IRC connection. We use an \texttt{interface} to listen to the chat and call a function in the \texttt{TwitchChat} object whenever a messaged is received.
 
 \begin{minted}[linenos,breaklines]{java}
 public interface ChatListener {
@@ -2009,41 +2250,35 @@ public interface ChatListener {
 }
 \end{minted}
 
-In the TwitchThread class we can define what should happen upon receiving a message. We have a predefined list of messages, which will perform an action in the game, for now the only action implemented is lowering gravity on the emote "Kreygasm", but the system is built in a way where we could easily implement more actions.
+In the TwitchThread class, we can define what should happen upon receiving a message. We have a predefined list of messages, which will perform an action in the game, for now, the only action implemented is lowering gravity on the emote "Kreygasm", but the system is built in a way where we could easily implement more actions.
 
 \begin{minted}[linenos,breaklines]{java}
 private ArrayList<String> receivableMessages = new ArrayList<>();
 public TwitchThread(boolean enabled, MainGameClass mainGameClass)
 {
-    ...
+    // ...
     receivableMessages.add("Kreygasm");
 }
 \end{minted}
 
-In the TwitchThread class we implement our ChatListener object and define the method for receiving a message. When we receive a message we add it to a log of the last 10 messages. When the we receive a message we check our log of the 10 messages, if 3 of the last 10 messages were in the receivableMessages list we call a method in the mainGameClass.
+In the \texttt{TwitchThread} class we implement our \texttt{ChatListener} object and define the method for receiving a message. When we receive a message we add it to a log of the last 10 messages. When the program receives a message, it checks the log of the 10 messages, if 3 of the last 10 messages were in the \texttt{receivableMessages} list we call a method in the \texttt{MainGameClass}.
 
 \begin{minted}[linenos,breaklines]{java}
 public void messageReceived(String channel, String sender, String login, String hostname, String message) {
     for (String receivableMessage : receivableMessages) {
         if (getNumberOfThisMessagesInLog(twitch.getLog(), receivableMessage) >= 3) {
-            switch (receivableMessage) {
-                case "Kreygasm":
-                    mainGameClass.receiveActionFromTwitch("Kreygasm");
-                    break;
-                default:
-                    break;
-            }
+            mainGameClass.receiveActionFromTwitch(receivableMessage);
         }
     }
 }
 \end{minted}
 
-The action for a message in receivableMessages is defined in the MainGameClass. We first check if the current screen is the PlayScreen, after that we check for which action to perform and then add the effect by defining the effectStateTime, and currentEffect, then we apply the actual effect, which for the "Kreygasm" emote is changing the gravity.
+The action for a message in \texttt{receivableMessages} is defined in the \texttt{MainGameClass}. We first check if the current screen is the \texttt{PlayScreen}, after that, we check for which action to perform and then add the effect by defining the \texttt{effectStateTime}, and \texttt{currentEffect}, then we apply the actual effect, which for the "Kreygasm" emote is changing the gravity.
 
 \begin{minted}[linenos,breaklines]{java}
 public void receiveActionFromTwitch(String action) {
-	if (this.getScreen() instanceof PlayScreen) {
-		playScreen = (PlayScreen) this.getScreen();
+	if (this.getCurrentScreen().isPresent() && this.getCurrentScreen().get() instanceof PlayScreen) {
+		playScreen = (PlayScreen) this.getCurrentScreen().get();
 
 		if (action.equalsIgnoreCase("Kreygasm")) {
 		    if (playScreen != null) {
@@ -2053,6 +2288,14 @@ public void receiveActionFromTwitch(String action) {
             }
 		}
 	}
+}
+\end{minted}
+
+The \texttt{getCurrentScreen} method returns a \texttt{Screen} instance encapsulated in the new \texttt{Optional} object, which was introduced in Java SE 8 \cite{JavaOptional}. We could obviously just use the \texttt{getScreen} method of libGDX and check, if the returned object is not null, but we wanted to test out the newest try of Oracle to unf**k null pointers in Java. The following snippet is the getter to receive the \texttt{Optional}.
+
+\begin{minted}[linenos,breaklines]{java}
+public Optional<? extends Screen> getCurrentScreen() {
+    return Optional.of(this.getScreen());
 }
 \end{minted}
 
@@ -2209,8 +2452,13 @@ The following appendix contains direct links to each Java class file and possibl
     
     \item \textbf{Screens}
     \begin{itemize}
+        \item LevelSelectionMenu: \url{https://goo.gl/WRH2pZ}
+        \item MainMenu: \url{https://goo.gl/Vmoi83}
+        \item MenuScreen: \url{https://goo.gl/swxtyS}
         \item PlayScreen: \url{https://goo.gl/qFch7g}
+        \item SettingsMenu: \url{https://goo.gl/z1nxpQ}
         \item SplashScreen: \url{https://goo.gl/LQRfX9}
+        \item StatisticsMenu: \url{https://goo.gl/8VTvLv}
     \end{itemize}
     
     \item \textbf{Statistics}
@@ -2223,7 +2471,9 @@ The following appendix contains direct links to each Java class file and possibl
     \begin{itemize}
         \item BitmapFontGenerator: \url{https://goo.gl/9PTfjq}
         \item Box2DWorldCreator: \url{https://goo.gl/kZXThj}
+        \item JSONFileCreator: \url{https://goo.gl/mSwWyc}
         \item WorldContactListener: \url{https://goo.gl/xB8hMM}
+        \item ResolutionObject: \url{https://goo.gl/YTt7Mi}
     \end{itemize}
     
     \item \textbf{Twitch}
