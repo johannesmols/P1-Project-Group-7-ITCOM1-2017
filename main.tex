@@ -18,6 +18,7 @@
 \usepackage{minted} % Used for including code with syntax highlighting: https://www.sharelatex.com/learn/Code_Highlighting_with_minted
 \usepackage{fontawesome} % Allows usage of icons within text
 \usepackage{enumitem}
+\usepackage[final]{pdfpages}
 
 \usepackage[
   style=numeric,
@@ -141,7 +142,7 @@
 \begin{abstract}
 \thispagestyle{plain} %Sets the page style for this specific page to plain, to remove the header and show the page number at the bottom
 
-\noindent The purpose of this project is to develop a retro style game, Gangster Squirrel. The Gangster Squirrel is a retro game, where the main objective of the player is to reach to the top of a tree to find the eggs, which were stolen by an Eagle. To obtain the development of this game, JAVA has been used as our programming language and furthermore LibGDX library as our game engine. We also used Tiled program as our design level editor. The project succeeded and three playable stages were made during the process of development. 
+\noindent The purpose of this project is to develop a Java desktop application and we chose to make a retro game named 'Gangster Squirrel'. It is a retro game, where the main objective of the player is to reach the top of a tree to steal the eggs from Pablo Escobar's eagle. Java has been used as the primary programming language and LibGDX as the game engine. The paper is divided into four main sections. The first part of the paper presents the readers to the project and the delimitations we have. The second part of the paper is about the competitors and how we want our game to differ from them, along with our business strategy and market segmentation. The third part of the paper is the visual and technical documentation, which describe the process of the development. The last part of the paper discusses what we could have improved in the project and what we initially wanted, but weren't able to do due to the time delimitation. Nevertheless, we conclude the paper as a successful project and three playable stages were made during the process of development.
 
 \end{abstract}
 
@@ -201,13 +202,30 @@ Goal: it needs to get to the top of the tree to steal the eggs of the eagle - Pa
 
 \subsection{Game Design}
 
-To figure out the basic features of our game we did a qualitative analysis of the game \emph{Spelunky} \cite{Spelunky}, we wrote down the different features and elements we decided to include in our game. In terms of the look an feel of the game we looked more at retro games such as Super Mario Bros published by Nintendo in 1985 \cite{SuperMarioBros}. To further investigate the design of our game we used quantitative research to examine what makes new retro games successful, we chose a few games based on the features in the game, and if any of those features could work in our game. We then wrote a list of all the main features of each game we looked at and decided what features we would like to implement in our own game. We also looked at what platforms would have the most potential for our game and compared the prices to the feature list of the other games to figure out how to price our own game. This analysis can be found in the \emph{State of the Art} section of this report (see section \ref{sec:StateOfTheArt}).
+To figure out the basic features of our game we did a qualitative analysis of the game \emph{Spelunky} \cite{Spelunky}, we wrote down the different features and elements we decided to include in our game. In terms of the look an feel of the game we looked more at retro games such as Super Mario Bros published by Nintendo in 1985 \cite{SuperMarioBros}. To further investigate the design of our game we used quantitative research to examine what makes new retro games successful, we chose several games based on the features in the game, and determined if any of those features could work in our game. We then wrote a list of all the main features of each game we looked at and decided what features we would like to implement in our own game. We also looked at what platforms would have the most potential for our game and compared the prices to the feature list of the other games to figure out how to price our own game. This analysis can be found in the \emph{State of the Art} section of this report (see section \ref{sec:StateOfTheArt}).
 
 \subsection{Game Engine}
 
-In order to determine the best game engine for our game, we did an analysis on various different java game engines. We compared the learning curve of the different engines, and looked at their features compared to what features we need in our game.
+In order to determine the best game engine for our game, we did an analysis on various different java game engines. We tried to find the most popular ones that aren't deprecated and researched their viability. We compared the learning curve of the different engines, and looked at their features compared to what features we need in our game.
+
+We researched feedback from other developers who have used the game engines and came up with a list of six libraries:
+
+\begin{itemize}
+  \item java.awt \cite{javaawt}
+  \item LWJGL \cite{LWJGL}
+  \item jMonkeyEngine \cite{jMonkeyEngine}
+  \item mini2Dx \cite{mini2Dx}
+  \item Turbulenz \cite{Turbulenz}
+  \item libGDX \cite{libGDX}
+\end{itemize}
+
+Each team member picked one and made a game with it. Afterwards we discussed our impressions and agreed that libGDX is the best choice, due to the large amount of educational material, features it will help us add to the game, its popularity and regular updates.
+
+The documentation on this process can be found in section \ref{DocGameEngine}.
 
 \subsection{Playtesting}
+
+After we have done the implementation and the business part we made the playtesting and  the survey afterwards. There were few reasons why we made it: mainly to check if platform that we chose and the price that we agreed on are appropriate. We also wanted to know which features players appreciate in the game (these should be our strenght and these we should develop) and what they didn't like (these we should eliminate or improve).  Another matter that we checked was that we asked if the people would like to spare they free time on it - to see if the game is enjoyable and if there is going to be demand for it.
 
 % #TODO: @all
 
@@ -824,13 +842,20 @@ The visuals of the health bar were inspired by the health bar of \emph{Stardew V
 
 The navigational menus of the game were added as one of the last features. LibGDX provides a scene graph functionality with a few user interface widgets, but without any default style \cite{Scene2DUI}. Since the priority is functionality and not visuals, we used a community template called \emph{Flat Earth UI Skin} \cite{FlatEarthUISkin} to speed up the process of creating a working menu system. This might still change until the exam.
 
-The following figure \ref{fig:flat_earth_ui_skin} shows a template application, provided on the website, with all widgets to show the visuals of this template.
+The following figure \ref{fig:flat_earth_ui_skin} shows a template application, provided on the website, with all widgets to show the visuals of this template. Figure \ref{fig:main_menu_screenshot} then shows one of the menus that we created using this template.
 
 \begin{figure}[ht]
   \center
   \includegraphics[width=0.75\textwidth]{Documentation/preview.png}
   \caption{Flat Earth UI Skin \cite{FlatEarthUISkin}}
   \label{fig:flat_earth_ui_skin}
+\end{figure}
+
+\begin{figure}[ht]
+  \center
+  \includegraphics[width=0.75\textwidth]{Documentation/main_menu.png}
+  \caption{The main menu}
+  \label{fig:main_menu_screenshot}
 \end{figure}
 
 %------------------------------------------------
@@ -846,7 +871,7 @@ We researched the option of using a native Java library like \texttt{JavaFX} \ci
 
 All of this would have the consequence of us having to code everything ourselves, limiting the outcome of the project due to the limited time. The group decided against this option by a majority vote. Not having to deal with a lot of very basic problems and therefore being able to develop the game farther and with more features, was more appealing to the majority of the group members.
 
-Moving on, the group settled on a couple of game engines or frameworks to research: \texttt{libGDX} \cite{LibGDX}, \texttt{LWJGL} \cite{LWJGL}, \texttt{jMonkeyEngine} \cite{jMonkeyEngine}, \texttt{mini2Dx} \cite{mini2Dx} and \texttt{Slick2D} \cite{Slick2D}. This selection is mostly by scavenging forum posts and the first page of Google for the search of "Java Game Engines". One particular \emph{Reddit} post \cite{RedditJavaGameEngines} named all of them.
+Moving on, the group settled on a couple of game engines or frameworks to research: \texttt{libGDX} \cite{libGDX}, \texttt{LWJGL} \cite{LWJGL}, \texttt{jMonkeyEngine} \cite{jMonkeyEngine}, \texttt{mini2Dx} \cite{mini2Dx} and \texttt{Slick2D} \cite{Slick2D}. This selection is mostly by scavenging forum posts and the first page of Google for the search of "Java Game Engines". One particular \emph{Reddit} post \cite{RedditJavaGameEngines} named all of them.
 
 Since \texttt{libGDX} is based on \texttt{LWJGL}, it is easy to compare them. \texttt{LWJGL} is very low-level and doesn't provide many features, compared to \texttt{libGDX}. It is also harder to start off with as a beginner in programming \cite{StackExchangeLibGDXLWJGL}, which is why we went with \texttt{libGDX}. Furthermore, the \texttt{jMonkeyEngine} is mainly developed for 3D applications, which rules it out for our project. 
 
@@ -979,7 +1004,15 @@ The following list briefly describes each class that can be seen in the minimise
   \item \textbf{GameProgress}: reads and writes the user's progress in the game to a file (see section \ref{DocJSONfiles})
   \item \textbf{Statistics}: reads and writes the user's statistics to a file (see section \ref{DocJSONfiles})
   \item \textbf{WeaponList}: reads and writes all available weapons in the game to a file (see section \ref{DocJSONfiles})
+  \item \textbf{Settings}: reads and writes the game settings to a file (see section \ref{DocJSONfiles})
+  \item \textbf{MenuScreen}: an abstract class that provides a basic functionality to set up menu screens (see section \ref{DocMenus})
+  \item \textbf{MainMenu}: the entrance of the game, the user can select to play, change settings and view statistics or exit the application
+  \item \textbf{LevelSelectionMenu}: a menu to select which level the user wants to play
+  \item \textbf{StatisticsMenu}: a menu to view and reset all statistics
+  \item \textbf{SettingsMenu}: a menu to change the game settings
 \end{itemize}
+
+A flowchart of the navigation within the game can be found in the documentation of the menus (see section \ref{DocMenus}).
 
 %------------------------------------------------
  
@@ -2179,14 +2212,7 @@ The main menu system consists of four different screens:
 
 Each screen is \texttt{extends} the \texttt{abstract} \texttt{MenuScreen} class. This class loads the \texttt{Skin} of the template that we use (see section \ref{VisualDocMenus}), creates an empty layout table and handles rendering and other methods that a \texttt{Screen} needs to override.
 
-Each child class can now simply extend this class and create widgets to add to the layout table. As an example, we can take a look at the \texttt{MainMenu} class, which displays four different buttons: \emph{Play}, \emph{Settings}, \emph{Statistics} and \emph{Exit}. A screenshot of the menu can be found in figure \ref{fig:main_menu_screenshot}.
-
-\begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{Documentation/main_menu.png}
-  \caption{Screenshot of the main menu}
-  \label{fig:main_menu_screenshot}
-\end{figure}
+Each child class can now simply extend this class and create widgets to add to the layout table. As an example, we can take a look at the \texttt{MainMenu} class, which displays four different buttons: \emph{Play}, \emph{Settings}, \emph{Statistics} and \emph{Exit}. A screenshot of the menu can be found in the visual documentation of the menus (see section \ref{VisualDocMenus}).
 
 A \texttt{TextButton} can be created with the following constructor, giving three parameters: The text on the button, the \texttt{Skin} and the name of the style in the skin, which is "\texttt{default}" in this case. Each widget can have several styles in a \texttt{Skin}.
 
@@ -2210,7 +2236,8 @@ layoutTable.row();
 The last thing to do now is to add event listeners to the widgets. For example, the checkbox will have a \texttt{change} listener, the buttons will have \texttt{click} listeners, and so on.
 
 \begin{minted}[linenos,breaklines]{java}
-private ChangeListener fullscreenCheckBoxChangeListener = new ChangeListener() {
+private ChangeListener fullscreenCheckBoxChangeListener = new ChangeListener() 
+{
     @Override
     public void changed(ChangeEvent event, Actor actor) {
         settings.setFullscreen(fullscreenCheckBox.isChecked());
@@ -2226,6 +2253,15 @@ Since the change listener is simply an object of the type \texttt{ChangeListener
 \mint{java}{fullscreenCheckBox.addListener(fullscreenCheckBoxChangeListener);}
 
 Navigating through the menus is generally done by simply creating new instances of the relevant screen and assigning it to the instance of the main game class as the next screen.
+
+The following flowchart shows the navigation within the menus of the game.
+
+\begin{figure}[ht]
+  \center
+  \includegraphics[width=1\textwidth]{Documentation/flowchart.png}
+  \label{fig:flowchart}
+  \caption{Flowchart of the menus}
+\end{figure}
 
 %------------------------------------------------
 
@@ -2319,6 +2355,20 @@ public void updateTwitchEffectTimer() {
 \end{minted}
 
 %----------------------------------------------------------------------------------------
+%	PLAYTESTING AND SURVEY RESULTS
+%----------------------------------------------------------------------------------------
+
+\newpage
+\section{Playtesting and Survey results}
+
+In this section we would like to briefly describe our playtesting process and the survey results that we got afterwards.
+
+Playtesting:
+"A playtest is the process by which a game designer tests a new game for bugs and design flaws before bringing it to market." \cite{Playtest}
+
+
+
+%----------------------------------------------------------------------------------------
 %	DISCUSSION
 %----------------------------------------------------------------------------------------
 
@@ -2335,7 +2385,6 @@ Although we did a lot of planning and divided task equally among the team we did
     \item More weapons - we planned to add a larger variety of weapons, which would make the game more interesting and incentivize users to play longer.
     \item More items - initially we wanted to allow our player access to equipment that will help him during the game. Items that will increase his speed, jump distance or other special abilities.
     \item Prizes - we wanted to allow our player to pick up coins and different prizes that add up to your score.
-    \item Game menu - a menu where players can edit the game settings, choose which level you want to play and see the high scores and statistics.
     \item Climbing - currently our player can only move left and right, and also jump. We would like to add the ability to him to climb ladders, ropes, etc.
 \end{itemize}
 
@@ -2345,13 +2394,26 @@ Although we did a lot of planning and divided task equally among the team we did
 
 \newpage
 \section{Conclusion}
-Our whole team has had some kind of experience in gaming, because we all do it in one form or the other. However during the research we were surprised to see how much the game industry has grown since it's beginning, both in variety and popularity. A decade ago games were more of a niche hobby, but the latest industry reports show that it has become a new entertainment sector of considerable size.
-This growth has brought a lot of success to a lot of game developers, but it has also made life more difficult for everyone else. The market has become very competitive and increasingly saturated.
-\textbf{How can game developers attract interest in today’s saturated market?}
 
-The strategy we came up with is to rely on people's nostalgia, while keeping them entertained with pop-culture references and comedy. We were inspired by the success of simple entertaining games, that incorporate retro gaming aspects either in their gameplay or storyline. Pokemon Go \cite{PokemonGO} rebooted a 20 year old franchise, by implementing modern technological features like augmented reality, but still maintaining the format of the original games.
+In the introduction of this report, we formulated a goal for this project. In this section we will conclude whether we achieved the goal or not. The project's goal was as following:
 
-It used to be widely accepted that for a game to be successful it needs to have very realistic graphics, and every generation needs to be better an better. The rise of mobile games, which have very simple user interfaces and stories have somewhat disproved that. Desktop and console games like Minecraft \cite{Minecraft} have taken that point even further.
+\textit{How can we develop a retro game using one of the modern game engines? What platforms should it support and what price should it have?}
+
+In this report, the development of the game 'Gangster Squirrel' has been described.
+Our whole team has had some kind of experience in gaming because we all do it in one form or another. However, during the research, we were surprised to see how much the game industry has grown since it's beginning, both in variety and popularity. A decade ago games were more of a niche hobby, but the latest industry reports show that it has become a new entertainment sector of considerable size.
+This growth has brought a lot of success to a lot of game developers, and it's become harder to develop a competitive game, due to the contenders. The market has become very competitive and increasingly saturated. We have successfully developed our game with a modern game engine (libGDX), which has been a good experience regarding set up and structure our game. Another advantage of using libGDX was that it can run on multiple platforms. We decided to release our game for these platforms, chosen on the basis of compatibility:
+
+\begin{itemize}
+    \item Microsoft Windows
+    \item macOS
+    \item Linux
+\end{itemize}
+
+Last but not least, we've set a price for our product as following: 
+
+\begin{itemize}
+  \item All platforms: 3.99\$ USD
+\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
@@ -2371,7 +2433,7 @@ It used to be widely accepted that for a game to be successful it needs to have 
 
 \subsection{Class diagram} \label{AppendixClassDiagramFull}
 
-The following figure is the full class diagram of the entire project. A high resolution version can be found here: \texttt{https://i.imgur.com/6zzDp6a.png}
+The following figure is the full class diagram of the entire project. A high resolution version can be found here: \texttt{https://i.imgur.com/goEseUO.png}
 
 \begin{figure}[ht]
   \centering
@@ -2382,13 +2444,12 @@ The following figure is the full class diagram of the entire project. A high res
 
 %------------------------------------------------
 
-\section{Source Code} \label{SourceCode}
-
-The following appendix contains direct links to each Java class file and possibly other relevant files on the GitHub repository since the raw code is too long to put here.
-
 % REMOVE IF SOMETHING ABOVE CHANGES
 \newpage
 % REMOVE IF SOMETHING ABOVE CHANGES
+\subsection{Source Code} \label{SourceCode}
+
+The following appendix contains direct links to each Java class file and possibly other relevant files on the GitHub repository since the raw code is too long to put here.
 
 \renewcommand{\labelitemi}{\faFolderOpen}
 \renewcommand{\labelitemii}{\faFile}
@@ -2484,6 +2545,28 @@ The following appendix contains direct links to each Java class file and possibl
         \item TwitchThread: \url{https://goo.gl/PCXpqz}
     \end{itemize}
 \end{itemize}
+
+%------------------------------------------------
+
+\subsection{Javadoc} \label{Javadoc}
+
+The Javadoc files can be found in the GitHub repository in the \texttt{javadoc} directory or with this short URL: \texttt{https://goo.gl/ec9JwS}
+
+%------------------------------------------------
+
+\subsection{Playtesting Survey Results} \label{SurveyResults}
+
+\begin{figure}[ht]
+  \center
+  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{surveyresults1.png}
+  \label{fig:survey_results_1}
+\end{figure}
+
+\begin{figure}[ht]
+  \center
+  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{surveyresults2.png}
+  \label{fig:survey_results_2}
+\end{figure}
 
 %------------------------------------------------
 
