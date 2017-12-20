@@ -2405,10 +2405,74 @@ public void updateTwitchEffectTimer() {
 
 In this section we would like to briefly describe our playtesting process and the survey results that we got afterwards.
 
-Playtesting:
-"A playtest is the process by which a game designer tests a new game for bugs and design flaws before bringing it to market." \cite{Playtest}
+\subsection{Playtesting}
 
+\textit{"A playtest is the process by which a game designer tests a new game for bugs and design flaws before bringing it to market."} \cite{Playtest}
+\newline \newline
+In the playtesting part of the methodology (Section 2.9), we already explained the purpose of it. In our case, the playtest was carried out on a group of seven people. As the group was relatively small, we should not take the results as fully reliable information. The testers were our colleagues from the study year, so all of them were students in the age of 18-25. They were testing the game on Windows, MacOs, and Linux Ubuntu.
 
+\subsection{The survey results}
+
+\begin{figure}[ht]
+ \center
+ \includegraphics[width=1\textwidth]{SurveyQuestions/1.png}
+ \label{fig:survey_question_1}
+ \caption{Survey question 1}
+\end{figure}
+
+In the first question, we asked about what people enjoy in our game. The testers appreciated our Twitch feature, retro design and they hold the view that the storyline is funny. This answers gave us the impression that the game is enjoyable.
+
+% REMOVE IF SOMETHING CHANGES
+\newpage
+% REMOVE IF SOMETHING CHANGES
+
+\begin{figure}[ht]
+ \center
+ \includegraphics[width=1\textwidth]{SurveyQuestions/2.png}
+ \label{fig:survey_question_2}
+ \caption{Survey Question 2}
+\end{figure}
+
+From the second question we wanted to get the issues of the game and we wanted to know what we can improve in the future. The most hated component of our game was the spikes. The hitboxes set up on it were too high and it made the game too difficult. Because of this feedback, we changed the spikes to be easier to jump over and closer to the actual texture.
+
+% REMOVE IF SOMETHING CHANGES
+\newpage
+% REMOVE IF SOMETHING CHANGES
+
+\begin{figure}[ht]
+ \center
+ \includegraphics[width=1\textwidth]{SurveyQuestions/3.png}
+ \label{fig:survey_question_3}
+ \caption{Survey Question 3}
+\end{figure}
+
+The third question was supposed to help us determine whether we chose the right platform to develop our game. The majority of respondents would like to play our game on a desktop computer, but we can see that there is also demand for a mobile version of it.
+
+% REMOVE IF SOMETHING CHANGES
+\newpage
+% REMOVE IF SOMETHING CHANGES
+
+\begin{figure}[ht]
+ \center
+ \includegraphics[width=1\textwidth]{SurveyQuestions/4.png}
+ \label{fig:survey_question_4}
+ \caption{Survey Question 4}
+\end{figure}
+
+The fourth question was made to help us ascertain whether we chose the appropriate price for our game. The majority of respondents wanted to pay up to \$5 for it, so our price \$3,99 seems to be reasonable. 
+
+% REMOVE IF SOMETHING CHANGES
+\newpage
+% REMOVE IF SOMETHING CHANGES
+
+\begin{figure}[H]
+ \center
+ \includegraphics[width=1\textwidth]{SurveyQuestions/5.png}
+ \label{fig:survey_question_5}
+ \caption{Survey Question 5}
+\end{figure}
+
+The last question of our survey was an additional question to make us sure that the storyline is attractive and that there is going to be demand for our game. The majority of respondents enjoyed playing Gangster Squirrel and would like to do it in their spare time. 
 
 %----------------------------------------------------------------------------------------
 %	DISCUSSION
@@ -2428,6 +2492,7 @@ Although we did a lot of planning and divided task equally among the team we did
   \item More items - initially we wanted to allow our player access to equipment that will help him during the game. Items that will increase his speed, jump distance or other special abilities.
   \item Prizes - we wanted to allow our player to pick up coins and different prizes that add up to your score.
   \item Climbing - currently our player can only move left and right, and also jump. We would like to add the ability to him to climb ladders, ropes, etc.
+  \item Checkpoints - we wanted to create checkpoints in the map in order to make use of the lives. The player would respawn at the last checkpoint as long as he has remaining lives.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -2481,7 +2546,7 @@ Though you can build a game without any external libraries, our experience led u
 
 \subsection{Class diagram} \label{AppendixClassDiagramFull}
 
-The following figure is the full class diagram of the entire project. A high resolution version can be found here: \texttt{https://i.imgur.com/goEseUO.png}
+The following figure is the full class diagram of the entire project. A high resolution version can be found here: \texttt{https://i.imgur.com/goEseUO.png} or in the attached files.
 
 \begin{figure}[ht]
  \centering
@@ -2497,7 +2562,7 @@ The following figure is the full class diagram of the entire project. A high res
 % REMOVE IF SOMETHING ABOVE CHANGES
 \subsection{Source Code} \label{SourceCode}
 
-The following appendix contains direct links to each Java class file and possibly other relevant files on the GitHub repository since the raw code is too long to put here.
+The following appendix contains direct links to each Java class file and possibly other relevant files on the GitHub repository since the raw code is too long to put here. The entire source code is also attached to the hand-in.
 
 \renewcommand{\labelitemi}{\faFolderOpen}
 \renewcommand{\labelitemii}{\faFile}
@@ -2599,25 +2664,7 @@ The following appendix contains direct links to each Java class file and possibl
 
 \subsection{Javadoc} \label{Javadoc}
 
-The Javadoc files can be found in the GitHub repository in the \texttt{javadoc} directory or with this short URL: \texttt{https://goo.gl/ec9JwS}
-
-%------------------------------------------------
-
-\subsection{Playtesting Survey Results} \label{SurveyResults}
-
-Unfortunately, we couldn't figure out a way to display the images properly on this page, which is why the two images can be found on the next pages.
-
-\begin{figure}[ht]
- \center
- \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{surveyresults1.png}
- \label{fig:survey_results_1}
-\end{figure}
-
-\begin{figure}[ht]
- \center
- \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{surveyresults2.png}
- \label{fig:survey_results_2}
-\end{figure}
+The Javadoc files can be found in the GitHub repository in the \texttt{javadoc} directory, with this short URL: \texttt{https://goo.gl/ec9JwS} or in the attached files of submission.
 
 %------------------------------------------------
 
