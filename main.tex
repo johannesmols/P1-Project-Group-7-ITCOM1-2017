@@ -1,6 +1,6 @@
 \documentclass[12p]{article}
 
-\usepackage{geometry} % Required to change the page size to A4
+\usepackage{geometry} % Requied to change the page size to A4
 \geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
 
 \usepackage[utf8]{inputenc}
@@ -21,9 +21,9 @@
 \usepackage[final]{pdfpages}
 
 \usepackage[
-  style=numeric,
-  sorting=none
-  ]{biblatex}
+ style=numeric,
+ sorting=none
+ ]{biblatex}
 \addbibresource{references.bib}
 
 \linespread{1.2} % Line spacing
@@ -49,16 +49,16 @@
 %----------------------------------------------------------------------------------------
 
 \begin{titlepage}
-  
-  \center
-  
-  %------------------------------------------------
+ 
+ \center
+ 
+ %------------------------------------------------
 	%	Logo
 	%------------------------------------------------
 	
 	\includegraphics[width=0.2\textwidth]{pics/AAU_Logo.png}\\[1cm]
-  
-  %------------------------------------------------
+ 
+ %------------------------------------------------
 	%	Headings
 	%------------------------------------------------
 	
@@ -85,45 +85,45 @@
 	%	Author(s) and Supervisor(s)
 	%------------------------------------------------
 	
-  \begin{minipage}{0.4\textwidth}
-  \begin{flushleft} \large
-  \emph{Authors}\\
-    Ludvig Alexander \textsc{Brüchmann} \\
-    Muheb \textsc{Moshfiq} \\
-  	Rehan \textsc{Mir} \\
-  	Johannes \textsc{Mols} \\
-  	Martin \textsc{Sander} \\
-  	Agata \textsc{Surmacz} \\
-  	Boris \textsc{Yordanov} \\
-  \end{flushleft}
-  \end{minipage}
-  ~
-  \begin{minipage}{0.4\textwidth}
-  \begin{flushright} \large
-  \emph{Study Numbers} \\
-    20174692 \\
-    20173803 \\
-    20174693 \\
-    20174921 \\
-    20174446 \\
-    20173800 \\
-    20174447 \\
-  \end{flushright}
-  \end{minipage}\\[0.5cm]
-  
-  %------------------------------------------------
-  
-  \begin{minipage}{0.4\textwidth}
-  \begin{flushleft} \large
-  \emph{Supervisor}\\
-    Morten \textsc{Falch} \\
-  \end{flushleft}
-  \end{minipage}
-  ~
-  \begin{minipage}{0.4\textwidth}
-  \begin{flushright} \large
-  \end{flushright}
-  \end{minipage}\\[0.5cm]
+ \begin{minipage}{0.4\textwidth}
+ \begin{flushleft} \large
+ \emph{Authors}\\
+  Ludvig Alexander \textsc{Brüchmann} \\
+  Muheb \textsc{Moshfiq} \\
+ 	Rehan \textsc{Mir} \\
+ 	Johannes \textsc{Mols} \\
+ 	Martin \textsc{Sander} \\
+ 	Agata \textsc{Surmacz} \\
+ 	Boris \textsc{Yordanov} \\
+ \end{flushleft}
+ \end{minipage}
+ ~
+ \begin{minipage}{0.4\textwidth}
+ \begin{flushright} \large
+ \emph{Study Numbers} \\
+  20174692 \\
+  20173803 \\
+  20174693 \\
+  20174921 \\
+  20174446 \\
+  20173800 \\
+  20174447 \\
+ \end{flushright}
+ \end{minipage}\\[0.5cm]
+ 
+ %------------------------------------------------
+ 
+ \begin{minipage}{0.4\textwidth}
+ \begin{flushleft} \large
+ \emph{Supervisor}\\
+  Morten \textsc{Falch} \\
+ \end{flushleft}
+ \end{minipage}
+ ~
+ \begin{minipage}{0.4\textwidth}
+ \begin{flushright} \large
+ \end{flushright}
+ \end{minipage}\\[0.5cm]
 
 	%------------------------------------------------
 	%	Date
@@ -142,7 +142,11 @@
 \begin{abstract}
 \thispagestyle{plain} %Sets the page style for this specific page to plain, to remove the header and show the page number at the bottom
 
-\noindent The purpose of this project is to develop a Java desktop application and we chose to make a retro game named 'Gangster Squirrel'. It is a retro game, where the main objective of the player is to reach the top of a tree to steal the eggs from Pablo Escobar's eagle. Java has been used as the primary programming language and LibGDX as the game engine. The paper is divided into four main sections. The first part of the paper presents the readers to the project and the delimitations we have. The second part of the paper is about the competitors and how we want our game to differ from them, along with our business strategy and market segmentation. The third part of the paper is the visual and technical documentation, which describe the process of the development. The last part of the paper discusses what we could have improved in the project and what we initially wanted, but weren't able to do due to the time delimitation. Nevertheless, we conclude the paper as a successful project and three playable stages were made during the process of development.
+\noindent The purpose of this project is to develop a Java desktop application. We chose to develop a game called 'Gangster Squirrel'. It is a game, inspired by the 8-bit console games that were popular in the 1990s. The player is represented in the game as a Gangster Squirrel that needs to fight its way to the top of a tree to win the game.
+\newline \newline
+\noindent This project primarily focuses on the technical implementation and documentation of building a game with Java. We researched our competitors, market segmentation, trends, and possible business strategies. The game is built in Java using the LibGDX game engine, which let us speed up the development process.
+
+% \noindent The purpose of this project is to develop a Java desktop application and we chose to make a game named 'Gangster Squirrel'. It is a retro game, where the main objective of the player is to reach the top of a tree to steal the eggs from Pablo Escobar's eagle. Java has been used as the primary programming language and LibGDX as the game engine. The paper is divided into four main sections. The first part of the paper presents the readers to the project and the delimitations we have. The second part of the paper is about the competitors and how we want our game to differ from them, along with our business strategy and market segmentation. The third part of the paper is the visual and technical documentation, which describe the process of the development. The last part of the paper discusses what we could have improved in the project and what we initially wanted, but weren't able to do due to the time delimitation. Nevertheless, we conclude the paper as a successful project and three playable stages were made during the process of development. 
 
 \end{abstract}
 
@@ -177,7 +181,7 @@ How can we develop a retro game using one of the modern game engines? What platf
 
 \subsection{Project delimitations} \label{ProjectDelimitations}
 
-Our team decided to focus on building a working MVP (minimum viable product \cite{MVP}) for PC only, with only the most important features of the game - at least two levels, different enemies, weapons, and statistics tracking. Given more time we would implement the missing parts of the game we had planned - more levels, ranged weapons, a navigational menu, a mobile version and implementing a marketing strategy, however, we figured that it would be out of the scope of this project.
+Our team decided to focus on building a working MVP (minimum viable product \cite{MVP}) for desktop environments only, with only the most important features of the game - at least two levels, different enemies, weapons, and statistics tracking. Given more time we would implement the missing parts of the game we had planned - more levels, ranged weapons, a navigational menu, a mobile version and implementing a marketing strategy. However, we figured that it would be out of the scope of this project.
 Another priority was to focus on the technical implementation. The problem formulation also addresses how the game should be marketed. Though we did work on that point as well, it was not as in-depth as we would have wanted. 
 
 \subsection{Project introduction} \label{ProjectIntroduction}
@@ -188,9 +192,9 @@ Our game revolves around 24 hours of an action-packed day of our main character 
 Goal: it needs to get to the top of the tree to steal the eggs of the eagle - Pablo Escobar, which are full of pure Columbian cocaine. It needs the drugs so it can sell it and pay the bail for it’s best friend - the Rasta Lion (sacred in Rastafarian culture \cite{RastaLion}). Rasta Lion is in jail for shooting the sheriff \cite{Sheriff} of the jungle.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{gameplayScreenshot.png}
-  \caption{Screenshot of Gangster Squirrel}
+ \center
+ \includegraphics[width=1\textwidth]{screenshot.png}
+ \caption{Screenshot of Gangster Squirrel}
 \end{figure}
 
 %----------------------------------------------------------------------------------------
@@ -200,35 +204,39 @@ Goal: it needs to get to the top of the tree to steal the eggs of the eagle - Pa
 \newpage
 \section{Methodology} \label{Methodology}
 
+\subsection{State of the Art}
+
+To save time we decided to let each team member research a game they think fits closest to the concept of our game. We looked for 2D games, with a simple gameplay, that have retro styling. Each team member analysed their pick's features, platform support and price policy. At a team meeting we discussed what useful information we learned from our research and decided if it will be useful in our project.
+
+\subsection{Business \& Marketing Strategy}
+To enter the market and make our game competitive, we had to make a business and marketing strategy. In order to determine the best business strategy we had to analyze the models and strategies, and we chose to use the direct sales model.   
+
+In the marketing strategy, we determined that we will not be distributing our game on the physical media, as many other companies have due to the extra cost's. Gangster Squirrel will be available solely online. Moreover, to aid with the advertising of our game, our marketing will be online, due to
+its high return on investment, analytic capabilities and ease of use.
+
+\subsection{Market Segmentation}
+To have a successful game it is essential to have a market segmentation, so that the target group is established. In the marketing segmentation we shaped our target group via analyzing what kind of market segmentation suited them. Furthermore, we have used this information to build our business strategy as well. 
+
 \subsection{Game Design}
 
-To figure out the basic features of our game we did a qualitative analysis of the game \emph{Spelunky} \cite{Spelunky}, we wrote down the different features and elements we decided to include in our game. In terms of the look an feel of the game we looked more at retro games such as Super Mario Bros published by Nintendo in 1985 \cite{SuperMarioBros}. To further investigate the design of our game we used quantitative research to examine what makes new retro games successful, we chose several games based on the features in the game, and determined if any of those features could work in our game. We then wrote a list of all the main features of each game we looked at and decided what features we would like to implement in our own game. We also looked at what platforms would have the most potential for our game and compared the prices to the feature list of the other games to figure out how to price our own game. This analysis can be found in the \emph{State of the Art} section of this report (see section \ref{sec:StateOfTheArt}).
+To figure out the basic features of our game we did a qualitative analysis of the game \emph{Spelunky} \cite{Spelunky}, we wrote down the different features and elements we decided to include in our game. In terms of the look and feel of the game we looked more at retro games such as \emph{Super Mario Bros} published by Nintendo in 1985 \cite{SuperMarioBros}. To further investigate the design of our game we used quantitative research to examine what makes new retro games successful, we chose several games based on the features in the game and determined if any of those features could work in our game. We then wrote a list of all the main features of each game we looked at and decided what features we would like to implement in our own game. We also looked at what platforms would have the most potential for our game and compared the prices to the feature list of the other games to figure out how to price our own game.
+
+\subsection{Documentation}
+The approach we took for the technical documentation was to structure it a bit as a guide to build a game in Java. We tried splitting up the work we needed to do evenly amongst the team and each team member picked the sections they had the most knowledge about, so we could maintain a uniformly high level of detail. Each section was reviewed by a team member who hadn't written it, to make sure the explanations were understandable.
+
+\subsection{Visual Documentation}
+We made a subsection for each part of the game we had to design - the characters, maps, menu and head-up display of the game. Each item has its own subsection due to the different approaches we took to design each part of the game. 
+
+\subsection{Technical Documentation}
+We documented everything from choosing the libraries you might need, to animations, to integrating with third-part apps like Twitch. Each section contains both explanations of the functionality of the code, as well as snippets or external references to our code base on GitHub.
 
 \subsection{Game Engine}
 
-In order to determine the best game engine for our game, we did an analysis on various different java game engines. We tried to find the most popular ones that aren't deprecated and researched their viability. We compared the learning curve of the different engines, and looked at their features compared to what features we need in our game.
-
-We researched feedback from other developers who have used the game engines and came up with a list of six libraries:
-
-\begin{itemize}
-  \item java.awt \cite{javaawt}
-  \item LWJGL \cite{LWJGL}
-  \item jMonkeyEngine \cite{jMonkeyEngine}
-  \item mini2Dx \cite{mini2Dx}
-  \item Turbulenz \cite{Turbulenz}
-  \item libGDX \cite{libGDX}
-\end{itemize}
-
-Each team member picked one and made a game with it. Afterwards we discussed our impressions and agreed that libGDX is the best choice, due to the large amount of educational material, features it will help us add to the game, its popularity and regular updates.
-
-The documentation on this process can be found in section \ref{DocGameEngine}.
+In order to determine the best game engine for our game, we did an analysis on various different Java game engines. We tried to find the most popular ones that aren't deprecated and researched their viability. We compared the learning curve of the different engines and looked at their features compared to what features we need in our game. We researched feedback from other developers who have used the game engines and came up with a list of different libraries that would be the best for the scope of our project. We did a quantitative analysis of the engines on our list and compared our results to determine which engine we should use.
 
 \subsection{Playtesting}
 
-After we have done the implementation and the business part we made the playtesting and  the survey afterwards. There were few reasons why we made it: mainly to check if platform that we chose and the price that we agreed on are appropriate. We also wanted to know which features players appreciate in the game (these should be our strenght and these we should develop) and what they didn't like (these we should eliminate or improve).  Another matter that we checked was that we asked if the people would like to spare they free time on it - to see if the game is enjoyable and if there is going to be demand for it.
-
-% #TODO: @all
-
+To see if our implementation of our game concept was enjoyable, and if our market analysis gave us a reasonable price, we did a playtest of the game with a small group of test subjects. After playing our game the subjects answered a survey about which parts of the game they enjoyed, and which they enjoyed less, etc. We reviewed the data from the playtest to see where changes to our implementation and business model should be made. 
 
 %----------------------------------------------------------------------------------------
 %	STATE OF THE ART
@@ -246,7 +254,7 @@ After we have done the implementation and the business part we made the playtest
 
 In this section, we have been looking at possible competitors which have a similar game concept as we do. The purpose of this is to determine strengths and weaknesses of these games and learn from their success or failure to create the best possible game ourselves, not only regarding the features and gameplay, but also the marketing, availability on different platforms and price.
 
-The market for 2D side-scrolling games is basically infinitely large and not comprehensible in terms of picking the best games because there are too many. This is the reason, why we did not spend hours on searching for games on Google or the Steam charts or similar research possibilities, but rather decided to let each team member pick one game that he thinks fits best with the game concept that we brainstormed earlier, and research that one game. Of course, we discussed each choice in the group and if everyone thought it is a good choice and made changes based on that discussion. Most games in the upcoming list were played by one or more team members previously, which made it easier and more accurate to determine it's main features, as well as good and bad points about it.
+The market for 2D side-scrolling games is basically infinitely large and not comprehensible in terms of picking the best games because there are too many. This is the reason, why we did not spend hours on searching for games on Google or the Steam charts or similar research possibilities, but rather decided to let each team member pick one game that he/she thinks fits best with the game concept that we brainstormed earlier and research that one game. Of course, we discussed each choice in the group and if everyone agreed that it was a good choice we made changes based on that discussion. Most games in the upcoming list were played by one or more team members previously, which made it easier and more accurate to determine it's main features, as well as good and bad points.
 
 %------------------------------------------------
 
@@ -256,10 +264,10 @@ The market for 2D side-scrolling games is basically infinitely large and not com
 \subsubsection[Tallowmere]{Tallowmere \cite{Tallowmere}} \label{sec:StateOfTheArt_Tallowmere}
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/tallowmere.jpeg}
-  \label{sec:StateOfTheArt_Screenshots_Tallowmere}
-  \caption{Screenshot of the game Tallowmere \cite{Tallowmere}}
+ \center
+ \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/tallowmere.jpeg}
+ \label{sec:StateOfTheArt_Screenshots_Tallowmere}
+ \caption{Screenshot of the game Tallowmere \cite{Tallowmere}}
 \end{figure}
 
 A 2D action platformer with an emphasis on executing your hero's jumping, shield-blocking, and weapon-attacking at the right moments as you move through a procedurally-generated dungeon.
@@ -267,35 +275,35 @@ A 2D action platformer with an emphasis on executing your hero's jumping, shield
 Features:
 
 \begin{itemize}
-  \item Randomly-generated rooms, with each room bigger than the last
-  \item Blood splats, particle effects and sounds
-  \item Skill-based gameplay, with no ammo, mana, or stamina gauges
-  \item Traps and obstacles to dodge and avoid
-  \item Special boss and event rooms
-  \item Different weapons, shields and garments the hero can equip
-  \item Infinite jumping
-  \item Single Player and local co-op (up to 4 players)
-  \item Permanent death, with a typical run lasting from 1 minute to 2 hours depending on skill
+ \item Randomly-generated rooms, with each room bigger than the last
+ \item Blood splats, particle effects and sounds
+ \item Skill-based gameplay, with no ammo, mana, or stamina gauges
+ \item Traps and obstacles to dodge and avoid
+ \item Special boss and event rooms
+ \item Different weapons, shields and garments the hero can equip
+ \item Infinite jumping
+ \item Single Player and local co-op (up to 4 players)
+ \item Permanent death, with a typical run lasting from 1 minute to 2 hours depending on skill
 \end{itemize}
 
 Platforms:
 
 \begin{itemize}
-    \item Windows XP SP2 or newer
-    \item macOS 10.8 or newer
-    \item SteamOS
-    \item Ubuntu 12.04 or newer
-    \item Android 4.4 or newer
-    \item iOS 8.1 or newer
-    \item Wii U
+  \item Windows XP SP2 or newer
+  \item macOS 10.8 or newer
+  \item SteamOS
+  \item Ubuntu 12.04 or newer
+  \item Android 4.4 or newer
+  \item iOS 8.1 or newer
+  \item Wii U
 \end{itemize}
 
 Prices:
 
 \begin{itemize}
-  \item Steam: 3.99 EUR (4.71 USD)
-  \item iTunes: 1.99 USD
-  \item PlayStore: 16.0 DKK (2.54 USD)
+ \item Steam: 3.99 EUR (4.71 USD)
+ \item iTunes: 1.99 USD
+ \item PlayStore: 16.0 DKK (2.54 USD)
 \end{itemize}
 
 Subconclusion:
@@ -309,10 +317,10 @@ We like the idea of a single hero that has to fight with enemies. Skill-based ga
 \subsubsection[Cave Story Plus]{Cave Story Plus \cite{CaveStoryPlusSteam}}
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/cave_story_plus}
-  \label{sec:StateOfTheArt_Screenshots_CaveStoryPlus}
-  \caption{Screenshot of the game Cave Story+ \cite{CaveStoryPlusScreenshot}}
+ \center
+ \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/cave_story_plus}
+ \label{sec:StateOfTheArt_Screenshots_CaveStoryPlus}
+ \caption{Screenshot of the game Cave Story+ \cite{CaveStoryPlusScreenshot}}
 \end{figure}
 
 Cave Story+ is a Cave Story remake for PC, Mac and Nintendo Switch developed by Nicalis, released in 2011. The game features remastered graphics and music as well as several new game modes, of which one is only made exclusively for the Nintendo Switch version \cite{CaveStoryPlusWiki}.
@@ -322,14 +330,14 @@ Cave Story+ has a selection of three difficulty levels; easy, standard and hard.
 Features:
 
 \begin{itemize}
-  \item Background music
-  \item Over 20 boss battle games
-  \item A variety of weaponry
-  \item Four different game endings
-  \item Hard mode for veterans
-  \item Multiple versions available
-  \item Metroid inspired setting
-  \item Simple storyline
+ \item Background music
+ \item Over 20 boss battle games
+ \item A variety of weaponry
+ \item Four different game endings
+ \item Hard mode for veterans
+ \item Multiple versions available
+ \item Metroid inspired setting
+ \item Simple storyline
 \end{itemize}
 
 % REMOVE IF SOMETHING CHANGES
@@ -339,17 +347,17 @@ Features:
 Platforms:
 
 \begin{itemize}
-    \item Windows
-    \item macOS
-    \item Nintendo Switch
+  \item Windows
+  \item macOS
+  \item Nintendo Switch
 \end{itemize}
 
 Prices:
 
 \begin{itemize}
-  \item Steam: 14.99 EUR (17.69 USD)
-  \item iTunes: 4.99 USD
-  \item Nintendo: 29.99 USD
+ \item Steam: 14.99 EUR (17.69 USD)
+ \item iTunes: 4.99 USD
+ \item Nintendo: 29.99 USD
 \end{itemize}
 
 Subconclusion:
@@ -362,10 +370,10 @@ The ideas that we like in this game are that enemies have various health points 
 \subsubsection[Stardew Valley]{Stardew Valley \cite{StardewValley}} \label{StardewValley}
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/stardew_valley}
-  \label{sec:StateOfTheArt_Screenshots_StardewValley}
-  \caption{Screenshot of the game Stardew Valley \cite{StardewValleyScreenshot}}
+ \center
+ \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/stardew_valley}
+ \label{sec:StateOfTheArt_Screenshots_StardewValley}
+ \caption{Screenshot of the game Stardew Valley \cite{StardewValleyScreenshot}}
 \end{figure}
 
 Stardew Valley is a 2D top-down indie farming simulation, which features an endless mine, where the player can fight, gather resources for the character and his farm and explore the different levels. The mines consist of an endless amount of procedurally generated levels, with checkpoints after every five levels. These checkpoints can be reached by an elevator on the first level in the mines. Each level consists of several elements, which are mainly gatherable stones and enemies. Furthermore, some levels have special elements, which are quicksand, minecarts, chests, and more. To reach the next level, the player has to find a ladder down, which can be found under a random stone or ore. They can either be destroyed by a pickaxe or bomb. This mine system is only a small part of the overall game but offers a fun and highly replayable experience due to the infinite amounts of levels.
@@ -373,14 +381,14 @@ Stardew Valley is a 2D top-down indie farming simulation, which features an endl
 Features:
 
 \begin{itemize}
-  \item Top-down rather than a sidescrolling game
-  \item Procedurally generated levels
-  \item Different themes and enemies for different level regions
-  \item Inventory system
-  \item Health and energy system
-  \item Upgrading of weapons and armor
-  \item Resource gathering (for overall game)
-  \item Simple 8-bit graphics with customizable character
+ \item Top-down rather than a sidescrolling game
+ \item Procedurally generated levels
+ \item Different themes and enemies for different level regions
+ \item Inventory system
+ \item Health and energy system
+ \item Upgrading of weapons and armor
+ \item Resource gathering (for overall game)
+ \item Simple 8-bit graphics with customizable character
 \end{itemize}
 
 % REMOVE IF SOMETHING CHANGES
@@ -390,21 +398,21 @@ Features:
 Platforms:
 
 \begin{itemize}
-    \item Nintendo Switch
-    \item PlayStation 4
-    \item Xbox One
-    \item Windows
-    \item Linux
-    \item macOS
-    \item PlayStation Vita
+  \item Nintendo Switch
+  \item PlayStation 4
+  \item Xbox One
+  \item Windows
+  \item Linux
+  \item macOS
+  \item PlayStation Vita
 \end{itemize}
 
 Prices:
 
 \begin{itemize}
-  \item Steam: 13.99 EUR (16.51 USD)
-  \item Xbox: 14.99 USD
-  \item Nintendo: 10.99 GBP (14.77 USD)
+ \item Steam: 13.99 EUR (16.51 USD)
+ \item Xbox: 14.99 USD
+ \item Nintendo: 10.99 GBP (14.77 USD)
 \end{itemize}
 
 Subconclusion:
@@ -417,26 +425,26 @@ The concept that interested us the most in this game is the different theme on e
 \subsubsection[Rogue Legacy]{Rogue Legacy \cite{RogueLegacy}}
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/rogue_legacy}
-  \label{sec:StateOfTheArt_Screenshots_RogueLegacy}
-  \caption{Screenshot of the game Rogue Legacy \cite{RogueLegacyScreenshot}}
+ \center
+ \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/rogue_legacy}
+ \label{sec:StateOfTheArt_Screenshots_RogueLegacy}
+ \caption{Screenshot of the game Rogue Legacy \cite{RogueLegacyScreenshot}}
 \end{figure}
 
-Rogue Legacy is a 2D game, which was released in 2013 and developed by Cellar Door Games. The game is about exploring a randomly generated dungeon and collecting gold. The player  / character has default abilities such as jump and slash with a sword and secondary abilities such as magic attacks by using mana. The player has to defeat a boss in order to go to the next level \cite{RogueLegacyReview}.
+Rogue Legacy is a 2D game, which was released in 2013 and developed by Cellar Door Games. The game is about exploring a randomly generated dungeon and collecting gold. The player / character has default abilities such as jump and slash with a sword and secondary abilities such as magic attacks by using mana. The player has to defeat a boss in order to go to the next level \cite{RogueLegacyReview}.
 
 Features: \cite{RogueLegacySteam}
 
 \begin{itemize}
-  \item Single player
-  \item With sword, mana and life gauge to worry about
-  \item Traps and obstacles to dodge and avoid
-  \item More than 8 classes to choose from
-  \item Over 60 different enemies
-  \item Powerful weaponry and armor
-  \item Tons of secret areas
-  \item Boss in every stage
-  \item Jump, run and dash
+ \item Single player
+ \item With sword, mana and life gauge to worry about
+ \item Traps and obstacles to dodge and avoid
+ \item More than 8 classes to choose from
+ \item Over 60 different enemies
+ \item Powerful weaponry and armor
+ \item Tons of secret areas
+ \item Boss in every stage
+ \item Jump, run and dash
 \end{itemize}
 
 % REMOVE IF SOMETHING CHANGES
@@ -446,21 +454,21 @@ Features: \cite{RogueLegacySteam}
 Platforms: \cite{RogueLegacyWiki}
 
 \begin{itemize}
-    \item Windows
-    \item Linux
-    \item macOS
-    \item PlayStation 3
-    \item PlayStation 4
-    \item PlayStation Vita
-    \item Xbox One
+  \item Windows
+  \item Linux
+  \item macOS
+  \item PlayStation 3
+  \item PlayStation 4
+  \item PlayStation Vita
+  \item Xbox One
 \end{itemize}
 
 Prices:
 
 \begin{itemize}
-  \item Steam: 14.99 EUR (17.69 USD)
-  \item Xbox: 13.99 USD
-  \item PlayStation: 16.99 USD
+ \item Steam: 14.99 EUR (17.69 USD)
+ \item Xbox: 13.99 USD
+ \item PlayStation: 16.99 USD
 \end{itemize}
 
 Subconclusion:
@@ -474,10 +482,10 @@ In this game, we like the boss idea the most. We would also like to have one rea
 \subsubsection[Mega Miner]{Mega Miner \cite{MegaMiner}}
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/mega_miner}
-  \label{sec:StateOfTheArt_Screenshots_MegaMiner}
-  \caption{Screenshot of the game Mega Miner}
+ \center
+ \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/mega_miner}
+ \label{sec:StateOfTheArt_Screenshots_MegaMiner}
+ \caption{Screenshot of the game Mega Miner}
 \end{figure}
 
 Mega Miner is a 2D game developed by Armor Games. The main task in the game is to drill a mine and while this process collects gold, silver, coal and other minerals. The player / character can then sell it for cash and upgrade his mining machine with new coolers and more. This game is qualified as a strategy game.
@@ -485,18 +493,18 @@ Mega Miner is a 2D game developed by Armor Games. The main task in the game is t
 Features:
 
 \begin{itemize}
-  \item Single player
-  \item Gold, silver, coal and other minerals to collect
-  \item Rocks as obstacles to avoid
-  \item One map
-  \item No enemies
-  \item Possibility to upgrade character (drill)
+ \item Single player
+ \item Gold, silver, coal and other minerals to collect
+ \item Rocks as obstacles to avoid
+ \item One map
+ \item No enemies
+ \item Possibility to upgrade character (drill)
 \end{itemize}
 
 Platform: 
 
 \begin{itemize}
-    \item Adobe Flash Player
+  \item Adobe Flash Player
 \end{itemize}
 
 Price: Free
@@ -512,10 +520,10 @@ From this game, we received inspiration for collecting resources. However, due t
 \subsubsection[Spelunky]{Spelunky \cite{Spelunky}}
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/spelunky}
-  \label{sec:StateOfTheArt_Screenshots_Spelunky}
-  \caption{Screenshot of the game Spelunky \cite{SpelunkyScreenshot}}
+ \center
+ \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/spelunky}
+ \label{sec:StateOfTheArt_Screenshots_Spelunky}
+ \caption{Screenshot of the game Spelunky \cite{SpelunkyScreenshot}}
 \end{figure}
 
 Spelunky is a 2D cave exploration/treasure-hunting game inspired by classic platform games such as Rayman, Super Mario, and Sonic the Hedgehog. One of the crucial features that differentiate this game to the classic versions, is that the game is top-down rather than sidescrolling, which leaves the player with a completely different feel. With an inventory full of bombs, ropes, and your own whip, the aim is to creatively maneuver through the fully-destructible ancient caves. In order to complete levels, you have to search deep in the underground for a door, while encountering a variety of enemies, as well as traps and treasure. It's a challenging game that will likely test your patience since you will die continuously. But with many deaths comes experience, and eventually, as you beat the level, the frustration is overtaken by a great feeling of satisfaction.
@@ -537,13 +545,13 @@ Spelunky is a 2D cave exploration/treasure-hunting game inspired by classic plat
 Features:
 
 \begin{itemize}
-  \item Top-down rather than a sidescrolling game
-  \item Skill-based gameplay
-  \item Single player and local co-op (up to 4 players)
-  \item Traps and enemies to dodge and avoid
-  \item Inventory system primarily with bombs and ropes
-  \item Money collecting for the shopkeeper in-between levels
-  \item Full maneuverability with infinite jumping and running
+ \item Top-down rather than a sidescrolling game
+ \item Skill-based gameplay
+ \item Single player and local co-op (up to 4 players)
+ \item Traps and enemies to dodge and avoid
+ \item Inventory system primarily with bombs and ropes
+ \item Money collecting for the shopkeeper in-between levels
+ \item Full maneuverability with infinite jumping and running
 \end{itemize}
 
 Price: Free
@@ -558,10 +566,10 @@ This game has the storyline a bit deviating from ours, but despite this, we used
 \subsubsection[Nuclear Throne]{Nuclear Throne \cite{NulcearThrone}}
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/nuclearthrone}
-  \label{sec:StateOfTheArt_Screenshots_Nulcearthrone}
-  \caption{Screenshot of the game Nuclear Throne \cite{NulcearThroneScreenshot}}
+ \center
+ \includegraphics[width=0.8\textwidth]{StateOfTheArtScreenshots/nuclearthrone}
+ \label{sec:StateOfTheArt_Screenshots_Nulcearthrone}
+ \caption{Screenshot of the game Nuclear Throne \cite{NulcearThroneScreenshot}}
 \end{figure}
 
 Nuclear Throne is a "bullet hell" 2D top-down shooter, with an 8-bit retro style look and feel to it. The gameplay is very simple, there are different weapons you can pick up throughout the game, progressively getting better weapons as you play the game. The game consists of several themed "worlds", featuring themes such as desert, frozen, sewer. Each world has several levels where you face enemies shooting hundreds of projectiles at you, which is why it's referred to as a "bullet hell" game. At the end of each world, you must fight a boss before you can advance to the next world. The game also features multiple characters you can play in each playthrough.
@@ -569,19 +577,19 @@ Nuclear Throne is a "bullet hell" 2D top-down shooter, with an 8-bit retro style
 Features:
 
 \begin{itemize}
-  \item Top down view
-  \item Multiple themed worlds
-  \item Multiple boss battles
-  \item A large variety of weapons
-  \item Multiple characters
-  \item Procedural levels
-  \item Daily challenges
+ \item Top down view
+ \item Multiple themed worlds
+ \item Multiple boss battles
+ \item A large variety of weapons
+ \item Multiple characters
+ \item Procedural levels
+ \item Daily challenges
 \end{itemize}
 
 Prices:
 
 \begin{itemize}
-  \item Steam: 11.99 USD
+ \item Steam: 11.99 USD
 \end{itemize}
 
 Subconclusion:
@@ -596,21 +604,21 @@ What captivated us the most in this game is the retro style of it. Also, there a
 The games research that we made helped us to establish what features Gangster Squirrel should have and also to better understand how the gaming market looks like. The list below shows the features that we agreed on:
 
 \begin{itemize}
-    \item Single player
-    \item 2D platform game
-    \item 3 non-randomly generated levels (the last one should be with a Boss)
-    \item One version supported - Desktop
-    \item Squirrel as a hero
-    \item Matching environment - the outside world, tree, the interior of the tree
-    \item Matching enemies - frogs, monkeys
-    \item Hero has limited lifes and health points 
-    \item Variety of weapons
-    \item Background music
+  \item Single player
+  \item 2D platform game
+  \item 3 non-randomly generated levels (the last one should be with a Boss)
+  \item One version supported - Desktop
+  \item Squirrel as a hero
+  \item Matching environment - the outside world, tree, the interior of the tree
+  \item Matching enemies - frogs, monkeys
+  \item Hero has limited lifes and health points 
+  \item Variety of weapons
+  \item Background music
 \end{itemize}
 
 \textbf{Platforms:}
 
-We would like our game to be available on all of the platforms, but due to our time limits, we decided to first implement a desktop version and then expand it to others, if possible.
+We would like our game to be available on at least all of the platforms our competitors have released their games for, but due to our time limitation, we decided to first implement a desktop version and then expand it to others, if possible.
 
 \textbf{Price:}
 
@@ -627,10 +635,10 @@ As we mentioned in subconclusions above, many games that are similar to what we 
 Ever since the release of Pong \cite{Pong} in the U.S. and the beginning of the first generation of video game consoles in 1972 the gaming industry has been growing steadily and sees no end in sight. It has spread throughout the globe and game development companies have become international organizations. The only part of the globe where games are not popular is South America \cite{GamesMarketRevenue}. In the past few years, the mobile gaming segment has overtaken all others in revenue and is expected to increase its lead over the coming years.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{BusinessStrategy/Newzoo_2017_Global_Games_Market_Per_Segment_April_2017}
-  \label{Newzoo_2017_Global_Games_Market_Per_Segment_April_2017}
-  \caption{Newzoo 2017 Global Games Market Per Segment \cite{NezooScreenshot}}
+ \center
+ \includegraphics[width=1\textwidth]{BusinessStrategy/Newzoo_2017_Global_Games_Market_Per_Segment_April_2017}
+ \label{Newzoo_2017_Global_Games_Market_Per_Segment_April_2017}
+ \caption{Newzoo 2017 Global Games Market Per Segment \cite{NezooScreenshot}}
 \end{figure}
 
 One of the reasons for this growth is the inclusion of new players - mostly females and elders, has induced the popularity of casual games in social networks and mobile apps. Another reason is the constant development of the different business models used by game developers. The most successful in recent years has been the free-to-play-model \cite{BusinessModelsAndStrategy}.
@@ -646,7 +654,7 @@ A subscription-based model, though other games have had great success with it, d
 \subsection{Marketing Strategy}
 
 Through the long history of game development, the marketing utilized by game producers has been quite varied \cite{MarketingStrategyExamples}. Users have been bombarded with promotional videos, print ads, billboards, newsletters and much more. Some companies have benefited from their marketing materials going viral.
-Our game will not be distributed on physical media, due to the added cost, it will available solely online. Therefore to aid with the advertisement our marketing will also be online, due to its high return on investment, analytic capabilities and ease of use.
+Our game will not be distributed on physical media, due to the added cost, it will be available solely online. Therefore to aid with the advertisement our marketing will also be online, due to its high return on investment, analytic capabilities and ease of use.
 
 %------------------------------------------------
 
@@ -654,28 +662,26 @@ Our game will not be distributed on physical media, due to the added cost, it wi
 
 Market segmentation is the process of dividing a broad consumer or business market, normally consisting of existing or potential customers, into sub-groups of consumers which are known as segments. The segments are based on some type of characteristics. Which typically are common characteristics, such as shared needs, common interests, or similar lifestyles. Market segmentation has become critical to any business or marketing plan \cite{MarketSegmentation}.
 
-The market is highly competitive as major vendors are competing against each other to acquire a greater market share.  As specified further under the “Business Model” section in the report, there has been a peak in the past few years in mobile gaming, which has opened up the doors for new players - mostly females and elders have induced the popularity of casual games in social networks and mobile apps. The statistic below shows the gender split among U.S. computer and video games from 2006-2017. Moreover, the calculation showed that nearly 42\% of all gamers in the United States, were women, a slight increase over the previous year. Based on a 2015 forecast, worldwide video game sales have increased to nearly 75 billion U.S. dollars in 2015 and are expected to grow to 90 billion by 2020. In 2014, it was also calculated that there were some 1.8 billion gamers in the world, which equals to about 25 percent of the entire global population. Therefore, video gaming is not only a hobby or for entertainment. It is the basis of a tremendous industry, worth over tens of billions U.S. dollars \cite{VideoGamerGender}.
+The market is highly competitive as major vendors are competing against each other to acquire a greater market share. As specified further under the “Business Model” section in the report, there has been a peak in the past few years in mobile gaming, which has opened up the doors for new players - mostly females and elders have induced the popularity of casual games in social networks and mobile apps. The statistic below shows the gender split among U.S. computer and video games from 2006-2017. Moreover, the calculation showed that nearly 42\% of all gamers in the United States, were women, a slight increase over the previous year. Based on a 2015 forecast, worldwide video game sales have increased to nearly 75 billion U.S. dollars in 2015 and are expected to grow to 90 billion by 2020. In 2014, it was also calculated that there were some 1.8 billion gamers in the world, which equals to about 25 percent of the entire global population. Therefore, video gaming is not only a hobby or for entertainment. It is the basis of a tremendous industry, worth over tens of billions U.S. dollars \cite{VideoGamerGender}.
 
+
+\newpage
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{BusinessStrategy/Statistics-MarketSeg}
-  \label{Statistcs-MarketSeg}
-  \caption{Distribution of computer and video gamers in the United States from 2006 to 2017, by gender \cite{NezooScreenshot}}
+ \center
+ \includegraphics[width=1\textwidth]{BusinessStrategy/Statistics-MarketSeg}
+ \label{Statistcs-MarketSeg}
+ \caption{Distribution of computer and video gamers in the United States from 2006 to 2017, by gender \cite{NezooScreenshot}}
 \end{figure}
 
-\newpage
 Today, 27 percent of U.S. video gamers are between the ages of 18 and 35, so roughly every third game enthusiast is a Millennial, with figures going further towards the younger generation in recent years. However, 26 percent of surveyed Americans who admitted having playing video games were at least 50 years old \cite{VideoGamerGender}.
 
-Our segmentation is generally based on gamers, who have interest in retro gaming. We target people who want to bring the old retro games back on the market. There is a slight decreasement in the Boxed/Downloaded PC Games for this year. However, there has been an immense growth in mobile gaming, throughout the past few years. Which will eventually make the market size expand for the years to come. One thing our customers have in common is retro gaming, whether it's for a small platform (mobile gaming) or a big platform (PC-games). Segmentation basically divides a population based on variables. We believe that our target group will be suitable for the psychographic market segmentation-strategy. 
-
-\newpage
 There are four basic market segmentation-strategies which are based on: 
 
 \begin{itemize}
-    \item behaviour
-    \item demographic
-    \item geographical differences
-    \item psychographic
+  \item behaviour
+  \item demographic
+  \item geographical differences
+  \item psychographic
 \end{itemize}
 
 Segmentation according to demographic is based on consumer-demographic variables such as age, income, family size, economic status etc. This kind of segmentation assumes that consumers with similar demographic profiles will exhibit similar purchasing patterns, and have similar interests, lifestyles and motivations. Moreover, that these characteristics will translate into similar product/brand preferences. The demographic segmentation is one of the simplest and widest types of market segmentation used. 
@@ -686,13 +692,15 @@ Geographical segmentation divides people on the geographic criteria. The potenti
 
 The psychographic segmentation is one which uses lifestyle of people, their interests, activities, and hobbies as well as opinions to define a market segmentation. It’s quite similar to the behavioral segmentation. But psychographic also takes the psychological aspects of consumer buying behavior into accounts. Having the statistics and latest Games Market Report in mind, we have chosen to limit our target group to consumers aged between 18-50 years old, and to categorize our segmentation as psychographic \cite{MarketSegmentation}.
 
+Our segmentation is generally based on gamers, who have interest in retro gaming. We target people who want to bring the old retro games back on the market. There is a slight decreasement in the Boxed/Downloaded PC Games for this year. However, there has been an immense growth in mobile gaming, throughout the past few years. Which will eventually make the market size expand for the years to come. One thing our customers have in common is retro gaming, whether it's for a small platform (mobile gaming) or a big platform (PC-games). Segmentation basically divides a population based on variables. We believe that our target group will be suitable for the psychographic market segmentation-strategy.  
+
 The latest quarterly update of the Global Games Market Report, released by Newzoo, displays the essence of computer gaming. Throughout the infographic, is illustrated the big part computer gaming has on the global games market since 2016 and will have until est. 2020. Having this in mind we have chosen to release Gangster Squirrel for free for Desktop devices as an effort to boost interest. The full-length game will be available for 3.99\$ for the desktop. Furthermore, if the desktop-version succeeds, a mobile version will be available as well for 1.99\$
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{BusinessStrategy/GlobalGamesMarket2016-2020.png}
-  \label{GlobalGamesMarket2016-2020}
-  \caption{2016-2020 Global Games Market (forecast per segment toward 2020) \cite{GlobalGamesMarket}}
+ \center
+ \includegraphics[width=1\textwidth]{BusinessStrategy/GlobalGamesMarket2016-2020.png}
+ \label{GlobalGamesMarket2016-2020}
+ \caption{2016-2020 Global Games Market (forecast per segment toward 2020) \cite{GlobalGamesMarket}}
 \end{figure}
 
 %----------------------------------------------------------------------------------------
@@ -711,22 +719,22 @@ Since the original idea was that we wanted to do custom textures for every chara
 The main character was created with PyxelEdit, since the program allows for easy and simple tile creation, which made it painless to insert the regular squirrel and add a different weapon for each tile, as shown in the picture underneath.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{Documentation/Picture1.png}
-  \caption{PyxelEdit interface \cite{PyxelEdit}}
-  \label{fig:pyxeledit_screenshot}
+ \center
+ \includegraphics[width=1\textwidth]{Documentation/Picture1.png}
+ \caption{PyxelEdit interface \cite{PyxelEdit}}
+ \label{fig:pyxeledit_screenshot}
 \end{figure}
 
 \newpage 
 The look of the squirrel was done with inspiration from the “White-tailed Antelope Ground Squirrel”. The weapons are made with inspiration from the weapons listed chronologically below:
 
 \begin{itemize}
-    \item Branch
-    \item Swiss-Army Knife
-    \item Switchblade
-    \item Katana
-    \item Tommy Gun
-    \item Rocket Launcher
+  \item Branch
+  \item Swiss-Army Knife
+  \item Switchblade
+  \item Katana
+  \item Tommy Gun
+  \item Rocket Launcher
 \end{itemize}
 
 As it appears, some of the peculiar details were lost when trying to recreate the weapons, as 8-bit textures have its delimitations. 
@@ -734,10 +742,10 @@ As it appears, some of the peculiar details were lost when trying to recreate th
 The attacking animations were done with the same approach as any other animation in our game. In this particular case, it is only done with a single different texture with the weapon stretching out from the body of the squirrel, as shown in the image below.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{Documentation/Picture2.png}
-  \caption{The default and attack texture of the squirrel holding a branch}
-  \label{fig:squirrel_branch_default_attack_texture}
+ \center
+ \includegraphics[width=1\textwidth]{Documentation/Picture2.png}
+ \caption{The default and attack texture of the squirrel holding a branch}
+ \label{fig:squirrel_branch_default_attack_texture}
 \end{figure}
 
 \newpage 
@@ -759,40 +767,40 @@ The textures are the graphical images by which one can construct the whole map. 
 
 \subsubsection{Map creation}
 
-A game's map represents a lot about the game itself. The Gangster Squirrel consists of three levels (maps).
+A game's map has a huge influence on the game experience, since it's the environment that the player is gonna manoeuvre around in. Gangster Squirrel consists of three levels (maps).
 
 \begin{itemize}
  \item The first level is on the ground, where the player has to go from left to right to find his way to the next level (see figure \ref{fig:FirstLevel}).
  
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{Documentation/level_1.png}
-  \caption{First level}
-  \label{fig:FirstLevel}
+ \center
+ \includegraphics[width=1\textwidth]{Documentation/level_1.png}
+ \caption{First level}
+ \label{fig:FirstLevel}
 \end{figure}
 
- \item The second level is inside the tree, where the player has to go from bottom to the top of the tree to get to the eagle (boss) (see figure \ref{fig:SecondLevel}).
+ \item The second level is inside the tree, where the player has to fight his way from bottom to the top of the tree to get to the eagle (boss) (see figure \ref{fig:SecondLevel}).
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.4\textwidth]{Documentation/level_2.png}
-   \caption{Second level}
-  \label{fig:SecondLevel}
+ \center
+ \includegraphics[width=0.4\textwidth]{Documentation/level_2.png}
+  \caption{Second level}
+ \label{fig:SecondLevel}
 \end{figure}
 
- \item The last level is at the top of the tree where the player fights with the eagle / boss (see figure \ref{fig:BossLevel}).
+ \item The last level is at the top of the tree where the player is encountered by an eagle that must be defeated to complete the game (see figure \ref{fig:BossLevel}).
  
-  \begin{figure}[ht]
-      \center
-      \includegraphics[width=0.9\textwidth]{Documentation/boss_level.png}
-      \caption{Boss Level}
-      \label{fig:BossLevel}
-    \end{figure}
+ \begin{figure}[ht]
+   \center
+   \includegraphics[width=0.9\textwidth]{Documentation/boss_level.png}
+   \caption{Boss Level}
+   \label{fig:BossLevel}
+  \end{figure}
 \end{itemize}
 
 We created these maps by using a software called \texttt{Tiled}. Tiled is a map editor software, which is mostly used by developers to create maps \cite{TiledMapEditor}. Tiled is mostly used to make 8-bit styled based games, which is perfect for our game.
 
-One of the reasons why we chose \emph{Tiled} as a map editor was that it's recommended by LibGDX itself in the documentation \cite{TileMaps}. Another reason was that the tutorial series for LibGDX on YouTube \cite{BrentAureliSuperMarioBros}, which we followed, had also used the Tiled map editor, which made it easy to get into it. From our point of view working with the Tiled program was really easy to understand, because it was really simple to create a map with it.
+One of the reasons why we chose \emph{Tiled} as a map editor was that it's recommended by LibGDX itself in the documentation \cite{TileMaps}. Another reason was that the tutorial series for LibGDX on YouTube \cite{BrentAureliSuperMarioBros}, which we followed, had also used the Tiled map editor, which made very painless to follow. From our point of view working with the Tiled program was really easy to understand, since we managed to create a map with fairly easily with no experience whatsoever.
 
 \subsection{Head-up display}
 
@@ -801,37 +809,37 @@ For the head-up display, we needed an icon for the remaining lives, the weapon s
 For the remaining lives, we used our own version of the iconic 8-bit heart (see figure \ref{fig:hud_heart_icon}). Thousands of those hearts can be found when googling "8-bit heart". The image size is 48 by 32 pixels, 16 extra pixels were added to the right side of the image to have a margin between the icon and the text in the game since it doesn't have a feature to do it itself. The icon can be seen in figure \ref{fig:hud_heart_icon}.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.1\textwidth]{Documentation/heart_icon.png}
-  \caption{The remaining lives icon in the HUD}
-  \label{fig:hud_heart_icon}
+ \center
+ \includegraphics[width=0.1\textwidth]{Documentation/heart_icon.png}
+ \caption{The remaining lives icon in the HUD}
+ \label{fig:hud_heart_icon}
 \end{figure}
 
 The icon for the weapon strength is similar. It is also a 48 by 32-pixel image and based on already existing 8-bit art, but still created by ourselves completely (see figure \ref{fig:hud_weapon_strength_icon}). The icon shows a military knife with blood on its tip and around it, creating the illusion that it was just used. We think this is the clearest way to represent the strength of a weapon in an icon. The icon can be seen in figure \ref{fig:hud_weapon_strength_icon}
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.1\textwidth]{Documentation/weapon_strength_icon.png}
-  \caption{The weapon strength icon in the HUD}
-  \label{fig:hud_weapon_strength_icon}
+ \center
+ \includegraphics[width=0.1\textwidth]{Documentation/weapon_strength_icon.png}
+ \caption{The weapon strength icon in the HUD}
+ \label{fig:hud_weapon_strength_icon}
 \end{figure}
 
 The last of these icons simply shows the Twitch icon to represent the remaining time of an active effect that was given by Twitch chat (see section \ref{Twitch}). The icon has a 48 by 32-pixel resolution like the other icons and was self-drawn with the original logo as a template. The icon can be seen in figure \ref{fig:hud_twitch_icon}.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.1\textwidth]{Documentation/twitch.png}
-  \caption{The Twitch icon in the HUD}
-  \label{fig:hud_twitch_icon}
+ \center
+ \includegraphics[width=0.1\textwidth]{Documentation/twitch.png}
+ \caption{The Twitch icon in the HUD}
+ \label{fig:hud_twitch_icon}
 \end{figure}
 
 The progress bars are a bit trickier because it has to be resizable in the horizontal direction to make it fit every screen size. LibGDX solves this scaling issue by using 9-Patch files \cite{NinePatchImage}. These images are normal PNG's, but with the extension \texttt{*.9.png}. Each nine-patch image has to be bigger by one pixel on each side of the image, which then contains black bars which describe the so-called \emph{patches}. A patch is simply the area of the image that is scalable, so the other graphical elements stay unaffected. IntelliJ has a built-in editor for nine patch images, which is a bit tricky to use but does the trick. When creating the skin for the HUD (see section \ref{DocHUD}), we needed to define a \texttt{knobBefore} image, which fills the progress bar. This image is simply one pixel wide and contains green pixels. The progress bar can be seen in figure \ref{fig:hud_health_bar}.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.75\textwidth]{Documentation/healthbar.png}
-  \caption{The health bar in the HUD}
-  \label{fig:hud_health_bar}
+ \center
+ \includegraphics[width=0.75\textwidth]{Documentation/healthbar.png}
+ \caption{The health bar in the HUD}
+ \label{fig:hud_health_bar}
 \end{figure}
 
 The visuals of the health bar were inspired by the health bar of \emph{Stardew Valley} (see section \ref{StardewValley}). We adapted some of the main colors of their progress bar and also included a red cross on the left side of the progress bar. It is similar style-wise but created by ourselves completely and with our own ideas.
@@ -840,22 +848,22 @@ The visuals of the health bar were inspired by the health bar of \emph{Stardew V
 
 \subsection{Menus} \label{VisualDocMenus}
 
-The navigational menus of the game were added as one of the last features. LibGDX provides a scene graph functionality with a few user interface widgets, but without any default style \cite{Scene2DUI}. Since the priority is functionality and not visuals, we used a community template called \emph{Flat Earth UI Skin} \cite{FlatEarthUISkin} to speed up the process of creating a working menu system. This might still change until the exam.
+The navigational menus of the game were added as one of the last features. LibGDX provides a scene graph functionality with a few user interface widgets, but without any default style \cite{Scene2DUI}. Since the priority is functionality and not visuals, we used a community template called \emph{Flat Earth UI Skin} \cite{FlatEarthUISkin} to speed up the process of creating a working menu system.
 
 The following figure \ref{fig:flat_earth_ui_skin} shows a template application, provided on the website, with all widgets to show the visuals of this template. Figure \ref{fig:main_menu_screenshot} then shows one of the menus that we created using this template.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.75\textwidth]{Documentation/preview.png}
-  \caption{Flat Earth UI Skin \cite{FlatEarthUISkin}}
-  \label{fig:flat_earth_ui_skin}
+ \center
+ \includegraphics[width=0.75\textwidth]{Documentation/preview.png}
+ \caption{Flat Earth UI Skin \cite{FlatEarthUISkin}}
+ \label{fig:flat_earth_ui_skin}
 \end{figure}
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.75\textwidth]{Documentation/main_menu.png}
-  \caption{The main menu}
-  \label{fig:main_menu_screenshot}
+ \center
+ \includegraphics[width=0.75\textwidth]{Documentation/main_menu.png}
+ \caption{The main menu}
+ \label{fig:main_menu_screenshot}
 \end{figure}
 
 %------------------------------------------------
@@ -867,7 +875,7 @@ The following figure \ref{fig:flat_earth_ui_skin} shows a template application, 
 
 Deciding on a game engine is not an easy task, especially for Java. In the group, we split up the research of individual game engines, so that we can gather information about as many as possible before deciding on one. The procedure of finding relevant frameworks and game engines was fairly easy, by searching on a list of game engines on Wikipedia \cite{ListOfGameEngines}, using Google search and reading through forums to determine the public opinion on this topic. It quickly became apparent, that the market is rather thin when it comes to Java-based game engines, the big players like Unity \cite{UnityGameEngine} and Unreal Engine \cite{UnrealEngine} rely on \texttt{C} variations.
 
-We researched the option of using a native Java library like \texttt{JavaFX} \cite{JavaFX}, which would imply a lot of work on creating a core foundation for a game since it's not specifically made for this purpose. Most modern game engines come with certain standards, including an already existing application structure (with a game loop, scene management, events, and more). Popular engines usually also include their own or community made tools like map editors, asset managers, user interface composer, physics simulation, and so much more.
+We researched the option of using a native Java library like \texttt{JavaFX} \cite{JavaFX} or Java AWT \cite{javaawt}, which would imply a lot of work on creating a core foundation for a game since it's not specifically made for this purpose. Most modern game engines come with certain standards, including an already existing application structure (with a game loop, scene management, events, and more). Popular engines usually also include their own or community made tools like map editors, asset managers, user interface composer, physics simulation, and so much more.
 
 All of this would have the consequence of us having to code everything ourselves, limiting the outcome of the project due to the limited time. The group decided against this option by a majority vote. Not having to deal with a lot of very basic problems and therefore being able to develop the game farther and with more features, was more appealing to the majority of the group members.
 
@@ -887,10 +895,10 @@ This analysis is quite a clear statement, which choice would be the best and mos
 To set up a libGDX project in IntelliJ IDEA, the official setup tool (see Figure \ref{fig:LibGDXSetupScreenshot}) needs to be used. This creates a Gradle project with all necessary files, adds optional extensions by default and defines the deployment platforms (Windows, macOS, Linux, Android, iOS, Blackberry, and HTML5). By clicking on \emph{Advanced} and selecting IntelliJ IDEA or a different IDE, this tool also creates the project files for the specific IDE.
 
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.8\textwidth]{libGDX_setup.png}
-  \caption{libGDX Setup Tool}
-  \label{fig:LibGDXSetupScreenshot}
+ \centering
+ \includegraphics[width=0.8\textwidth]{libGDX_setup.png}
+ \caption{libGDX Setup Tool}
+ \label{fig:LibGDXSetupScreenshot}
 \end{figure}
 
 The import into IntelliJ is easy, just open the project and an import pop-up appears. By simply clicking \texttt{Ok}, everything will be imported and set up and the project is ready. To run the application in a desktop environment, the build configuration needs to be updated first, by setting the working directory to the \texttt{assets} folder of the project. With this being done, the set-up is complete.
@@ -902,7 +910,7 @@ The import into IntelliJ is easy, just open the project and an import pop-up app
 
 Since no one in the group had any experience with LibGDX previously, we had to find a way to learn it and be able to set up a viable project structure. When searching for relevant tutorials online, we stumbled upon a YouTube playlist by Brent Aureli with tutorials on how to create a \emph{Super Mario Bros} \cite{SuperMarioBros} clone with LibGDX \cite{BrentAureliSuperMarioBros}.
 
-The tutorial series helped us by a great amount to understand how LibGDX works and how we have to set up and structure our game. This is mainly due to the nature of our game, which is similar to the original \emph{Super Mario Bros} in terms of gameplay. The playlist furthermore covers the creation of maps with the open source map editor \texttt{Tiled} (see section \ref{VisualDocMaps}) and the usage of the physics engine \texttt{Box2D} (see section \ref{DocCollisions}). The group reviewed about half of the playlist until we decided that we learned all basics that we need to create our own game.
+The tutorial series helped us immensely in understanding how LibGDX works and how we had to set up and structure our game. This is mainly due to the nature of our game, which is similar to the original \emph{Super Mario Bros} in terms of gameplay. The playlist furthermore covers the creation of maps with the open source map editor \texttt{Tiled} (see section \ref{VisualDocMaps}) and the usage of the physics engine \texttt{Box2D} (see section \ref{DocCollisions}). The group reviewed about half of the playlist until we decided that we learned all basics that we need to create our own game.
 
 However, it is important to note that we solely used this tutorial to learn about LibGDX and set up a basic 2D game. All code in the project is completely written by ourselves and we did not use any pre-made projects or classes from third parties.
 
@@ -937,10 +945,10 @@ Going further, the actual code is located in the \texttt{core} directory of the 
 The game starts off in the \texttt{MainGameClass}, which runs the very basic foundation of the game, by setting up important public static parameters like screen size, camera settings, gravity, and more. The main class extends libGDX's \emph{abstract} \texttt{Game} class, which itself implements the \texttt{ApplicationListener} \emph{interface}. LibGDX mostly works in an event-driven fashion, which is why there is no game loop \cite{libGDXLifeCycle}. The \texttt{render} method, however, can be considered as such, as it runs every frame. The flowchart in figure \ref{fig:LibGDXLifeCycle} explains the life cycle of a libGDX application.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{Documentation/lifeCycle}
-  \caption{LibGDX Life Cycle \cite{libGDXLifeCycle}}
-  \label{fig:LibGDXLifeCycle}
+ \center
+ \includegraphics[width=1\textwidth]{Documentation/lifeCycle}
+ \caption{LibGDX Life Cycle \cite{libGDXLifeCycle}}
+ \label{fig:LibGDXLifeCycle}
 \end{figure}
 
 The main class has several purposes. It runs the main game cycle, sets up necessary parameters and has them publicly available to all classes, but also contains some important methods, like resetting certain values in the save files (player lives, current time) and also methods to exit the application. The following code shows the two overloaded exit methods. The difference is simply, that one of them prints out a message before exiting, while the other does not.
@@ -975,13 +983,13 @@ When the main class is done setting things up, including the creation of a new T
 
 As described in the previous section, the \texttt{MainGameClass} is the entry point of the application, followed by the most important class of the game, the \texttt{PlayScreen}. This does not nearly describe the structure of the entire project though since there are dozens of classes in the project.
 
-The following figure \ref{fig:minClassDiagram} is a minimised version of the class diagram of the project, which is supposed to show the relation between classes and the overall structure.
+The following figure \ref{fig:minClassDiagram} is a minimised version of the class diagram of the project, which is supposed to show the relation between classes and the overall structure. A flowchart of the game can be found in section \ref{DocMenus}.
 
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=1\textwidth]{Documentation/class_diagram_minimized.png}
-  \caption{Minimised class diagram}
-  \label{fig:minClassDiagram}
+ \centering
+ \includegraphics[width=1\textwidth]{Documentation/class_diagram_minimized.png}
+ \caption{Minimised class diagram}
+ \label{fig:minClassDiagram}
 \end{figure}
 
 The application starts with the \texttt{DesktopLauncher}. Other platforms have different launchers, but this project is only available on desktop platforms and is, therefore, the only launcher. The full diagram also shows a \texttt{HtmlLauncher} for running it in a web browser, which is not used, nor supported in our case. We simply checked the box for it in the set up of the project and didn't remove it.
@@ -993,23 +1001,23 @@ Following that, the main game class creates the \texttt{SplashScreen}, which jus
 The following list briefly describes each class that can be seen in the minimised class diagram, except the ones already described. Many of these classes have subclasses or associated classes, which are not relevant for the structure but can be seen in the full diagram (see section \ref{AppendixClassDiagramFull}).
 
 \begin{itemize}
-  \item \textbf{Box2DWorldCreator}: responsible for creating the physics environment of the map (see section \ref{DocMaps})
-  \item \textbf{WorldContactListener}: detects and handles all collision between physics objects (see section \ref{DocCollisionDetection})
-  \item \textbf{InteractiveMapTileObject}: an abstract class for static map objects, includes physical body set up and collision handling (see section \ref{DocPhysicsAndBodySetup})
-  \item \textbf{Enemy}: an abstract class for different enemy objects, includes physical body set up, collision handling and enemy movement (see section \ref{DocEnemyClass})
-  \item \textbf{Player}: the definition of the player as physical entity and as texture. Everything from player animations, moving, attacking and switching weapons is done here (see section \ref{DocPlayerClass})
-  \item \textbf{PlayScreenHud}: sets up and manages the "Head-Up Display", containing items like the health bar and the timer (see section \ref{DocHUD})
-  \item \textbf{GameplayInputProcessor}: registers key press events and handles them appropriately (see section \ref{DocKeyBindings})
-  \item \textbf{KeyBindings}: reads and writes associated keys with certain actions to a file (see section \ref{DocKeyBindings})
-  \item \textbf{GameProgress}: reads and writes the user's progress in the game to a file (see section \ref{DocJSONfiles})
-  \item \textbf{Statistics}: reads and writes the user's statistics to a file (see section \ref{DocJSONfiles})
-  \item \textbf{WeaponList}: reads and writes all available weapons in the game to a file (see section \ref{DocJSONfiles})
-  \item \textbf{Settings}: reads and writes the game settings to a file (see section \ref{DocJSONfiles})
-  \item \textbf{MenuScreen}: an abstract class that provides a basic functionality to set up menu screens (see section \ref{DocMenus})
-  \item \textbf{MainMenu}: the entrance of the game, the user can select to play, change settings and view statistics or exit the application
-  \item \textbf{LevelSelectionMenu}: a menu to select which level the user wants to play
-  \item \textbf{StatisticsMenu}: a menu to view and reset all statistics
-  \item \textbf{SettingsMenu}: a menu to change the game settings
+ \item \textbf{Box2DWorldCreator}: responsible for creating the physics environment of the map (see section \ref{DocMaps})
+ \item \textbf{WorldContactListener}: detects and handles all collision between physics objects (see section \ref{DocCollisionDetection})
+ \item \textbf{InteractiveMapTileObject}: an abstract class for static map objects, includes physical body set up and collision handling (see section \ref{DocPhysicsAndBodySetup})
+ \item \textbf{Enemy}: an abstract class for different enemy objects, includes physical body set up, collision handling and enemy movement (see section \ref{DocEnemyClass})
+ \item \textbf{Player}: the definition of the player as physical entity and as texture. Everything from player animations, moving, attacking and switching weapons is done here (see section \ref{DocPlayerClass})
+ \item \textbf{PlayScreenHud}: sets up and manages the "Head-Up Display", containing items like the health bar and the timer (see section \ref{DocHUD})
+ \item \textbf{GameplayInputProcessor}: registers key press events and handles them appropriately (see section \ref{DocKeyBindings})
+ \item \textbf{KeyBindings}: reads and writes associated keys with certain actions to a file (see section \ref{DocKeyBindings})
+ \item \textbf{GameProgress}: reads and writes the user's progress in the game to a file (see section \ref{DocJSONfiles})
+ \item \textbf{Statistics}: reads and writes the user's statistics to a file (see section \ref{DocJSONfiles})
+ \item \textbf{WeaponList}: reads and writes all available weapons in the game to a file (see section \ref{DocJSONfiles})
+ \item \textbf{Settings}: reads and writes the game settings to a file (see section \ref{DocJSONfiles})
+ \item \textbf{MenuScreen}: an abstract class that provides a basic functionality to set up menu screens (see section \ref{DocMenus})
+ \item \textbf{MainMenu}: the entrance of the game, the user can select to play, change settings and view statistics or exit the application
+ \item \textbf{LevelSelectionMenu}: a menu to select which level the user wants to play
+ \item \textbf{StatisticsMenu}: a menu to view and reset all statistics
+ \item \textbf{SettingsMenu}: a menu to change the game settings
 \end{itemize}
 
 A flowchart of the navigation within the game can be found in the documentation of the menus (see section \ref{DocMenus}).
@@ -1039,13 +1047,13 @@ The following code snippet is taken from the \texttt{setupPlayer()} method.
 
 \begin{minted}[linenos,breaklines]{java}
 switch (gameProgress.getCurrentLevel()) {
-    case 1:
-        player = new Player(this, level_1_spawnPositionX, level_1_spawnPositionY);
-        break;
-    // Omitted case 2 & 3 to save space ...
-    default:
-        game.exitApplication("No current level defined, exiting application");
-        break;
+  case 1:
+    player = new Player(this, level_1_spawnPositionX, level_1_spawnPositionY);
+    break;
+  // Omitted case 2 & 3 to save space ...
+  default:
+    game.exitApplication("No current level defined, exiting application");
+    break;
 }
 
 setUpPlayer();
@@ -1061,24 +1069,24 @@ After this, the method \texttt{setUpPlayer()} method is called, which takes care
 
 \begin{minted}[linenos,breaklines]{java}
 private void setUpPlayer() {
-    // Player health
-    player.setHealth(gameProgress.getPlayerMaxHealth());
+  // Player health
+  player.setHealth(gameProgress.getPlayerMaxHealth());
 
-    // Add default weapon, if the players weapon list is empty
-    if (gameProgress.getPlayerWeaponList().size() == 0) {
-        ArrayList<WeaponObject> playerWeaponList = gameProgress.getPlayerWeaponList();
-        playerWeaponList.add(allWeapons.get(0));
-        gameProgress.setPlayerWeaponList(playerWeaponList);
-    } else if (gameProgress.getPlayerWeaponList().size() > 0) {
-        player.setWeapons(gameProgress.getPlayerWeaponList());
-    }
+  // Add default weapon, if the players weapon list is empty
+  if (gameProgress.getPlayerWeaponList().size() == 0) {
+    ArrayList<WeaponObject> playerWeaponList = gameProgress.getPlayerWeaponList();
+    playerWeaponList.add(allWeapons.get(0));
+    gameProgress.setPlayerWeaponList(playerWeaponList);
+  } else if (gameProgress.getPlayerWeaponList().size() > 0) {
+    player.setWeapons(gameProgress.getPlayerWeaponList());
+  }
 
-    // Movement variables
-    player.setJumpImpulseVelocity(gameProgress.getPlayerJumpImpulseVelocity());
-    player.setWalkImpulseVelocity(gameProgress.getPlayerWalkImpulseVelocity());
-    player.setClimbImpulseVelocity(gameProgress.getPlayerClimbImpulseVelocity());
-    player.setMaxWalkVelocity(gameProgress.getPlayerMaxWalkVelocity());
-    player.setMaxClimbVelocity(gameProgress.getPlayerMaxClimbVelocity());
+  // Movement variables
+  player.setJumpImpulseVelocity(gameProgress.getPlayerJumpImpulseVelocity());
+  player.setWalkImpulseVelocity(gameProgress.getPlayerWalkImpulseVelocity());
+  player.setClimbImpulseVelocity(gameProgress.getPlayerClimbImpulseVelocity());
+  player.setMaxWalkVelocity(gameProgress.getPlayerMaxWalkVelocity());
+  player.setMaxClimbVelocity(gameProgress.getPlayerMaxClimbVelocity());
 }
 \end{minted}
 
@@ -1086,7 +1094,7 @@ As of first, the field variable \texttt{health} is set to the maximum at the beg
 
 The next thing is to check, if the player has any weapons in his inventory. The equipped weapons are also stored in the \texttt{gameprogress.json} file. If the inventory is empty, which is only the case if the file is empty or deleted, the default weapon will be added by getting the first weapon in the list of all available weapons in the game, which is stored in the \texttt{weaponlist.json} file. The variable \texttt{allWeapons} is an \texttt{ArrayList} of the type \texttt{WeaponObject}, which is initialized in the field of the class, containing all weapon objects in the game.
 
-The last thing here is to assign the variables that are used for moving the player. They are also stored in the \texttt{gameprogress.json} file for scalability, in case we want to change the values with level-ups or similar mechanics. The values are assigned to field variables of the \texttt{Player} class, which are later read by the \texttt{PlayScreen} again, when handling input actions and applying impulses (making it move) to the player's body. These values can obviously just just be read from the file, when they are needed, but we wanted to keep the structure as clear as possible and wanted to keep all player related variables in the player's class.
+The last thing here is to assign the variables that are used for moving the player. They are also stored in the \texttt{gameprogress.json} file for scalability, in case we want to change the values with level-ups or similar mechanics. The values are assigned to field variables of the \texttt{Player} class, which are later read by the \texttt{PlayScreen} again, when handling input actions and applying impulses (making it move) to the player's body. These values can obviously just be read from the file, when they are needed, but we wanted to keep the structure as clear as possible and wanted to keep all player related variables in the player's class.
 
 \subsubsection{The render method}
 
@@ -1099,13 +1107,13 @@ The \texttt{handleInput} method contains all code to check for user input. An ex
 \begin{minted}[linenos,breaklines]{java}
 if (isPressingJump && player.getIsOnJumpableGround() && player.body.getLinearVelocity().y == 0) {
 
-    player.body.applyLinearImpulse(new Vector2(0, player.getJumpImpulseVelocity()), player.body.getWorldCenter(), true);
+  player.body.applyLinearImpulse(new Vector2(0, player.getJumpImpulseVelocity()), player.body.getWorldCenter(), true);
 
-    if (MainGameClass.PLAY_SOUNDS) {
-        jumpSound.play();
-    }
+  if (MainGameClass.PLAY_SOUNDS) {
+    jumpSound.play();
+  }
 
-    statistics.setJumpsMade(statistics.getJumpsMade() + 1);
+  statistics.setJumpsMade(statistics.getJumpsMade() + 1);
 }
 \end{minted}
 
@@ -1120,8 +1128,8 @@ In the \texttt{update} method, all time, physics and camera related are updated.
 \begin{minted}[linenos,breaklines]{java}
 deltaTimeCount += deltaTime;
 if (deltaTimeCount >= 1) {
-    timer++;
-    deltaTimeCount = 0f;
+  timer++;
+  deltaTimeCount = 0f;
 }
 \end{minted}
 
@@ -1144,15 +1152,15 @@ When the player collides with an object that is marked as a "Finish", the game n
 
 \begin{minted}[linenos,breaklines]{java}
 if (statistics.getHighscoreTimes()[gameProgress.getCurrentLevel() - 1] > 0) {
-    if (timer < statistics.getHighscoreTimes()[gameProgress.getCurrentLevel() - 1]) {
-        long[] tmp = statistics.getHighscoreTimes();
-        tmp[gameProgress.getCurrentLevel() - 1] = timer;
-        statistics.setHighscoreTimes(tmp);
-    }
-} else {
+  if (timer < statistics.getHighscoreTimes()[gameProgress.getCurrentLevel() - 1]) {
     long[] tmp = statistics.getHighscoreTimes();
     tmp[gameProgress.getCurrentLevel() - 1] = timer;
     statistics.setHighscoreTimes(tmp);
+  }
+} else {
+  long[] tmp = statistics.getHighscoreTimes();
+  tmp[gameProgress.getCurrentLevel() - 1] = timer;
+  statistics.setHighscoreTimes(tmp);
 }
 \end{minted}
 
@@ -1166,9 +1174,9 @@ Going further, the current level is stored in the \texttt{gameprogress} JSON fil
 
 \begin{minted}[linenos,breaklines]{java}
 if (gameProgress.getCurrentLevel() < MainGameClass.NUMBER_OF_LEVELS) {
-    gameProgress.setCurrentLevel(gameProgress.getCurrentLevel() + 1);
+  gameProgress.setCurrentLevel(gameProgress.getCurrentLevel() + 1);
 } else {
-    log("Game finished, no more levels to play");
+  log("Game finished, no more levels to play");
 }
 \end{minted}
 
@@ -1188,11 +1196,11 @@ To make life as easy as possible, we added a spawn method for enemies that only 
 
 \begin{minted}[linenos,breaklines]{java}
 public void spawnEnemy(Class<? extends Enemy> type, int spawnPositionX, int spawnPositionY) {
-    if (type == FrogEnemy.class) {
-        enemies.add(new FrogEnemy(this, spawnPositionX, spawnPositionY));
-    } else if (type == MonkeyEnemy.class) {
-        enemies.add(new MonkeyEnemy(this, spawnPositionX, spawnPositionY));
-    }
+  if (type == FrogEnemy.class) {
+    enemies.add(new FrogEnemy(this, spawnPositionX, spawnPositionY));
+  } else if (type == MonkeyEnemy.class) {
+    enemies.add(new MonkeyEnemy(this, spawnPositionX, spawnPositionY));
+  }
 }
 \end{minted}
 
@@ -1207,13 +1215,13 @@ Depending on the type of enemy, the list of all enemies in the level gets a new 
 
 One of the most important aspects of a game is certainly the collision detection and handling between objects. Without it, it would not be possible to even make the player walk on a flat surface.
 
-LibGDX utilizes \texttt{Box2D}, a famous physics engine for rigid body simulations, originally written in \texttt{C++} and since ported into many other languages. It was used in several well known games like \emph{Angry Birds}, \emph{Tiny Wings}, \emph{Limbo}, and \emph{Happy Wheels} \cite{box2DGithub}\cite{box2DWikipedia}.
+LibGDX utilizes \texttt{Box2D}, a well known physics engine for rigid body simulations, originally written in \texttt{C++} and since ported into many other languages. It was used in several well known games like \emph{Angry Birds}, \emph{Tiny Wings}, \emph{Limbo}, and \emph{Happy Wheels} \cite{box2DGithub}\cite{box2DWikipedia}.
 
 \subsubsection{Physics and map objects setup} \label{DocPhysicsAndBodySetup}
 
 As described in the map documentation (see section \ref{DocMaps}), the maps that are created in the \texttt{Tiled} map editor, can contain so-called object layers, which contain information about shapes, that will be used as collision shapes in the game. For example, when creating a simple two-dimensional map in a map editor, you obviously add graphics. The game can't know, what the world actually looks like just by the textures though. It needs concrete information on what to treat as walkable ground, what enemies are, where a finish line might be, and so on. This is where the object layers come into play.
 
-Before we can go on to detecting collisions and handling them, we obviously first need to create a world and all it's bodies, in order to play with them. The first step towards this is done in the \texttt{PlayScreen} class within the constructor. Here, a \texttt{World} object is created, which contains all bodies and controls the entire physics simulation. The following line of code initializes the world, with the parameter of the gravity, which is roughly $9.81m/s^2$ in the negative direction of the Y-axis. This value is a final floating point value, defined in the main game class amongst the other constant values. The second parameter, \texttt{doSleep}, improves the performance of the simulation if set to \texttt{true}, by not simulating inactive bodies, which means bodies that do not move or interact in any other way with the world, at the specific time.
+Before we can go on to detecting collisions and handling them, we first need to create a world and all it's bodies, in order to play with them. The first step towards this is done in the \texttt{PlayScreen} class within the constructor. Here, a \texttt{World} object is created, which contains all bodies and controls the entire physics simulation. The following line of code initializes the world, with the parameter of the gravity, which is roughly $9.81m/s^2$ in the negative direction of the Y-axis. This value is a final floating point value, defined in the main game class amongst the other constant values. The second parameter, \texttt{doSleep}, improves the performance of the simulation if set to \texttt{true}, by not simulating inactive bodies, which means bodies that do not move or interact in any other way with the world, at the specific time.
 
 \mint{java}{world = new World(new Vector2(0, - MainGameClass.GRAVITY), true);}
 
@@ -1232,39 +1240,39 @@ The following code snippet is from the \texttt{DeathTile} class in order to expl
 \begin{minted}[linenos,breaklines]{java}
 public class DeathTile extends InteractiveMapTileObject {
 
-    private PlayScreen playScreen;
+  private PlayScreen playScreen;
 
-    public DeathTile(PlayScreen screen, Rectangle bounds) {
-        super(screen, bounds, true);
-        this.playScreen = screen;
+  public DeathTile(PlayScreen screen, Rectangle bounds) {
+    super(screen, bounds, true);
+    this.playScreen = screen;
 
-        fixture.setUserData(this);
-        createFilterMask();
-    }
+    fixture.setUserData(this);
+    createFilterMask();
+  }
 
-    @Override
-    public void onPlayerBeginContact(Player player) {
-        playScreen.setPlayerCurrentHealth(-1);
-    }
+  @Override
+  public void onPlayerBeginContact(Player player) {
+    playScreen.setPlayerCurrentHealth(-1);
+  }
 
-    @Override
-    public void onPlayerEndContact(Player player) { }
+  @Override
+  public void onPlayerEndContact(Player player) { }
 
-    @Override
-    public void onEnemyBeginContact(Enemy enemy) {
-        enemy.setHealth(-1);
-    }
+  @Override
+  public void onEnemyBeginContact(Enemy enemy) {
+    enemy.setHealth(-1);
+  }
 
-    @Override
-    public void onEnemyEndContact(Enemy enemy) { }
+  @Override
+  public void onEnemyEndContact(Enemy enemy) { }
 
-    @Override
-    public void createFilterMask() {
-        Filter filter = new Filter();
-        filter.categoryBits = MainGameClass.CATEGORY_DEATHTILE;
-        filter.maskBits = MainGameClass.MASK_DEATHTILE;
-        fixture.setFilterData(filter);
-    }
+  @Override
+  public void createFilterMask() {
+    Filter filter = new Filter();
+    filter.categoryBits = MainGameClass.CATEGORY_DEATHTILE;
+    filter.maskBits = MainGameClass.MASK_DEATHTILE;
+    fixture.setFilterData(filter);
+  }
 }
 \end{minted}
 
@@ -1280,24 +1288,24 @@ The last code snippet for this section finally shows, how a map object is actual
 
 \begin{minted}[linenos,breaklines]{java}
 public InteractiveMapTileObject(PlayScreen screen, Rectangle bounds, boolean isSensor) {
-        this.playScreen = screen;
-        this.world = screen.getWorld();
-        this.map = screen.getMap();
-        this.bounds = bounds;
+    this.playScreen = screen;
+    this.world = screen.getWorld();
+    this.map = screen.getMap();
+    this.bounds = bounds;
 
-        BodyDef bodyDef = new BodyDef();
-        FixtureDef fixtureDef = new FixtureDef();
-        PolygonShape shape = new PolygonShape();
+    BodyDef bodyDef = new BodyDef();
+    FixtureDef fixtureDef = new FixtureDef();
+    PolygonShape shape = new PolygonShape();
 
-        bodyDef.type = BodyDef.BodyType.StaticBody;
-        bodyDef.position.set((bounds.getX() + bounds.getWidth() / 2) / MainGameClass.PPM, (bounds.getY() + bounds.getHeight() / 2) / MainGameClass.PPM);
-        body = world.createBody(bodyDef);
+    bodyDef.type = BodyDef.BodyType.StaticBody;
+    bodyDef.position.set((bounds.getX() + bounds.getWidth() / 2) / MainGameClass.PPM, (bounds.getY() + bounds.getHeight() / 2) / MainGameClass.PPM);
+    body = world.createBody(bodyDef);
 
-        shape.setAsBox(bounds.getWidth() / 2 / MainGameClass.PPM, bounds.getHeight() / 2 / MainGameClass.PPM);
-        fixtureDef.shape = shape;
-        fixtureDef.isSensor = isSensor;
-        fixture = body.createFixture(fixtureDef);
-    }
+    shape.setAsBox(bounds.getWidth() / 2 / MainGameClass.PPM, bounds.getHeight() / 2 / MainGameClass.PPM);
+    fixtureDef.shape = shape;
+    fixtureDef.isSensor = isSensor;
+    fixture = body.createFixture(fixtureDef);
+  }
 \end{minted}
 
 In here, the body of the map object is defined with the help of a \texttt{body definition}, \texttt{fixture definition} and \texttt{polygon shape}. The type of the body is \texttt{static} since the map objects should not move upon contact with another object like the player and enemies do (they are \texttt{dynamic}). The position of the body is then being set to the middle of the rectangle. \texttt{bounds.getX()} and \texttt{bounds.getY()} return the lower left corner of the object, which is why half of the width and height is added. This value is then being divided by the \texttt{pixels per meter} scaling unit, which \texttt{Box2D} needs since it's never a good idea to code in pixels. A clarification can be found in a great Stackoverflow answer \cite{stackoverflowPPM}. The shape is then set to a box, with the width and height of the rectangle. The values are divided into two because the \texttt{setAsBox} method takes in the radius of a box.
@@ -1330,22 +1338,22 @@ The following code snippet is from the \texttt{WorldContactListener} class and s
 \begin{minted}[linenos,breaklines]{java}
 private void processContact(Contact contact, boolean beginOrEndContact) {
 
-        Fixture fixtureA = contact.getFixtureA();
-        Fixture fixtureB = contact.getFixtureB();
+    Fixture fixtureA = contact.getFixtureA();
+    Fixture fixtureB = contact.getFixtureB();
 
-        if (fixtureA.getUserData() instanceof Player || fixtureB.getUserData() instanceof Player) {
-            Fixture player = fixtureA.getUserData() instanceof Player ? fixtureA : fixtureB;
-            Fixture collidedObject = player == fixtureA ? fixtureB : fixtureA;
+    if (fixtureA.getUserData() instanceof Player || fixtureB.getUserData() instanceof Player) {
+      Fixture player = fixtureA.getUserData() instanceof Player ? fixtureA : fixtureB;
+      Fixture collidedObject = player == fixtureA ? fixtureB : fixtureA;
 
-            if (collidedObject.getUserData() instanceof InteractiveMapTileObject) {
-                if (beginOrEndContact) {
-                    ((InteractiveMapTileObject) collidedObject.getUserData()).onPlayerBeginContact((Player) player.getUserData());
-                } else {
-                    ((InteractiveMapTileObject) collidedObject.getUserData()).onPlayerEndContact((Player) player.getUserData());
-                }
-            }
+      if (collidedObject.getUserData() instanceof InteractiveMapTileObject) {
+        if (beginOrEndContact) {
+          ((InteractiveMapTileObject) collidedObject.getUserData()).onPlayerBeginContact((Player) player.getUserData());
+        } else {
+          ((InteractiveMapTileObject) collidedObject.getUserData()).onPlayerEndContact((Player) player.getUserData());
         }
+      }
     }
+  }
 \end{minted}
 
 The method \texttt{processContact} is called from \texttt{beginContact} and \texttt{endContact}, passing a boolean as a parameter, to determine from what method it was called. This is done to avoid having almost identical code twice.
@@ -1369,13 +1377,13 @@ To make this work, these unique numbers need to follow a certain pattern, or els
 The pattern is a simple geometric sequence with the factor of two ($1, 2, 4, 8, 16, ...$). The numbers are stored in a 16-bit \texttt{short}, which has a maximum value of $32,767$. Representing these numbers in binary 16-bit notation, they look like this:
 
 \begin{itemize}[leftmargin=*]
-    \itemsep-0.75em 
-    \item[] $000000000000000\mathbf{1}$
-    \item[] $00000000000000\mathbf{1}0$
-    \item[] $0000000000000\mathbf{1}00$
-    \item[] $000000000000\mathbf{1}000$
-    \item[] $00000000000\mathbf{1}0000$
-    \item[] $...$
+  \itemsep-0.75em 
+  \item[] $000000000000000\mathbf{1}$
+  \item[] $00000000000000\mathbf{1}0$
+  \item[] $0000000000000\mathbf{1}00$
+  \item[] $000000000000\mathbf{1}000$
+  \item[] $00000000000\mathbf{1}0000$
+  \item[] $...$
 \end{itemize}
 
 Using the \texttt{inclusive bitwise OR} operator \cite{bitwiseOROperator} of Java, we can combine these numbers into one.
@@ -1383,15 +1391,15 @@ Using the \texttt{inclusive bitwise OR} operator \cite{bitwiseOROperator} of Jav
 The following code snippet shows the definition of all the category bits in the \texttt{MainGameClass}. They are defined in hexadecimal values (\texttt{0x}) for readability, it doesn't matter if they are written in binary (\texttt{0b}), hexadecimal or decimal. The hexadecimal notation simply allows putting zeros in front, which makes it more readable.
 
 \begin{minted}[linenos,breaklines]{java}
-public static final short CATEGORY_PLAYER               = 0x0001;
-public static final short CATEGORY_ENEMY                = 0x0002;
-public static final short CATEGORY_GROUND               = 0x0004;
-public static final short CATEGORY_DEATHTILE            = 0x0008;
-public static final short CATEGORY_WEAPON               = 0x0016;
-public static final short CATEGORY_FINISH               = 0x0032;
-public static final short CATEGORY_JUMPABLE             = 0x0064;
-public static final short CATEGORY_ENEMY_MOVE_BORDER    = 0x0128;
-public static final short CATEGORY_PLAYER_ATTACK        = 0x0256;
+public static final short CATEGORY_PLAYER        = 0x0001;
+public static final short CATEGORY_ENEMY        = 0x0002;
+public static final short CATEGORY_GROUND        = 0x0004;
+public static final short CATEGORY_DEATHTILE      = 0x0008;
+public static final short CATEGORY_WEAPON        = 0x0016;
+public static final short CATEGORY_FINISH        = 0x0032;
+public static final short CATEGORY_JUMPABLE       = 0x0064;
+public static final short CATEGORY_ENEMY_MOVE_BORDER  = 0x0128;
+public static final short CATEGORY_PLAYER_ATTACK    = 0x0256;
 \end{minted}
 
 The following example now shows the creation of the mask bits for the player, which determines what he can collide with.
@@ -1425,14 +1433,14 @@ Therefore, each body that is supposed to be removed, has to be stored in a colle
 
 \begin{minted}[linenos,breaklines]{java}
 private void destroyQueuedBodies() {
-    Iterator<Body> i = destroyBodiesQueue.iterator();
-    if (!world.isLocked()) {
-        while (i.hasNext()) {
-            Body b = i.next();
-            world.destroyBody(b);
-            i.remove();
-        }
+  Iterator<Body> i = destroyBodiesQueue.iterator();
+  if (!world.isLocked()) {
+    while (i.hasNext()) {
+      Body b = i.next();
+      world.destroyBody(b);
+      i.remove();
     }
+  }
 }
 \end{minted}
 
@@ -1453,26 +1461,26 @@ The player class \texttt{extends} LibGDX's \texttt{Sprite} class and is therefor
 
 \begin{minted}[linenos,breaklines]{java}
 public Player(PlayScreen screen, int spawnPosition_X, int spawnPosition_Y) {
-    super(screen.getPlayerTextureAtlas().findRegion("squirrel_default"));
-    
-    // several assignments omitted
+  super(screen.getPlayerTextureAtlas().findRegion("squirrel_default"));
+  
+  // several assignments omitted
 
-    definePlayer();
-    setUpTextureRegions();
-    setBounds(0, 0, PLAYER_PIXEL_WIDTH / MainGameClass.PPM, PLAYER_PIXEL_HEIGHT / MainGameClass.PPM);
+  definePlayer();
+  setUpTextureRegions();
+  setBounds(0, 0, PLAYER_PIXEL_WIDTH / MainGameClass.PPM, PLAYER_PIXEL_HEIGHT / MainGameClass.PPM);
 
-    if (weapons.size() > screen.getGameProgress().getCurrentlyEquippedWeapon()) 
-    {
-        setRegion(
-            textureRegions.get(
-            weapons.get(
-            screen.getGameProgress().
-            getCurrentlyEquippedWeapon())
-            .getName())
-        );
-    } else {
-        setRegion(textureRegions.get("Fists"));
-    }
+  if (weapons.size() > screen.getGameProgress().getCurrentlyEquippedWeapon()) 
+  {
+    setRegion(
+      textureRegions.get(
+      weapons.get(
+      screen.getGameProgress().
+      getCurrentlyEquippedWeapon())
+      .getName())
+    );
+  } else {
+    setRegion(textureRegions.get("Fists"));
+  }
 }
 \end{minted}
 
@@ -1492,14 +1500,14 @@ The following if-condition determines if the player has a valid weapon equipped,
 
 \begin{minted}[linenos,breaklines]{java}
 public void changeWeapon(int indexInWeaponList) {
-    if (weapons.size() - 1 >= indexInWeaponList) {
-        setRegion(
-            textureRegions.get(weapons.get(indexInWeaponList).getName())
-        );
-        screen.getGameProgress().setCurrentlyEquippedWeapon(indexInWeaponList);
-    }
+  if (weapons.size() - 1 >= indexInWeaponList) {
+    setRegion(
+      textureRegions.get(weapons.get(indexInWeaponList).getName())
+    );
+    screen.getGameProgress().setCurrentlyEquippedWeapon(indexInWeaponList);
+  }
 
-    flipPlayerDirection(isFacingLeft);
+  flipPlayerDirection(isFacingLeft);
 }
 \end{minted}
 
@@ -1512,8 +1520,8 @@ In order to flip the texture, the following method needs to be called.
 
 \begin{minted}[linenos,breaklines]{java}
 public void flipPlayerDirection(boolean left) {
-    setFlip(left, false);
-    isFacingLeft = left;
+  setFlip(left, false);
+  isFacingLeft = left;
 }
 \end{minted}
 
@@ -1523,9 +1531,9 @@ In the \texttt{update} method, which is called each frame, the position of the t
 
 \begin{minted}[linenos,breaklines]{java}
 if (isFacingLeft) {
-    setPosition(body.getPosition().x - getWidth(), body.getPosition().y - getHeight() / 2);
+  setPosition(body.getPosition().x - getWidth(), body.getPosition().y - getHeight() / 2);
 } else {
-    setPosition(body.getPosition().x - getWidth() / 2, body.getPosition().y - getHeight() / 2);
+  setPosition(body.getPosition().x - getWidth() / 2, body.getPosition().y - getHeight() / 2);
 }
 \end{minted}
 
@@ -1536,24 +1544,24 @@ The player class implements a public method called \texttt{attack}, which needs 
 
 \begin{minted}[linenos,breaklines]{java}
 public void attack() {
-    if (!attackAnimationPlaying) {
-        attackAnimationPlaying = true;
+  if (!attackAnimationPlaying) {
+    attackAnimationPlaying = true;
 
-        // Deal damage to all enemies in range
-        if (isFacingLeft) {
-            for (Enemy enemy : screen.getEnemiesCurrentlyInLeftAttackRange()) {
-                enemy.setHealth(
-                    enemy.getHealth() - 
-                    screen.getGameProgress().getPlayerWeaponList().get(
-                        screen.getGameProgress()
-                        .getCurrentlyEquippedWeapon()
-                    ).getStrength()
-                );
-            }
-        } else {
-            // the same with the enemies in the right attack range
-        }
+    // Deal damage to all enemies in range
+    if (isFacingLeft) {
+      for (Enemy enemy : screen.getEnemiesCurrentlyInLeftAttackRange()) {
+        enemy.setHealth(
+          enemy.getHealth() - 
+          screen.getGameProgress().getPlayerWeaponList().get(
+            screen.getGameProgress()
+            .getCurrentlyEquippedWeapon()
+          ).getStrength()
+        );
+      }
+    } else {
+      // the same with the enemies in the right attack range
     }
+  }
 }
 \end{minted}
 
@@ -1567,40 +1575,40 @@ The visual side of the attack is done in the \texttt{update} method.
 
 \begin{minted}[linenos,breaklines]{java}
 if (attackTime <= ATTACK_DURATION) {
-    if (attackAnimationPlaying) {
-        attackTime += deltaTime;
+  if (attackAnimationPlaying) {
+    attackTime += deltaTime;
 
-        switch (
-            screen
-            .getGameProgress()
-            .getPlayerWeaponList()
-            .get(
-                screen
-                .getGameProgress()
-                .getCurrentlyEquippedWeapon()
-            ).getName()) 
-        {
-            case "Katana":
-                setRegion(textureRegions.get("katana_attack"));
-                flipPlayerDirection(isFacingLeft);
-                break;
-            // Other cases omitted because of redundancy
-            default:
-                break;
-        }
-    }
-} else {
-    attackTime = 0f;
-    attackAnimationPlaying = false;
-    changeWeapon(
+    switch (
+      screen
+      .getGameProgress()
+      .getPlayerWeaponList()
+      .get(
         screen
         .getGameProgress()
-        .getPlayerWeaponList()
-        .get(
-            screen
-            .getGameProgress()
-            .getCurrentlyEquippedWeapon()
-        ).getName());
+        .getCurrentlyEquippedWeapon()
+      ).getName()) 
+    {
+      case "Katana":
+        setRegion(textureRegions.get("katana_attack"));
+        flipPlayerDirection(isFacingLeft);
+        break;
+      // Other cases omitted because of redundancy
+      default:
+        break;
+    }
+  }
+} else {
+  attackTime = 0f;
+  attackAnimationPlaying = false;
+  changeWeapon(
+    screen
+    .getGameProgress()
+    .getPlayerWeaponList()
+    .get(
+      screen
+      .getGameProgress()
+      .getCurrentlyEquippedWeapon()
+    ).getName());
 }
 \end{minted}
 
@@ -1616,22 +1624,22 @@ The abstract \texttt{Enemy} class extends libGDX's \texttt{Sprite} class in orde
 \begin{minted}[linenos,breaklines]{java}
 public abstract class Enemy extends Sprite {
 
-    protected World world;
-    protected Body body;
+  protected World world;
+  protected Body body;
 
-    protected final int ENEMY_PIXEL_WIDTH = 32;
-    protected final int ENEMY_PIXEL_HEIGHT = 32;
+  protected final int ENEMY_PIXEL_WIDTH = 32;
+  protected final int ENEMY_PIXEL_HEIGHT = 32;
 
-    protected PlayScreen screen;
+  protected PlayScreen screen;
 
-    // Gameplay relevant variables
-    protected int[] damageMinMax;
-    protected int health;
-    protected float horizontalMoveImpulseVelocity;
-    protected float horizontalMaxMovementVelocity;
+  // Gameplay relevant variables
+  protected int[] damageMinMax;
+  protected int health;
+  protected float horizontalMoveImpulseVelocity;
+  protected float horizontalMaxMovementVelocity;
 
-    // Moving
-    protected boolean isMovingLeftOrRight;
+  // Moving
+  protected boolean isMovingLeftOrRight;
 \end{minted}
 
 Furthermore, the constructor sets up the body and fixtures of each enemy, so that each child class is automatically added to the physics simulation upon creation.
@@ -1641,21 +1649,21 @@ The \texttt{FrogEnemy}, \texttt{MonkeyEnemy} and \texttt{BossEnemy} classes then
 \begin{minted}[linenos,breaklines]{java}
 @Override
 public void onPlayerBeginContact(Player player) {
-    playScreen.log("Frog Enemy : Collision with player");
-    screen.setPlayerCurrentHealth(screen.getPlayer().getHealth() - randomDamageValueBetweenMinAndMax());
+  playScreen.log("Frog Enemy : Collision with player");
+  screen.setPlayerCurrentHealth(screen.getPlayer().getHealth() - randomDamageValueBetweenMinAndMax());
 
-    // Change movement direction
-    setMovingLeftOrRight(!getIsMovingLeftOrRight());
+  // Change movement direction
+  setMovingLeftOrRight(!getIsMovingLeftOrRight());
 }
 \end{minted}
 
 The enemies also have invisible barriers on the map to ensure that they don’t fall over edges or run into a hole. As soon as an enemy collides with these barriers, they turn around until either the player, an enemy or a different barrier is engaged. These borders are shown in the map creator in Figure \ref{fig:EnemyMoveBorders}.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{Documentation/enemyMoveBorders}
-  \caption{Invisible collision boxes that signal enemies to turn around}
-  \label{fig:EnemyMoveBorders}
+ \center
+ \includegraphics[width=1\textwidth]{Documentation/enemyMoveBorders}
+ \caption{Invisible collision boxes that signal enemies to turn around}
+ \label{fig:EnemyMoveBorders}
 \end{figure}
 
 The following method is implemented in the \texttt{EnemyMoveBorder} class. Whenever the collision listener detects, that an object of the type \texttt{Enemy} collided with a move border, this method is called and given the related enemy as a parameter.
@@ -1663,8 +1671,8 @@ The following method is implemented in the \texttt{EnemyMoveBorder} class. Whene
 \begin{minted}[linenos,breaklines]{java}
 @Override
 public void onEnemyBeginContact(Enemy enemy) {
-    playScreen.log("Collision : Move border reached by enemy");
-    enemy.setMovingLeftOrRight(!enemy.getIsMovingLeftOrRight());
+  playScreen.log("Collision : Move border reached by enemy");
+  enemy.setMovingLeftOrRight(!enemy.getIsMovingLeftOrRight());
 }
 \end{minted}
 
@@ -1703,9 +1711,9 @@ Finally, all of this is then used in the \texttt{update} loop of the \texttt{Pla
 
 \begin{minted}[linenos,breaklines]{java}
 if (isPressingMoveRight &&
-  player.body.getLinearVelocity().x <= player.getMaxWalkVelocity()) 
+ player.body.getLinearVelocity().x <= player.getMaxWalkVelocity()) 
 {
-  player.body.applyLinearImpulse(new Vector2(player.getWalkImpulseVelocity(), 0), player.body.getWorldCenter(), true);
+ player.body.applyLinearImpulse(new Vector2(player.getWalkImpulseVelocity(), 0), player.body.getWorldCenter(), true);
 }
 \end{minted}
 
@@ -1719,12 +1727,12 @@ Here, it is simply being checked, if the user presses a key that is associated w
 We use JSON files for many different purposes in the game, not only for storing key bindings (as described in \ref{DocKeyBindings}). The application currently manages six different JSON files: 
 
 \begin{itemize}
-    \item[\faFile] \texttt{gameprogress.json} : stores the general progress of the player in the game
-    \item[\faFile] \texttt{keybindings.json} : stores the currently assigned keys to all actions in the game
-    \item[\faFile] \texttt{settings.json} : stores the settings that can be changed in the menu
-    \item[\faFile] \texttt{statistics.json} : stores a broad amount of statistical values
-    \item[\faFile] \texttt{twitchcredentials.json} : stores the information needed to connect with the correct twitch channel
-    \item[\faFile] \texttt{weaponlist.json} : stores a list of all available weapons in the game
+  \item[\faFile] \texttt{gameprogress.json} : stores the general progress of the player in the game
+  \item[\faFile] \texttt{keybindings.json} : stores the currently assigned keys to all actions in the game
+  \item[\faFile] \texttt{settings.json} : stores the settings that can be changed in the menu
+  \item[\faFile] \texttt{statistics.json} : stores a broad amount of statistical values
+  \item[\faFile] \texttt{twitchcredentials.json} : stores the information needed to connect with the correct twitch channel
+  \item[\faFile] \texttt{weaponlist.json} : stores a list of all available weapons in the game
 \end{itemize}
 
 All six cases use the same approach to reading and writing to these files. We will use the \texttt{statistics} file to explain this process. The only difference in the code is the data structure of each file.
@@ -1734,10 +1742,10 @@ As already mentioned in section \ref{DocKeyBindings}, the program uses the \text
 In case of the statistics class, this is the \texttt{StatisticsObject} class. Figure \ref{fig:StatisticsObjectUML} shows the constructor and all variables inside the class.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{Documentation/StatisticsObject.png}
-  \caption{Statistics Object}
-  \label{fig:StatisticsObjectUML}
+ \center
+ \includegraphics[width=1\textwidth]{Documentation/StatisticsObject.png}
+ \caption{Statistics Object}
+ \label{fig:StatisticsObjectUML}
 \end{figure}
 
 The following shortened code then shows how the structure is implemented.
@@ -1745,27 +1753,27 @@ The following shortened code then shows how the structure is implemented.
 \begin{minted}[linenos,breaklines]{java}
 public class StatisticsObject {
 
-    private long secondsPlayed;
+  private long secondsPlayed;
+  // ...
+  private long[] highscoreTimes;
+  
+  public StatisticsObject(long secondsPlayed, /* ... */, long[] highscoreTimes) {
+    this.secondsPlayed = secondsPlayed;
     // ...
-    private long[] highscoreTimes;
-    
-    public StatisticsObject(long secondsPlayed, /* ... */, long[] highscoreTimes) {
-        this.secondsPlayed = secondsPlayed;
-        // ...
-        this.highscoreTimes = highscoreTimes;
-    }
-    
-    public long getSecondsPlayed() {
-        return secondsPlayed;
-    }
+    this.highscoreTimes = highscoreTimes;
+  }
+  
+  public long getSecondsPlayed() {
+    return secondsPlayed;
+  }
 
-    public void setSecondsPlayed(long secondsPlayed) {
-        if (secondsPlayed >= 0) {
-            this.secondsPlayed = secondsPlayed;
-        }
+  public void setSecondsPlayed(long secondsPlayed) {
+    if (secondsPlayed >= 0) {
+      this.secondsPlayed = secondsPlayed;
     }
-    
-    // ...
+  }
+  
+  // ...
 }
 \end{minted}
 
@@ -1785,24 +1793,24 @@ The following constructor then takes care of the initial reading of the file. A 
 
 \begin{minted}[linenos,breaklines]{java}
 public Statistics() {
-    fileHandle = Gdx.files.local("json/statistics.json");
-    StatisticsObject defaultStatistics = new StatisticsObject(
-            0, 0, 0, 0, 0, 0, 0, 0, new long[MainGameClass.NUMBER_OF_LEVELS]
-    );
+  fileHandle = Gdx.files.local("json/statistics.json");
+  StatisticsObject defaultStatistics = new StatisticsObject(
+      0, 0, 0, 0, 0, 0, 0, 0, new long[MainGameClass.NUMBER_OF_LEVELS]
+  );
 
-    if (fileHandle.exists()) {
-        String json = fileHandle.readString();
-        if (!json.trim().isEmpty()) {
-            statistics = deserializeStatistics(json);
-        } else {
-            System.err.println("JSON statistics string is empty, creating default statistics");
-            serializeStatistics(defaultStatistics);
-            statistics = deserializeStatistics(json);
-        }
+  if (fileHandle.exists()) {
+    String json = fileHandle.readString();
+    if (!json.trim().isEmpty()) {
+      statistics = deserializeStatistics(json);
     } else {
-        serializeStatistics(defaultStatistics);
-        statistics = deserializeStatistics(fileHandle.readString());
+      System.err.println("JSON statistics string is empty, creating default statistics");
+      serializeStatistics(defaultStatistics);
+      statistics = deserializeStatistics(json);
     }
+  } else {
+    serializeStatistics(defaultStatistics);
+    statistics = deserializeStatistics(fileHandle.readString());
+  }
 }
 \end{minted}
 
@@ -1810,18 +1818,18 @@ The below method \texttt{serializeStatistics()} finally converts the data struct
 
 \begin{minted}[linenos,breaklines]{java}
 private void serializeStatistics(StatisticsObject statistics) {
-    String json = gson.toJson(statistics);
+  String json = gson.toJson(statistics);
 
-    if (!fileHandle.exists()) {
-        try {
-            boolean successfull = fileHandle.file().createNewFile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+  if (!fileHandle.exists()) {
+    try {
+      boolean successfull = fileHandle.file().createNewFile();
+    } catch (IOException e) {
+      e.printStackTrace();
     }
+  }
 
-    fileHandle.writeString(json, false); // false = overwrite instead of append
-    this.statistics = deserializeStatistics(json);
+  fileHandle.writeString(json, false); // false = overwrite instead of append
+  this.statistics = deserializeStatistics(json);
 }
 \end{minted}
 
@@ -1829,7 +1837,7 @@ The below method \texttt{deserializeStatistics()} simply returns an \texttt{Stat
 
 \begin{minted}[linenos,breaklines]{java}
 private StatisticsObject deserializeStatistics(String json) {
-    return gson.fromJson(json, StatisticsObject.class);
+  return gson.fromJson(json, StatisticsObject.class);
 }
 \end{minted}
 
@@ -1837,12 +1845,12 @@ As the last thing in this class, we can now finally get and set values in our da
 
 \begin{minted}[linenos,breaklines]{java}
 public long getSecondsPlayed() {
-    return statistics.getSecondsPlayed();
+  return statistics.getSecondsPlayed();
 }
 
 public void setSecondsPlayed(long secondsPlayed) {
-    statistics.setSecondsPlayed(secondsPlayed);
-    serializeStatistics(statistics);
+  statistics.setSecondsPlayed(secondsPlayed);
+  serializeStatistics(statistics);
 }
 \end{minted}
 
@@ -1869,7 +1877,7 @@ enemyFrogTextureAtlas = new TextureAtlas("sprites/enemies/frog/frog.atlas");
 \begin{minted}[linenos,breaklines]{java}
 //Frog atlas getter
 public TextureAtlas getEnemyFrogTextureAtlas() {
-  return enemyFrogTextureAtlas;
+ return enemyFrogTextureAtlas;
 }
 \end{minted}
 
@@ -1885,9 +1893,9 @@ The second step is to pass the speed of the animation to the Animation Class alo
 //Define jump animation
 jumpFrames = new Array<>();
 for(int i = 0; i < 4; i++) {
-  jumpFrames.add(new TextureRegion(
-    screen.getEnemyFrogTextureAtlas().findRegion("frog_jump"), i * ENEMY_PIXEL_WIDTH, 0, ENEMY_PIXEL_WIDTH, ENEMY_PIXEL_HEIGHT)
-  );
+ jumpFrames.add(new TextureRegion(
+  screen.getEnemyFrogTextureAtlas().findRegion("frog_jump"), i * ENEMY_PIXEL_WIDTH, 0, ENEMY_PIXEL_WIDTH, ENEMY_PIXEL_HEIGHT)
+ );
 }
 jumpAnimation = new Animation<>(0.4f, jumpFrames);
 \end{minted}
@@ -1896,7 +1904,7 @@ It's up to the developer though to specify when and for how long the animation i
 
 \begin{minted}[linenos,breaklines]{java}
 public void update(float deltaTime) {
-  setRegion(jumpAnimation.getKeyFrame(stateTime, true));
+ setRegion(jumpAnimation.getKeyFrame(stateTime, true));
 }
 \end{minted}
 
@@ -1908,93 +1916,93 @@ public void update(float deltaTime) {
 When they player comes in contact with a weapon the item is added to the player's weapon collection. The logic behind that feature has been implemented in the \texttt{WeaponPickup} class. Every time the player collides with an enemy, the \texttt{onPlayerBeginContact} method is called, which detects what kind of weapon the player has picked up and adds it to the weapon's list if it is not already present. The weapon type is setup in the map. When setting up the map, each object of the map's object layers can be given custom properties. In the case of the weapons - we added properties containing the type of the weapon. This makes it easier to identify the contents programatically.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{Documentation/weaponMaps.png}
-  \caption{Custom property of a weapon in a map}
+ \center
+ \includegraphics[width=1\textwidth]{Documentation/weaponMaps.png}
+ \caption{Custom property of a weapon in a map}
 \end{figure}
 
 After the item is picked up, the \texttt{onPlayerBeginContact()} method detects it's type and the texture is removed from the map and added to the player's weapon list if it has not been added already.
 
 \begin{minted}[linenos,breaklines]{java}
  public void onPlayerBeginContact(Player player) {
-    // Remove texture
-    getCell(map.getLayers().getIndex("graphics")).setTile(null);
+  // Remove texture
+  getCell(map.getLayers().getIndex("graphics")).setTile(null);
 
-    // Add the picked up weapon
-    MapObject pickedUpWeapon = getCollidingMapObject(map.getLayers().getIndex("weapon"));
-    
-    if (pickedUpWeapon != null && pickedUpWeapon.getProperties().containsKey("weapon_name")) {
-    
-      String weaponName = pickedUpWeapon.getProperties().get("weapon_name", String.class);
-      playScreen.log("Picked up weapon: " + weaponName);
+  // Add the picked up weapon
+  MapObject pickedUpWeapon = getCollidingMapObject(map.getLayers().getIndex("weapon"));
+  
+  if (pickedUpWeapon != null && pickedUpWeapon.getProperties().containsKey("weapon_name")) {
+  
+   String weaponName = pickedUpWeapon.getProperties().get("weapon_name", String.class);
+   playScreen.log("Picked up weapon: " + weaponName);
 
-      boolean changedWeaponList = false;
-      ArrayList<WeaponObject> playerWeaponList = playScreen.getPlayer().getWeapons();
-      WeaponObject weapon;
-      
-      switch (weaponName) {
-        case "Fists":
-          weapon = getWeaponObjectByName("Fists");
-          if (weapon != null && !weaponAlreadyInList(weapon)) {
-            playerWeaponList.add(weapon);
-            changedWeaponList = true;
-          }
-          break;
-        // Several cases were omitted here to save space
-        default:
-          playScreen.log("Weapon not defined");
-          break;
-      }
+   boolean changedWeaponList = false;
+   ArrayList<WeaponObject> playerWeaponList = playScreen.getPlayer().getWeapons();
+   WeaponObject weapon;
+   
+   switch (weaponName) {
+    case "Fists":
+     weapon = getWeaponObjectByName("Fists");
+     if (weapon != null && !weaponAlreadyInList(weapon)) {
+      playerWeaponList.add(weapon);
+      changedWeaponList = true;
+     }
+     break;
+    // Several cases were omitted here to save space
+    default:
+     playScreen.log("Weapon not defined");
+     break;
+   }
 
-      if (changedWeaponList) {
-        playScreen.getPlayer().setWeapons(playerWeaponList);
-        playScreen.getPlayer().changeWeapon(weaponName);
+   if (changedWeaponList) {
+    playScreen.getPlayer().setWeapons(playerWeaponList);
+    playScreen.getPlayer().changeWeapon(weaponName);
 
-        // Save picked up item to statistics
-        playScreen.getStatistics() .setItemsCollected(playScreen.getStatistics().getItemsCollected() + 1);
-      }
-    }
+    // Save picked up item to statistics
+    playScreen.getStatistics() .setItemsCollected(playScreen.getStatistics().getItemsCollected() + 1);
+   }
   }
+ }
 \end{minted}
  
 The \texttt{getCollidingMapObject} method can be found in the \texttt{InteractiveMapTileObject} class. It's purpose is to return the object in a specific layer, that is currently intersecting with the player's collision box. The returned object stores all properties, including the custom property that contains the weapon name of the object. It is unfortunately not possible to check for collisions with weapon pick up items using the \texttt{Contact Listener}, because it is impossible to identify the exact object of the map that the player collided with. This can be therefore considered a workaround.
  
 \begin{minted}[linenos,breaklines]{java}
 protected MapObject getCollidingMapObject(int layerIndex) {
-    MapObjects mapObjects = map.getLayers().get(layerIndex).getObjects();
+  MapObjects mapObjects = map.getLayers().get(layerIndex).getObjects();
 
-    for (MapObject mapObject : mapObjects) {
-        MapProperties mapProperties = mapObject.getProperties();
+  for (MapObject mapObject : mapObjects) {
+    MapProperties mapProperties = mapObject.getProperties();
 
-        float width, height, x, y;
-        Rectangle objectRectangle = new Rectangle();
-        Rectangle playerRectangle = new Rectangle();
+    float width, height, x, y;
+    Rectangle objectRectangle = new Rectangle();
+    Rectangle playerRectangle = new Rectangle();
 
-        if (mapProperties.containsKey("width") && mapProperties.containsKey("height") && mapProperties.containsKey("x") && mapProperties.containsKey("y")) {
-            width = (float) mapProperties.get("width");
-            height = (float) mapProperties.get("height");
-            x = (float) mapProperties.get("x");
-            y = (float) mapProperties.get("y");
-            objectRectangle.set(x, y, width, height);
-        }
-
-        playerRectangle.set(
-                playScreen.getPlayer().getX() * MainGameClass.PPM,
-                playScreen.getPlayer().getY() * MainGameClass.PPM,
-                playScreen.getPlayer().getWidth() * MainGameClass.PPM,
-                playScreen.getPlayer().getHeight() * MainGameClass.PPM
-        );
-
-        // If the player rectangle and the object rectangle is colliding, return the object
-        if (Intersector.overlaps(objectRectangle, playerRectangle)) {
-            return mapObject;
-        }
+    if (mapProperties.containsKey("width") && mapProperties.containsKey("height") && mapProperties.containsKey("x") && mapProperties.containsKey("y")) {
+      width = (float) mapProperties.get("width");
+      height = (float) mapProperties.get("height");
+      x = (float) mapProperties.get("x");
+      y = (float) mapProperties.get("y");
+      objectRectangle.set(x, y, width, height);
     }
 
-    // If no colliding object was found in that layer
-    return null;
+    playerRectangle.set(
+        playScreen.getPlayer().getX() * MainGameClass.PPM,
+        playScreen.getPlayer().getY() * MainGameClass.PPM,
+        playScreen.getPlayer().getWidth() * MainGameClass.PPM,
+        playScreen.getPlayer().getHeight() * MainGameClass.PPM
+    );
+
+    // If the player rectangle and the object rectangle is colliding, return the object
+    if (Intersector.overlaps(objectRectangle, playerRectangle)) {
+      return mapObject;
+    }
+  }
+
+  // If no colliding object was found in that layer
+  return null;
 }
-   
+  
 \end{minted}
 
 %------------------------------------------------
@@ -2005,10 +2013,10 @@ protected MapObject getCollidingMapObject(int layerIndex) {
 Historically, the retro 8-bit games have always been very minimalist, in terms of the animations of the characters. Luckily the designs we used for our textures, described in the Visual Documentation, already had suitable animations. We just needed to convert the animated GIFs to sprite sheets. A sprite sheet is a series of images of the frames that represent the animation. A gif can be converted to a sprite sheet with the use of an online sprite editor, Piskelapp \cite{piskelapp}. Although the process is automated, the resulting spritesheet had excess frames, which need to be removed. This is the end result.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{Documentation/frog.jpg}
-  \label{SpriteSheetExample}
-  \caption{Sprite Sheet Example}
+ \center
+ \includegraphics[width=1\textwidth]{Documentation/frog.jpg}
+ \label{SpriteSheetExample}
+ \caption{Sprite Sheet Example}
 \end{figure}
 
 Sprite sheets can contain more than one animation, and even multiple characters. For instance, in the case of the frog enemy, the sprite sheet contains two different animations - the first 4 frames from left to right are used to animate movement. The last 4 are used for the attack animation. To help select the correct parts of the sprite sheet while animating, a \texttt{TextureAtlas} is generated. Among other information about the sheet, it contains the start position of the two types of animation. Here is an example:
@@ -2050,18 +2058,18 @@ After making a map in the \texttt{Tiled} map editor, we exported it to a .tmx fi
 mapLoader = new TmxMapLoader();
 
 switch (gameProgress.getCurrentLevel()) {
-  case 1:
-    map = mapLoader.load("maps/level_1/level_1.tmx");
-    break;
-  case 2:
-    map = mapLoader.load("maps/level_2/level_2.tmx");
-    break;
-  case 3:
-    map = mapLoader.load("maps/boss/boss_level.tmx");
-    break;
-  default:
-    game.exitApplication("Couldn't find level, exiting application");
-    break;
+ case 1:
+  map = mapLoader.load("maps/level_1/level_1.tmx");
+  break;
+ case 2:
+  map = mapLoader.load("maps/level_2/level_2.tmx");
+  break;
+ case 3:
+  map = mapLoader.load("maps/boss/boss_level.tmx");
+  break;
+ default:
+  game.exitApplication("Couldn't find level, exiting application");
+  break;
 }
 \end{minted}
 
@@ -2075,23 +2083,23 @@ The following constructor of the class \texttt{Box2DWorldCreator} reads out the 
 
 \begin{minted}[linenos,breaklines]{java}
 public Box2DWorldCreator(PlayScreen screen) {
-        this.playScreen = screen;
-        TiledMap map = screen.getMap();
-        MapLayers mapLayers = map.getLayers();
-        for (MapLayer mapLayer : mapLayers) {
-            for (MapObject mapObject : mapLayer.getObjects().getByType(RectangleMapObject.class)) {
-                Rectangle rectangle = ((RectangleMapObject) mapObject).getRectangle();
-                switch (mapLayer.getName()) {
-                    case "ground":
-                        groundObjects.add(new Ground(screen, rectangle));
-                        break;
-                    // Other types omitted because of redundancy
-                    default:
-                        break;
-                }
-            }
+    this.playScreen = screen;
+    TiledMap map = screen.getMap();
+    MapLayers mapLayers = map.getLayers();
+    for (MapLayer mapLayer : mapLayers) {
+      for (MapObject mapObject : mapLayer.getObjects().getByType(RectangleMapObject.class)) {
+        Rectangle rectangle = ((RectangleMapObject) mapObject).getRectangle();
+        switch (mapLayer.getName()) {
+          case "ground":
+            groundObjects.add(new Ground(screen, rectangle));
+            break;
+          // Other types omitted because of redundancy
+          default:
+            break;
         }
+      }
     }
+  }
 \end{minted}
 
 %------------------------------------------------
@@ -2102,11 +2110,11 @@ public Box2DWorldCreator(PlayScreen screen) {
 The head-up display consist of several elements, which are:
 
 \begin{itemize}
-    \item A timer that shows the current game time and is counting up
-    \item A health bar
-    \item A label to display the player's remaining lives
-    \item A label to display the strength of the currently equipped weapon
-    \item A label to display the remaining time of an active effect by Twitch (see section \ref{Twitch})
+  \item A timer that shows the current game time and is counting up
+  \item A health bar
+  \item A label to display the player's remaining lives
+  \item A label to display the strength of the currently equipped weapon
+  \item A label to display the remaining time of an active effect by Twitch (see section \ref{Twitch})
 \end{itemize}
 
 As described in the discussion (see section \ref{Discussion}), we also wanted to add a toolbar to show all the weapons that the player has in his inventory, and in which slots they are. This failed due to the time limitation.
@@ -2159,12 +2167,12 @@ The widgets have to be initialized with the styles now. The progress bar is crea
 
 \begin{minted}[linenos,breaklines]{java}
 healthBar = new ProgressBar(
-    0f,
-    playScreen.getGameProgress().getPlayerMaxHealth(),
-    1f,
-    false,
-    skin,
-    "default-horizontal"
+  0f,
+  playScreen.getGameProgress().getPlayerMaxHealth(),
+  1f,
+  false,
+  skin,
+  "default-horizontal"
 );
 \end{minted}
 
@@ -2204,10 +2212,10 @@ healthBar.setValue(playScreen.getPlayer().getHealth());
 The main menu system consists of four different screens:
 
 \begin{itemize}
-    \item the main menu
-    \item the level selection menu
-    \item the settings menu
-    \item the statistics menu
+  \item the main menu
+  \item the level selection menu
+  \item the settings menu
+  \item the statistics menu
 \end{itemize}
 
 Each screen is \texttt{extends} the \texttt{abstract} \texttt{MenuScreen} class. This class loads the \texttt{Skin} of the template that we use (see section \ref{VisualDocMenus}), creates an empty layout table and handles rendering and other methods that a \texttt{Screen} needs to override.
@@ -2222,14 +2230,14 @@ To add a button or any other widget to the menu, it has to be added to the layou
 
 \begin{minted}[linenos,breaklines]{java}
 layoutTable.add(new Actor())
-    .expandX()
-    .spaceBottom(getPixelSizeFromDensityIndependentPixels(25f));
+  .expandX()
+  .spaceBottom(getPixelSizeFromDensityIndependentPixels(25f));
 layoutTable.add(playButton)
-    .top().center().growX().expandX()
-    .spaceBottom(getPixelSizeFromDensityIndependentPixels(25f));
+  .top().center().growX().expandX()
+  .spaceBottom(getPixelSizeFromDensityIndependentPixels(25f));
 layoutTable.add(new Actor())
-    .expandX()
-    .spaceBottom(getPixelSizeFromDensityIndependentPixels(25f));
+  .expandX()
+  .spaceBottom(getPixelSizeFromDensityIndependentPixels(25f));
 layoutTable.row();
 \end{minted}
 
@@ -2238,11 +2246,11 @@ The last thing to do now is to add event listeners to the widgets. For example, 
 \begin{minted}[linenos,breaklines]{java}
 private ChangeListener fullscreenCheckBoxChangeListener = new ChangeListener() 
 {
-    @Override
-    public void changed(ChangeEvent event, Actor actor) {
-        settings.setFullscreen(fullscreenCheckBox.isChecked());
-        game.changeGameResolution();
-    }
+  @Override
+  public void changed(ChangeEvent event, Actor actor) {
+    settings.setFullscreen(fullscreenCheckBox.isChecked());
+    game.changeGameResolution();
+  }
 };
 \end{minted}
 
@@ -2257,11 +2265,45 @@ Navigating through the menus is generally done by simply creating new instances 
 The following flowchart shows the navigation within the menus of the game.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=1\textwidth]{Documentation/flowchart.png}
-  \label{fig:flowchart}
-  \caption{Flowchart of the menus}
+ \center
+ \includegraphics[width=1\textwidth]{Documentation/flowchart.png}
+ \label{fig:flowchart}
+ \caption{Flowchart of the menus}
 \end{figure}
+
+%------------------------------------------------
+
+\subsection{Highscore system} \label{Highscore}
+
+For the highscore system we made a PHP/SQL API to be accesed at the end of a level. The API takes 3 inputs: level, time, name. Whenever a level ends, a HTTP post call is sent to the API with the current level, the time it took to complete the level, and the username from the \texttt{settings.json} file. Sending the data this way is not very secure, and since anyone could easily fake a high score it is not very reliable either. In order to improve security we would like to obfuscate the sent data, or implement an account system of sorts, requiring you to login to submit your highscore.
+
+\begin{figure}[ht]
+ \center
+ \includegraphics[width=0.5\textwidth]{Documentation/gsapi.png}
+ \label{fig:highscoresystem}
+ \caption{Flowchart of the API}
+\end{figure}
+
+\begin{minted}[linenos,breaklines]{java}
+// http post code from: https://stackoverflow.com/a/16284863/5645395
+
+HttpClient httpClient = new DefaultHttpClient();
+HttpPost httpPost = new HttpPost("http://api.ludvig.xyz/gangstersquirrel/");
+
+List<NameValuePair> params = new ArrayList<NameValuePair>();
+params.add(new BasicNameValuePair("level", String.valueOf(gameProgress.getCurrentLevel())));
+params.add(new BasicNameValuePair("name", gameProgress.getPlayerName()));
+params.add(new BasicNameValuePair("time", String.valueOf(timer)));
+
+httpPost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
+HttpResponse response = httpClient.execute(httpPost);
+HttpEntity respEntity = response.getEntity();
+
+if (respEntity != null) {
+  // EntityUtils to get the response content
+  String content = EntityUtils.toString(respEntity);
+}
+\end{minted}
 
 %------------------------------------------------
 
@@ -2271,18 +2313,18 @@ The following flowchart shows the navigation within the menus of the game.
 Twitch.tv is a live streaming platform with 15 million daily active users \cite{twitchAbout}, it features an IRC chat alongside the live stream so the viewers can interact with the livestreamer. Twitch has a few emotes defined in the IRC chat, for example, if you type "Kreygasm" in the chat, a little face appears.
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=0.05\textwidth]{Documentation/Kreygasm.png}
-  \label{Kreygasm_emote}
-  \caption{Kreygasm emote on Twitch \cite{TwitchEmotes}}
+ \center
+ \includegraphics[width=0.05\textwidth]{Documentation/Kreygasm.png}
+ \label{Kreygasm_emote}
+ \caption{Kreygasm emote on Twitch \cite{TwitchEmotes}}
 \end{figure}
 
 A few newer games, such as Jackbox games \cite{JackboxGames} have added twitch integration to their games, meaning what the viewers say in chat affects the game the streamer is playing. Using a Java IRC framework called Pircbot \cite{pircbot} we can connect to the twitch IRC server. In order to not have the IRC connection slow down the rest of the game, we start a separate thread for handling the IRC connection. We use an \texttt{interface} to listen to the chat and call a function in the \texttt{TwitchChat} object whenever a messaged is received.
 
 \begin{minted}[linenos,breaklines]{java}
 public interface ChatListener {
-    void messageReceived(String channel, String sender,
-                         String login, String hostname, String message);
+  void messageReceived(String channel, String sender,
+             String login, String hostname, String message);
 }
 \end{minted}
 
@@ -2292,8 +2334,8 @@ In the TwitchThread class, we can define what should happen upon receiving a mes
 private ArrayList<String> receivableMessages = new ArrayList<>();
 public TwitchThread(boolean enabled, MainGameClass mainGameClass)
 {
-    // ...
-    receivableMessages.add("Kreygasm");
+  // ...
+  receivableMessages.add("Kreygasm");
 }
 \end{minted}
 
@@ -2301,11 +2343,11 @@ In the \texttt{TwitchThread} class we implement our \texttt{ChatListener} object
 
 \begin{minted}[linenos,breaklines]{java}
 public void messageReceived(String channel, String sender, String login, String hostname, String message) {
-    for (String receivableMessage : receivableMessages) {
-        if (getNumberOfThisMessagesInLog(twitch.getLog(), receivableMessage) >= 3) {
-            mainGameClass.receiveActionFromTwitch(receivableMessage);
-        }
+  for (String receivableMessage : receivableMessages) {
+    if (getNumberOfThisMessagesInLog(twitch.getLog(), receivableMessage) >= 3) {
+      mainGameClass.receiveActionFromTwitch(receivableMessage);
     }
+  }
 }
 \end{minted}
 
@@ -2317,11 +2359,11 @@ public void receiveActionFromTwitch(String action) {
 		playScreen = (PlayScreen) this.getCurrentScreen().get();
 
 		if (action.equalsIgnoreCase("Kreygasm")) {
-		    if (playScreen != null) {
-		        effectStateTime = 0f;
-		        currentEffect = "Kreygasm";
-                playScreen.getWorld().setGravity(new Vector2(0, - GRAVITY / 2));
-            }
+		  if (playScreen != null) {
+		    effectStateTime = 0f;
+		    currentEffect = "Kreygasm";
+        playScreen.getWorld().setGravity(new Vector2(0, - GRAVITY / 2));
+      }
 		}
 	}
 }
@@ -2331,7 +2373,7 @@ The \texttt{getCurrentScreen} method returns a \texttt{Screen} instance encapsul
 
 \begin{minted}[linenos,breaklines]{java}
 public Optional<? extends Screen> getCurrentScreen() {
-    return Optional.of(this.getScreen());
+  return Optional.of(this.getScreen());
 }
 \end{minted}
 
@@ -2340,17 +2382,17 @@ After a set amount of time we will remove the effect again.
 \begin{minted}[linenos,breaklines]{java}
 private float maximumEffectTimeInSeconds = 15f
 public void updateTwitchEffectTimer() {
-    if (effectStateTime >= maximumEffectTimeInSeconds) {
-        effectStateTime = 0f;
+  if (effectStateTime >= maximumEffectTimeInSeconds) {
+    effectStateTime = 0f;
 
-        switch (currentEffect) {
-            case "Kreygasm":
-                playScreen.getWorld().setGravity(new Vector2(0, - GRAVITY));
-                break;
-            default:
-                break;
-        }
+    switch (currentEffect) {
+      case "Kreygasm":
+        playScreen.getWorld().setGravity(new Vector2(0, - GRAVITY));
+        break;
+      default:
+        break;
     }
+  }
 }
 \end{minted}
 
@@ -2378,14 +2420,14 @@ Playtesting:
 Although we did a lot of planning and divided task equally among the team we didn't have enough time to accomplish a lot of features we wanted our game to have. That's more due to the limited time we had at our disposal that anything else, but if we had an opportunity to continue the project we would do the following:
 
 \begin{itemize}
-    \item Design our own sprites - we used animated images we found online to build the enemies in our game. This saved us a lot of time and effort, but ideally we would like to build them ourselves so they are more fitting to the overall theme of the game.
-    \item Add more levels - we were only able to make 3 maps, which makes our game quite short. Ideally we would like to add more levels when our player is climbing the tree to get to the top.
-    \item Experience points - ideally we would have wanted our hero to be able to have different characteristics (strength, agility, stamina, etc) that can be improved as the game progresses and our player gains experience and levels up.
-    \item Weapon toolbar - integrating our weapons list as a tool belt where players can see what weapons they have available, the shortcuts that allow them to equip each weapon 
-    \item More weapons - we planned to add a larger variety of weapons, which would make the game more interesting and incentivize users to play longer.
-    \item More items - initially we wanted to allow our player access to equipment that will help him during the game. Items that will increase his speed, jump distance or other special abilities.
-    \item Prizes - we wanted to allow our player to pick up coins and different prizes that add up to your score.
-    \item Climbing - currently our player can only move left and right, and also jump. We would like to add the ability to him to climb ladders, ropes, etc.
+  \item Design our own sprites - we used animated images we found online to build the enemies in our game. This saved us a lot of time and effort, but ideally we would like to build them ourselves so they are more fitting to the overall theme of the game.
+  \item Add more levels - we were only able to make 3 maps, which makes our game quite short. Ideally we would like to add more levels when our player is climbing the tree to get to the top.
+  \item Experience points - ideally we would have wanted our hero to be able to have different characteristics (strength, agility, stamina, etc) that can be improved as the game progresses and our player gains experience and levels up.
+  \item Weapon toolbar - integrating our weapons list as a tool belt where players can see what weapons they have available, the shortcuts that allow them to equip each weapon 
+  \item More weapons - we planned to add ranged weapons as well, which would make the game more interesting and incentivize users to play longer.
+  \item More items - initially we wanted to allow our player access to equipment that will help him during the game. Items that will increase his speed, jump distance or other special abilities.
+  \item Prizes - we wanted to allow our player to pick up coins and different prizes that add up to your score.
+  \item Climbing - currently our player can only move left and right, and also jump. We would like to add the ability to him to climb ladders, ropes, etc.
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -2399,21 +2441,27 @@ In the introduction of this report, we formulated a goal for this project. In th
 
 \textit{How can we develop a retro game using one of the modern game engines? What platforms should it support and what price should it have?}
 
-In this report, the development of the game 'Gangster Squirrel' has been described.
-Our whole team has had some kind of experience in gaming because we all do it in one form or another. However, during the research, we were surprised to see how much the game industry has grown since it's beginning, both in variety and popularity. A decade ago games were more of a niche hobby, but the latest industry reports show that it has become a new entertainment sector of considerable size.
-This growth has brought a lot of success to a lot of game developers, and it's become harder to develop a competitive game, due to the contenders. The market has become very competitive and increasingly saturated. We have successfully developed our game with a modern game engine (libGDX), which has been a good experience regarding set up and structure our game. Another advantage of using libGDX was that it can run on multiple platforms. We decided to release our game for these platforms, chosen on the basis of compatibility:
+During our research, we were surprised to see how much the game industry has grown since it's beginning, both in variety and popularity. A decade ago games were more of a niche hobby, but the latest industry reports show that it has become a new entertainment sector of considerable size.
+
+This growth has brought a lot of success to a lot of game developers, and it's become harder to develop a competitive game, due to the contenders. The market has become very competitive and increasingly saturated.
+
+Users expect high quality products, which is one of the reasons we developed our game with a modern game engine (libGDX), which helped us save time and make the game run smoothly. The library allowed us to design the game ourselves, which enabled us to achieve the retro look we aimed for.
+
+Another advantage of using libGDX was that it can run on multiple platforms. Each platform hold an almost equal market share and the use of a game engine can help us reach more of the consumers. That's why we decided to release our game for these platforms, chosen on the basis of compatibility:
 
 \begin{itemize}
-    \item Microsoft Windows
-    \item macOS
-    \item Linux
+  \item Microsoft Windows
+  \item macOS
+  \item Linux
 \end{itemize}
 
 Last but not least, we've set a price for our product as following: 
 
 \begin{itemize}
-  \item All platforms: 3.99\$ USD
+ \item All platforms: 3.99\$ USD
 \end{itemize}
+
+Though you can build a game without any external libraries, our experience led us to believe that you'd be doing yourself a disservice, if you don't use tools that help you save resources and provide a higher quality product.
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
@@ -2436,10 +2484,10 @@ Last but not least, we've set a price for our product as following:
 The following figure is the full class diagram of the entire project. A high resolution version can be found here: \texttt{https://i.imgur.com/goEseUO.png}
 
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=1\textwidth]{Documentation/class_diagram}
-  \caption{Full class diagram}
-  \label{fig:ClassDiagramFull}
+ \centering
+ \includegraphics[width=1\textwidth]{Documentation/class_diagram}
+ \caption{Full class diagram}
+ \label{fig:ClassDiagramFull}
 \end{figure}
 
 %------------------------------------------------
@@ -2455,95 +2503,96 @@ The following appendix contains direct links to each Java class file and possibl
 \renewcommand{\labelitemii}{\faFile}
 \renewcommand{\labelitemiii}{\faFile}
 \begin{itemize}
-    \item \textbf{/}
+  \item \textbf{/}
+  \begin{itemize}
+    \item MainGameClass: \url{https://goo.gl/sWmPjR}
+  \end{itemize}
+  
+  \item \textbf{GameProgress}
+  \begin{itemize}
+    \item GameProgress: \url{https://goo.gl/2RTmRm} 
+    \item GameProgressObject: \url{https://goo.gl/t1Bx4X}
+  \end{itemize}
+  
+  \item \textbf{Input}
+  \begin{itemize}
+    \item GameplayInputProcessor: \url{https://goo.gl/eMSxpK}
+  \end{itemize}
+  
+  \item \textbf{Items}
+  \begin{itemize}
+    \item WeaponList: \url{https://goo.gl/PysN6e}
+    \item WeaponObject: \url{https://goo.gl/rUjBA5}
+  \end{itemize}
+  
+  \item \textbf{KeyBindings}
+  \begin{itemize}
+    \item KeyBindingsObject: \url{https://goo.gl/FBeWNx}
+    \item KeyBindings: \url{https://goo.gl/Z7PviH}
+  \end{itemize}
+  
+  \item \textbf{Objects}
+  \begin{itemize}
+    \item[\faFolderOpen] \textbf{EnemyObjects}
     \begin{itemize}
-        \item MainGameClass: \url{https://goo.gl/sWmPjR}
+      \item FrogEnemy: \url{https://goo.gl/4DGm2R}
+      \item MonkeyEnemy: \url{https://goo.gl/gnWMLx}
+      \item BossEnemy: \url{https://goo.gl/48UavK}
     \end{itemize}
     
-    \item \textbf{GameProgress}
+    \item[\faFolderOpen] \textbf{MapObjects}
     \begin{itemize}
-        \item GameProgress: \url{https://goo.gl/2RTmRm} 
-        \item GameProgressObject: \url{https://goo.gl/t1Bx4X}
+      \item DeathTile: \url{https://goo.gl/6fUSQr}
+      \item EnemyMoveBorder: \url{https://goo.gl/p9PvBK}
+      \item Finish: \url{https://goo.gl/JEH73q}
+      \item Ground: \url{https://goo.gl/uSvrrh}
+      \item Jumpable: \url{https://goo.gl/fU629m}
+      \item WeaponPickup: \url{https://goo.gl/KwR2Xf}
     \end{itemize}
     
-    \item \textbf{Input}
-    \begin{itemize}
-        \item GameplayInputProcessor: \url{https://goo.gl/eMSxpK}
-    \end{itemize}
-    
-    \item \textbf{Items}
-    \begin{itemize}
-        \item WeaponList: \url{https://goo.gl/PysN6e}
-        \item WeaponObject: \url{https://goo.gl/rUjBA5}
-    \end{itemize}
-    
-    \item \textbf{KeyBindings}
-    \begin{itemize}
-        \item KeyBindingsObject: \url{https://goo.gl/FBeWNx}
-        \item KeyBindings: \url{https://goo.gl/Z7PviH}
-    \end{itemize}
-    
-    \item \textbf{Objects}
-    \begin{itemize}
-        \item[\faFolderOpen] \textbf{EnemyObjects}
-        \begin{itemize}
-            \item FrogEnemy: \url{https://goo.gl/4DGm2R}
-            \item MonkeyEnemy: \url{https://goo.gl/gnWMLx}
-        \end{itemize}
-        
-        \item[\faFolderOpen] \textbf{MapObjects}
-        \begin{itemize}
-            \item DeathTile: \url{https://goo.gl/6fUSQr}
-            \item EnemyMoveBorder: \url{https://goo.gl/p9PvBK}
-            \item Finish: \url{https://goo.gl/JEH73q}
-            \item Ground: \url{https://goo.gl/uSvrrh}
-            \item Jumpable: \url{https://goo.gl/fU629m}
-            \item WeaponPickup: \url{https://goo.gl/KwR2Xf}
-        \end{itemize}
-        
-        \item Enemy: \url{https://goo.gl/8zYXwP}
-        \item InteractiveMapTileObject: \url{https://goo.gl/tgstsE}
-        \item Player: \url{https://goo.gl/BPW542}
-    \end{itemize}
-    
-    \item \textbf{Scenes}
-    \begin{itemize}
-        \item PlayScreenHud: \url{https://goo.gl/EWCC1h}
-    \end{itemize}
-    
-    \item \textbf{Screens}
-    \begin{itemize}
-        \item LevelSelectionMenu: \url{https://goo.gl/WRH2pZ}
-        \item MainMenu: \url{https://goo.gl/Vmoi83}
-        \item MenuScreen: \url{https://goo.gl/swxtyS}
-        \item PlayScreen: \url{https://goo.gl/qFch7g}
-        \item SettingsMenu: \url{https://goo.gl/z1nxpQ}
-        \item SplashScreen: \url{https://goo.gl/LQRfX9}
-        \item StatisticsMenu: \url{https://goo.gl/8VTvLv}
-    \end{itemize}
-    
-    \item \textbf{Statistics}
-    \begin{itemize}
-        \item Statistics: \url{https://goo.gl/poKVXL}
-        \item StatisticsObject: \url{https://goo.gl/ZBt35J}
-    \end{itemize}
-    
-    \item \textbf{Tools}
-    \begin{itemize}
-        \item BitmapFontGenerator: \url{https://goo.gl/9PTfjq}
-        \item Box2DWorldCreator: \url{https://goo.gl/kZXThj}
-        \item JSONFileCreator: \url{https://goo.gl/mSwWyc}
-        \item WorldContactListener: \url{https://goo.gl/xB8hMM}
-        \item ResolutionObject: \url{https://goo.gl/YTt7Mi}
-    \end{itemize}
-    
-    \item \textbf{Twitch}
-    \begin{itemize}
-        \item ChatListener: \url{https://goo.gl/pPn6vq}
-        \item TwitchChat: \url{https://goo.gl/d9fve2}
-        \item TwitchCredentialsObject: \url{https://goo.gl/wFJnxR}
-        \item TwitchThread: \url{https://goo.gl/PCXpqz}
-    \end{itemize}
+    \item Enemy: \url{https://goo.gl/8zYXwP}
+    \item InteractiveMapTileObject: \url{https://goo.gl/tgstsE}
+    \item Player: \url{https://goo.gl/BPW542}
+  \end{itemize}
+  
+  \item \textbf{Scenes}
+  \begin{itemize}
+    \item PlayScreenHud: \url{https://goo.gl/EWCC1h}
+  \end{itemize}
+  
+  \item \textbf{Screens}
+  \begin{itemize}
+    \item LevelSelectionMenu: \url{https://goo.gl/WRH2pZ}
+    \item MainMenu: \url{https://goo.gl/Vmoi83}
+    \item MenuScreen: \url{https://goo.gl/swxtyS}
+    \item PlayScreen: \url{https://goo.gl/qFch7g}
+    \item SettingsMenu: \url{https://goo.gl/z1nxpQ}
+    \item SplashScreen: \url{https://goo.gl/LQRfX9}
+    \item StatisticsMenu: \url{https://goo.gl/8VTvLv}
+  \end{itemize}
+  
+  \item \textbf{Statistics}
+  \begin{itemize}
+    \item Statistics: \url{https://goo.gl/poKVXL}
+    \item StatisticsObject: \url{https://goo.gl/ZBt35J}
+  \end{itemize}
+  
+  \item \textbf{Tools}
+  \begin{itemize}
+    \item BitmapFontGenerator: \url{https://goo.gl/9PTfjq}
+    \item Box2DWorldCreator: \url{https://goo.gl/kZXThj}
+    \item JSONFileCreator: \url{https://goo.gl/mSwWyc}
+    \item WorldContactListener: \url{https://goo.gl/xB8hMM}
+    \item ResolutionObject: \url{https://goo.gl/YTt7Mi}
+  \end{itemize}
+  
+  \item \textbf{Twitch}
+  \begin{itemize}
+    \item ChatListener: \url{https://goo.gl/pPn6vq}
+    \item TwitchChat: \url{https://goo.gl/d9fve2}
+    \item TwitchCredentialsObject: \url{https://goo.gl/wFJnxR}
+    \item TwitchThread: \url{https://goo.gl/PCXpqz}
+  \end{itemize}
 \end{itemize}
 
 %------------------------------------------------
@@ -2556,16 +2605,18 @@ The Javadoc files can be found in the GitHub repository in the \texttt{javadoc} 
 
 \subsection{Playtesting Survey Results} \label{SurveyResults}
 
+Unfortunately, we couldn't figure out a way to display the images properly on this page, which is why the two images can be found on the next pages.
+
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{surveyresults1.png}
-  \label{fig:survey_results_1}
+ \center
+ \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{surveyresults1.png}
+ \label{fig:survey_results_1}
 \end{figure}
 
 \begin{figure}[ht]
-  \center
-  \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{surveyresults2.png}
-  \label{fig:survey_results_2}
+ \center
+ \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{surveyresults2.png}
+ \label{fig:survey_results_2}
 \end{figure}
 
 %------------------------------------------------
